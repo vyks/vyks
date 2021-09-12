@@ -9,6 +9,9 @@ function Library:CreateMain()
     local TextLabel = Instance.new("TextLabel")
     local UICorner_2 = Instance.new("UICorner")
     local UICorner_3 = Instance.new("UICorner")
+    
+    Frame.Active = true
+    Frame.Draggable = true
 
     ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
     ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
