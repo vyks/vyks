@@ -1,7 +1,6 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
+--UI--
+local invis = false
 local toggled = false
 local ScreenGui = Instance.new("ScreenGui")
 local MainBoarder = Instance.new("Frame")
@@ -22,7 +21,6 @@ local Title = Instance.new("TextLabel")
 MainBoarder.Active = true
 MainBoarder.Draggable = true
 
---Properties:
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -73,6 +71,7 @@ Button2.Font = Enum.Font.SourceSans
 Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button2.TextSize = 14.000
 Button2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Button2.Text = "Aux Pineapple"
 
 Button2Corner.CornerRadius = UDim.new(0, 5)
 Button2Corner.Name = "Button2Corner"
@@ -88,6 +87,7 @@ Button3.Font = Enum.Font.SourceSans
 Button3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button3.TextSize = 14.000
 Button3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Button3.Text = "Sanity Hub"
 
 Button3Corner.CornerRadius = UDim.new(0, 5)
 Button3Corner.Name = "Button3Corner"
@@ -103,6 +103,7 @@ Button1.Font = Enum.Font.SourceSans
 Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Button1.TextSize = 14.000
 Button1.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Button1.Text = "Fanta Hub"
 
 Button1Corner.CornerRadius = UDim.new(0, 5)
 Button1Corner.Name = "Button1Corner"
@@ -112,7 +113,7 @@ MinimizeGUI.Name = "MinimizeGUI"
 MinimizeGUI.Parent = MainBoarder
 MinimizeGUI.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 MinimizeGUI.BackgroundTransparency = 1.000
-MinimizeGUI.Position = UDim2.new(0.902499974, 0, 0.012765957, 0)
+MinimizeGUI.Position = UDim2.new(0.900499974, 0, 0.012765957, 0)
 MinimizeGUI.Size = UDim2.new(0, 20, 0, 20)
 MinimizeGUI.Font = Enum.Font.SourceSans
 MinimizeGUI.Text = "-"
@@ -139,6 +140,17 @@ CloseGUI.Font = Enum.Font.SourceSans
 CloseGUI.Text = "x"
 CloseGUI.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseGUI.TextSize = 20.000
+CloseGUI.Parent = MainBoarder
+CloseGUI.MouseButton1Down:Connect(function()
+    if invis then
+        invis = false
+        MainBoarder.Visible = false
+    else
+        invis = true
+        MainBoarder.Visible = true
+    end
+end)
+
 
 Title.Name = "Title"
 Title.Parent = MainBoarder
@@ -150,3 +162,16 @@ Title.Font = Enum.Font.SourceSans
 Title.Text = "Vykzs"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 20.000
+
+
+Button1.MouseButton1Click:Connect(function()
+    print"button1"
+end)
+
+Button2.MouseButton1Click:Connect(function()
+    print"button2"
+end)
+
+Button3.MouseButton1Click:Connect(function()
+    print"button3"
+end)
