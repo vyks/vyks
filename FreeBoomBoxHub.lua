@@ -1,4 +1,3 @@
-
 --UI--
 local invis = false
 local toggled = false
@@ -20,7 +19,6 @@ local CloseGUI = Instance.new("TextButton")
 local Title = Instance.new("TextLabel")
 MainBoarder.Active = true
 MainBoarder.Draggable = true
-
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -69,7 +67,7 @@ Button2.Position = UDim2.new(0.511999965, 0, 0.0250000004, 0)
 Button2.Size = UDim2.new(0, 185, 0, 50)
 Button2.Font = Enum.Font.SourceSans
 Button2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button2.TextSize = 14.000
+Button2.TextSize = 20.000
 Button2.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Button2.Text = "Aux Pineapple"
 
@@ -85,7 +83,7 @@ Button3.Position = UDim2.new(0.281230748, 0, 0.305000007, 0)
 Button3.Size = UDim2.new(0, 185, 0, 50)
 Button3.Font = Enum.Font.SourceSans
 Button3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button3.TextSize = 14.000
+Button3.TextSize = 20.000
 Button3.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Button3.Text = "Sanity Hub"
 
@@ -101,7 +99,7 @@ Button1.Position = UDim2.new(0.0149999997, 0, 0.0250000004, 0)
 Button1.Size = UDim2.new(0, 185, 0, 50)
 Button1.Font = Enum.Font.SourceSans
 Button1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Button1.TextSize = 14.000
+Button1.TextSize = 20.000
 Button1.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Button1.Text = "Fanta Hub"
 
@@ -151,7 +149,6 @@ CloseGUI.MouseButton1Down:Connect(function()
     end
 end)
 
-
 Title.Name = "Title"
 Title.Parent = MainBoarder
 Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -159,13 +156,14 @@ Title.BackgroundTransparency = 1.000
 Title.Position = UDim2.new(0.25, 0, 0, 0)
 Title.Size = UDim2.new(0, 200, 0, 30)
 Title.Font = Enum.Font.SourceSans
-Title.Text = "Vykzs"
+Title.Text = "Free Boombox Hubs || vykzs"
 Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title.TextSize = 20.000
 
+--Script--
 
 Button1.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
 end)
 
 Button2.MouseButton1Click:Connect(function()
@@ -173,5 +171,5 @@ Button2.MouseButton1Click:Connect(function()
 end)
 
 Button3.MouseButton1Click:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
 end)
