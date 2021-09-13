@@ -165,13 +165,13 @@ Title.TextSize = 20.000
 
 
 Button1.MouseButton1Click:Connect(function()
-    print"button1"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
 end)
 
 Button2.MouseButton1Click:Connect(function()
-    print"button2"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
 end)
 
 Button3.MouseButton1Click:Connect(function()
-    print"button3"
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
 end)
