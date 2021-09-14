@@ -14,6 +14,9 @@ local Button3 = Instance.new("TextButton")
 local Button3Corner = Instance.new("UICorner")
 local Button1 = Instance.new("TextButton")
 local Button1Corner = Instance.new("UICorner")
+local Button4 = Instance.new("TextButton")
+local Button4Corner = Instance.new("UICorner")
+local Warning = Instance.new("TextLabel")
 local MinimizeGUI = Instance.new("TextButton")
 local CloseGUI = Instance.new("TextButton")
 local Title = Instance.new("TextLabel")
@@ -79,7 +82,7 @@ Button3.Name = "Button3"
 Button3.Parent = ButtonBoarder
 Button3.BackgroundColor3 = Color3.fromRGB(76, 76, 76)
 Button3.BorderSizePixel = 0
-Button3.Position = UDim2.new(0.281230748, 0, 0.305000007, 0)
+Button3.Position = UDim2.new(0.511999965, 0, 0.305000007, 0)
 Button3.Size = UDim2.new(0, 185, 0, 50)
 Button3.Font = Enum.Font.SourceSans
 Button3.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -106,6 +109,35 @@ Button1.Text = "Fanta Hub"
 Button1Corner.CornerRadius = UDim.new(0, 5)
 Button1Corner.Name = "Button1Corner"
 Button1Corner.Parent = Button1
+
+Button4.Name = "Button4"
+Button4.Parent = ButtonBoarder
+Button4.BackgroundColor3 = Color3.new(0.298039, 0.298039, 0.298039)
+Button4.BorderSizePixel = 0
+Button4.Position = UDim2.new(0.0145640671, 0, 0.305000007, 0)
+Button4.Size = UDim2.new(0, 185, 0, 50)
+Button4.Font = Enum.Font.SourceSans
+Button4.TextColor3 = Color3.new(1, 1, 1)
+Button4.TextSize = 20
+Button4.TextStrokeColor3 = Color3.new(1, 1, 1)
+Button4.Text = "Verts Edited"
+
+Button4Corner.CornerRadius = UDim.new(0, 5)
+Button4Corner.Name = "Button4Corner"
+Button4Corner.Parent = Button4
+
+Warning.Name = "Warning"
+Warning.Parent = ButtonBoarder
+Warning.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Warning.BackgroundTransparency = 1.000
+Warning.Position = UDim2.new(0.0128205139, 0, 0.584999979, 0)
+Warning.Size = UDim2.new(0, 185, 0, 50)
+Warning.Font = Enum.Font.SourceSans
+Warning.Text = "Verts visualizer doesn't work on mac but the antilogger is way better than Fanta Hub"
+Warning.TextColor3 = Color3.fromRGB(255, 255, 255)
+Warning.TextScaled = true
+Warning.TextSize = 14.000
+Warning.TextWrapped = true
 
 MinimizeGUI.Name = "MinimizeGUI"
 MinimizeGUI.Parent = MainBoarder
@@ -172,4 +204,8 @@ end)
 
 Button3.MouseButton1Click:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
+end)
+
+Button4.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
 end)
