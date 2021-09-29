@@ -26,24 +26,32 @@ local DiscordCopy1 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
 local DiscordDesc1 = Instance.new("TextLabel")
 local RawLinkDesc1 = Instance.new("TextLabel")
+local Execute1 = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
 local Tab2Frame = Instance.new("Frame")
 local RawLinkCopy2 = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local RawLinkDesc2 = Instance.new("TextLabel")
 local Tab2Title = Instance.new("TextLabel")
+local Execute2 = Instance.new("TextButton")
+local UICorner_12 = Instance.new("UICorner")
 local Tab3Frame = Instance.new("Frame")
 local RawLinkCopy3 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local DiscordDesc3 = Instance.new("TextLabel")
 local RawLinkDesc3 = Instance.new("TextLabel")
 local Tab3Title = Instance.new("TextLabel")
 local DiscordCopy3 = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
+local Execute3 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
 local Tab4Frame = Instance.new("Frame")
-local RawLinkCopy4 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
 local RawLinkDesc4 = Instance.new("TextLabel")
 local Tab4Title = Instance.new("TextLabel")
+local Execute4 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local RawLinkCopy4 = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
 local Tab5Frame = Instance.new("Frame")
 local Tab5Title = Instance.new("TextLabel")
 local AboutMe2 = Instance.new("TextLabel")
@@ -52,15 +60,15 @@ local AboutMe3 = Instance.new("TextLabel")
 local HeaderContent = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local Minimize = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_18 = Instance.new("UICorner")
 local Watermark = Instance.new("TextLabel")
 MainBackground.Active = true
 MainBackground.Draggable = true
 
---GUI--
+--Properties:
 
 TabTester.Name = "TabTester"
-TabTester.Parent = game.CoreGui
+TabTester.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 TabTester.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainBackground.Name = "MainBackground"
@@ -185,12 +193,12 @@ Tab1Title.TextSize = 20.000
 RawLinkCopy1.Name = "RawLinkCopy1"
 RawLinkCopy1.Parent = Tab1Frame
 RawLinkCopy1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy1.Position = UDim2.new(0.630054057, 0, 0.277926087, 0)
-RawLinkCopy1.Size = UDim2.new(0, 100, 0, 50)
+RawLinkCopy1.Position = UDim2.new(0.0920000002, 0, 0.391000003, 0)
+RawLinkCopy1.Size = UDim2.new(0, 80, 0, 40)
 RawLinkCopy1.Font = Enum.Font.Cartoon
 RawLinkCopy1.Text = "Copy Lua"
 RawLinkCopy1.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy1.TextSize = 16.000
+RawLinkCopy1.TextSize = 14.000
 
 UICorner_8.CornerRadius = UDim.new(0, 5)
 UICorner_8.Parent = RawLinkCopy1
@@ -198,12 +206,12 @@ UICorner_8.Parent = RawLinkCopy1
 DiscordCopy1.Name = "DiscordCopy1"
 DiscordCopy1.Parent = Tab1Frame
 DiscordCopy1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-DiscordCopy1.Position = UDim2.new(0.0972972959, 0, 0.278003037, 0)
-DiscordCopy1.Size = UDim2.new(0, 100, 0, 50)
+DiscordCopy1.Position = UDim2.new(0.705405414, 0, 0.391303539, 0)
+DiscordCopy1.Size = UDim2.new(0, 80, 0, 40)
 DiscordCopy1.Font = Enum.Font.Cartoon
 DiscordCopy1.Text = "Copy Discord"
 DiscordCopy1.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordCopy1.TextSize = 16.000
+DiscordCopy1.TextSize = 14.000
 
 UICorner_9.CornerRadius = UDim.new(0, 5)
 UICorner_9.Parent = DiscordCopy1
@@ -212,12 +220,12 @@ DiscordDesc1.Name = "DiscordDesc1"
 DiscordDesc1.Parent = Tab1Frame
 DiscordDesc1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DiscordDesc1.BackgroundTransparency = 1.000
-DiscordDesc1.Position = UDim2.new(0, 0, 0.527093589, 0)
-DiscordDesc1.Size = UDim2.new(0, 172, 0, 95)
+DiscordDesc1.Position = UDim2.new(0.64864862, 0, 0.615763485, 0)
+DiscordDesc1.Size = UDim2.new(0, 122, 0, 76)
 DiscordDesc1.Font = Enum.Font.Cartoon
 DiscordDesc1.Text = "This button will set your clipboard to the discord invite to the Aux Pineapple server!"
 DiscordDesc1.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc1.TextSize = 17.000
+DiscordDesc1.TextSize = 15.000
 DiscordDesc1.TextWrapped = true
 DiscordDesc1.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -225,14 +233,27 @@ RawLinkDesc1.Name = "RawLinkDesc1"
 RawLinkDesc1.Parent = Tab1Frame
 RawLinkDesc1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkDesc1.BackgroundTransparency = 1.000
-RawLinkDesc1.Position = UDim2.new(0.535000026, 0, 0.52700001, 0)
-RawLinkDesc1.Size = UDim2.new(0, 172, 0, 89)
+RawLinkDesc1.Position = UDim2.new(0.0377027355, 0, 0.595965505, 0)
+RawLinkDesc1.Size = UDim2.new(0, 122, 0, 76)
 RawLinkDesc1.Font = Enum.Font.Cartoon
 RawLinkDesc1.Text = "This button will set your clipboard to the github raw of the Aux Pinapple open source code!"
 RawLinkDesc1.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc1.TextSize = 17.000
+RawLinkDesc1.TextSize = 15.000
 RawLinkDesc1.TextWrapped = true
 RawLinkDesc1.TextYAlignment = Enum.TextYAlignment.Top
+
+Execute1.Name = "Execute1"
+Execute1.Parent = Tab1Frame
+Execute1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Execute1.Position = UDim2.new(0.364864856, 0, 0.246305421, 0)
+Execute1.Size = UDim2.new(0, 100, 0, 50)
+Execute1.Font = Enum.Font.Cartoon
+Execute1.Text = "Execute!"
+Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute1.TextSize = 17.000
+
+UICorner_10.CornerRadius = UDim.new(0, 5)
+UICorner_10.Parent = Execute1
 
 Tab2Frame.Name = "Tab2Frame"
 Tab2Frame.Parent = TabContent
@@ -246,26 +267,26 @@ Tab2Frame.Visible = false
 RawLinkCopy2.Name = "RawLinkCopy2"
 RawLinkCopy2.Parent = Tab2Frame
 RawLinkCopy2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy2.Position = UDim2.new(0.140864879, 0, 0.406004906, 0)
+RawLinkCopy2.Position = UDim2.new(0.46227029, 0, 0.669862032, 0)
 RawLinkCopy2.Size = UDim2.new(0, 100, 0, 50)
 RawLinkCopy2.Font = Enum.Font.Cartoon
 RawLinkCopy2.Text = "Copy Lua"
 RawLinkCopy2.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy2.TextSize = 16.000
+RawLinkCopy2.TextSize = 14.000
 
-UICorner_10.CornerRadius = UDim.new(0, 5)
-UICorner_10.Parent = RawLinkCopy2
+UICorner_11.CornerRadius = UDim.new(0, 5)
+UICorner_11.Parent = RawLinkCopy2
 
 RawLinkDesc2.Name = "RawLinkDesc2"
 RawLinkDesc2.Parent = Tab2Frame
 RawLinkDesc2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkDesc2.BackgroundTransparency = 1.000
-RawLinkDesc2.Position = UDim2.new(0.462027043, 0, 0.36936453, 0)
-RawLinkDesc2.Size = UDim2.new(0, 172, 0, 89)
+RawLinkDesc2.Position = UDim2.new(0.0268919468, 0, 0.640300393, 0)
+RawLinkDesc2.Size = UDim2.new(0, 148, 0, 64)
 RawLinkDesc2.Font = Enum.Font.Cartoon
-RawLinkDesc2.Text = "This button will set your clipboard to the github raw of the Fanta Hub obfuscated source code"
+RawLinkDesc2.Text = "This button will set your clipboard to the github raw of the Fanta Hub obfuscated source code!"
 RawLinkDesc2.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc2.TextSize = 17.000
+RawLinkDesc2.TextSize = 15.000
 RawLinkDesc2.TextWrapped = true
 RawLinkDesc2.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -280,6 +301,19 @@ Tab2Title.Text = "Fanta Hub"
 Tab2Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Tab2Title.TextSize = 20.000
 
+Execute2.Name = "Execute2"
+Execute2.Parent = Tab2Frame
+Execute2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Execute2.Position = UDim2.new(0.364864856, 0, 0.246305421, 0)
+Execute2.Size = UDim2.new(0, 100, 0, 50)
+Execute2.Font = Enum.Font.Cartoon
+Execute2.Text = "Execute!"
+Execute2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute2.TextSize = 17.000
+
+UICorner_12.CornerRadius = UDim.new(0, 5)
+UICorner_12.Parent = Execute2
+
 Tab3Frame.Name = "Tab3Frame"
 Tab3Frame.Parent = TabContent
 Tab3Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -292,26 +326,26 @@ Tab3Frame.Visible = false
 RawLinkCopy3.Name = "RawLinkCopy3"
 RawLinkCopy3.Parent = Tab3Frame
 RawLinkCopy3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy3.Position = UDim2.new(0.630054057, 0, 0.277926087, 0)
-RawLinkCopy3.Size = UDim2.new(0, 100, 0, 50)
+RawLinkCopy3.Position = UDim2.new(0.0920000002, 0, 0.391000003, 0)
+RawLinkCopy3.Size = UDim2.new(0, 80, 0, 40)
 RawLinkCopy3.Font = Enum.Font.Cartoon
 RawLinkCopy3.Text = "Copy Lua"
 RawLinkCopy3.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy3.TextSize = 16.000
+RawLinkCopy3.TextSize = 14.000
 
-UICorner_11.CornerRadius = UDim.new(0, 5)
-UICorner_11.Parent = RawLinkCopy3
+UICorner_13.CornerRadius = UDim.new(0, 5)
+UICorner_13.Parent = RawLinkCopy3
 
 DiscordDesc3.Name = "DiscordDesc3"
 DiscordDesc3.Parent = Tab3Frame
 DiscordDesc3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 DiscordDesc3.BackgroundTransparency = 1.000
-DiscordDesc3.Position = UDim2.new(0, 0, 0.527093589, 0)
-DiscordDesc3.Size = UDim2.new(0, 172, 0, 95)
+DiscordDesc3.Position = UDim2.new(0.648999989, 0, 0.615999997, 0)
+DiscordDesc3.Size = UDim2.new(0, 122, 0, 76)
 DiscordDesc3.Font = Enum.Font.Cartoon
 DiscordDesc3.Text = "This button will set your clipboard to the discord invite to the Verts Hub server!"
 DiscordDesc3.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc3.TextSize = 17.000
+DiscordDesc3.TextSize = 15.000
 DiscordDesc3.TextWrapped = true
 DiscordDesc3.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -319,12 +353,12 @@ RawLinkDesc3.Name = "RawLinkDesc3"
 RawLinkDesc3.Parent = Tab3Frame
 RawLinkDesc3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkDesc3.BackgroundTransparency = 1.000
-RawLinkDesc3.Position = UDim2.new(0.535000026, 0, 0.52700001, 0)
-RawLinkDesc3.Size = UDim2.new(0, 172, 0, 89)
+RawLinkDesc3.Position = UDim2.new(0.0379999988, 0, 0.596000016, 0)
+RawLinkDesc3.Size = UDim2.new(0, 122, 0, 76)
 RawLinkDesc3.Font = Enum.Font.Cartoon
 RawLinkDesc3.Text = "This button will set your clipboard to the github raw of the Verts Hub open source code!"
 RawLinkDesc3.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc3.TextSize = 17.000
+RawLinkDesc3.TextSize = 15.000
 RawLinkDesc3.TextWrapped = true
 RawLinkDesc3.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -342,15 +376,28 @@ Tab3Title.TextSize = 20.000
 DiscordCopy3.Name = "DiscordCopy3"
 DiscordCopy3.Parent = Tab3Frame
 DiscordCopy3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-DiscordCopy3.Position = UDim2.new(0.0972972959, 0, 0.278003037, 0)
-DiscordCopy3.Size = UDim2.new(0, 100, 0, 50)
+DiscordCopy3.Position = UDim2.new(0.705405414, 0, 0.391303539, 0)
+DiscordCopy3.Size = UDim2.new(0, 80, 0, 40)
 DiscordCopy3.Font = Enum.Font.Cartoon
 DiscordCopy3.Text = "Copy Discord"
 DiscordCopy3.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordCopy3.TextSize = 16.000
+DiscordCopy3.TextSize = 14.000
 
-UICorner_12.CornerRadius = UDim.new(0, 5)
-UICorner_12.Parent = DiscordCopy3
+UICorner_14.CornerRadius = UDim.new(0, 5)
+UICorner_14.Parent = DiscordCopy3
+
+Execute3.Name = "Execute3"
+Execute3.Parent = Tab3Frame
+Execute3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Execute3.Position = UDim2.new(0.364864856, 0, 0.246305421, 0)
+Execute3.Size = UDim2.new(0, 100, 0, 50)
+Execute3.Font = Enum.Font.Cartoon
+Execute3.Text = "Execute!"
+Execute3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute3.TextSize = 17.000
+
+UICorner_15.CornerRadius = UDim.new(0, 5)
+UICorner_15.Parent = Execute3
 
 Tab4Frame.Name = "Tab4Frame"
 Tab4Frame.Parent = TabContent
@@ -361,29 +408,16 @@ Tab4Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
 Tab4Frame.Size = UDim2.new(0, 370, 0, 203)
 Tab4Frame.Visible = false
 
-RawLinkCopy4.Name = "RawLinkCopy4"
-RawLinkCopy4.Parent = Tab4Frame
-RawLinkCopy4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy4.Position = UDim2.new(0.141000003, 0, 0.405999988, 0)
-RawLinkCopy4.Size = UDim2.new(0, 100, 0, 50)
-RawLinkCopy4.Font = Enum.Font.Cartoon
-RawLinkCopy4.Text = "Copy Lua"
-RawLinkCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy4.TextSize = 16.000
-
-UICorner_13.CornerRadius = UDim.new(0, 5)
-UICorner_13.Parent = RawLinkCopy4
-
 RawLinkDesc4.Name = "RawLinkDesc4"
 RawLinkDesc4.Parent = Tab4Frame
 RawLinkDesc4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkDesc4.BackgroundTransparency = 1.000
-RawLinkDesc4.Position = UDim2.new(0.462000012, 0, 0.368999988, 0)
-RawLinkDesc4.Size = UDim2.new(0, 172, 0, 89)
+RawLinkDesc4.Position = UDim2.new(0.0270000007, 0, 0.639999986, 0)
+RawLinkDesc4.Size = UDim2.new(0, 148, 0, 64)
 RawLinkDesc4.Font = Enum.Font.Cartoon
 RawLinkDesc4.Text = "This button will set your clipboard to the github raw of the Sanity Hub obfuscated source code!"
 RawLinkDesc4.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc4.TextSize = 17.000
+RawLinkDesc4.TextSize = 15.000
 RawLinkDesc4.TextWrapped = true
 RawLinkDesc4.TextYAlignment = Enum.TextYAlignment.Top
 
@@ -397,6 +431,32 @@ Tab4Title.Font = Enum.Font.Cartoon
 Tab4Title.Text = "Sanity Hub"
 Tab4Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Tab4Title.TextSize = 20.000
+
+Execute4.Name = "Execute4"
+Execute4.Parent = Tab4Frame
+Execute4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Execute4.Position = UDim2.new(0.364864856, 0, 0.246305421, 0)
+Execute4.Size = UDim2.new(0, 100, 0, 50)
+Execute4.Font = Enum.Font.Cartoon
+Execute4.Text = "Execute!"
+Execute4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute4.TextSize = 17.000
+
+UICorner_16.CornerRadius = UDim.new(0, 5)
+UICorner_16.Parent = Execute4
+
+RawLinkCopy4.Name = "RawLinkCopy4"
+RawLinkCopy4.Parent = Tab4Frame
+RawLinkCopy4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+RawLinkCopy4.Position = UDim2.new(0.46227029, 0, 0.669862032, 0)
+RawLinkCopy4.Size = UDim2.new(0, 100, 0, 50)
+RawLinkCopy4.Font = Enum.Font.Cartoon
+RawLinkCopy4.Text = "Copy Lua"
+RawLinkCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
+RawLinkCopy4.TextSize = 14.000
+
+UICorner_17.CornerRadius = UDim.new(0, 5)
+UICorner_17.Parent = RawLinkCopy4
 
 Tab5Frame.Name = "Tab5Frame"
 Tab5Frame.Parent = TabContent
@@ -484,8 +544,8 @@ Minimize.Text = "Minimize"
 Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
 Minimize.TextSize = 14.000
 
-UICorner_14.CornerRadius = UDim.new(0, 5)
-UICorner_14.Parent = Minimize
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = Minimize
 
 Watermark.Name = "Watermark"
 Watermark.Parent = MainBackground
@@ -498,7 +558,7 @@ Watermark.Font = Enum.Font.Cartoon
 Watermark.Text = "discord.gg/scripting"
 Watermark.TextColor3 = Color3.fromRGB(61, 63, 67)
 Watermark.TextSize = 14.000
-Watermark.TextTransparency = 0.600
+Watermark.TextTransparency = 0.800
 
 --Scripts--
 
@@ -508,8 +568,6 @@ Tab1.MouseButton1Down:Connect(function()
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = false
-    wait()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
 end)
 
 Tab2.MouseButton1Down:connect(function()
@@ -518,8 +576,6 @@ Tab2.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = false
-    wait()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
 end)
 
 Tab3.MouseButton1Down:connect(function()
@@ -528,8 +584,6 @@ Tab3.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = true
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = false
-    wait()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
 end)
 
 
@@ -539,18 +593,31 @@ Tab4.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = true
 	Tab5Frame.Visible = false
-    wait()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
 end)
 
 
 Tab5.MouseButton1Down:connect(function()
 	Tab1Frame.Visible = false
-    Tab2Frame.Visible = false
+	Tab2Frame.Visible = false
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = true
-    wait()
+end)
+
+Execute1.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
+end)
+
+Execute2.MouseButton1Down:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
+end)
+
+Execute3.MouseButton1Down:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
+end)
+
+Execute4.MouseButton1Down:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
 end)
 
 Minimize.MouseButton1Down:Connect(function()
@@ -590,4 +657,4 @@ DiscordCopy3.MouseButton1Down:Connect(function()
     setclipboard("https://discord.gg/ZB9fJbED6H")
 end)
 
-warn("Enjoy!")
+warn("Anything after this line of code isn't related to the Ui and is related to the script or game that you choose")
