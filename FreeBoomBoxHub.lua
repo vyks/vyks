@@ -189,7 +189,7 @@ Tab1Title.BackgroundTransparency = 1.000
 Tab1Title.Position = UDim2.new(0.370270252, 0, 0.0591133013, 0)
 Tab1Title.Size = UDim2.new(0, 200, 0, 50)
 Tab1Title.Font = Enum.Font.Cartoon
-Tab1Title.Text = "Aux Pinapple"
+Tab1Title.Text = "Aux Pineapple"
 Tab1Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 Tab1Title.TextSize = 20.000
 
@@ -251,7 +251,7 @@ Execute1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 Execute1.Position = UDim2.new(0.140540496, 0, 0.0591133088, 0)
 Execute1.Size = UDim2.new(0, 100, 0, 50)
 Execute1.Font = Enum.Font.Cartoon
-Execute1.Text = "Execute!"
+Execute1.Text = "Console!"
 Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute1.TextSize = 17.000
 
@@ -635,7 +635,12 @@ Tab5.MouseButton1Down:connect(function()
 end)
 
 Execute1.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
+	--loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
+    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
+    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
+    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
+    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
+    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
 end)
 
 Execute2.MouseButton1Down:Connect(function()
