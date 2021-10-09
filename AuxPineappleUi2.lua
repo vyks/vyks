@@ -229,7 +229,7 @@ TextLabel_5.Position = UDim2.new(0.411214948, 0, 0.0289017335, 0)
 TextLabel_5.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_5.Font = Enum.Font.Code
 TextLabel_5.Text = "X Angle"
-TextLabel_5.TextColor3 = Color3.fromRGB(53, 53, 53)
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 14.000
 
 TextLabel_6.Parent = Frame_5
@@ -239,7 +239,7 @@ TextLabel_6.Position = UDim2.new(0.411214948, 0, 0.375722528, 0)
 TextLabel_6.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_6.Font = Enum.Font.Code
 TextLabel_6.Text = "Y Angle"
-TextLabel_6.TextColor3 = Color3.fromRGB(53, 53, 53)
+TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 14.000
 
 TextLabel_7.Parent = Frame_5
@@ -249,7 +249,7 @@ TextLabel_7.Position = UDim2.new(0.411214948, 0, 0.722543359, 0)
 TextLabel_7.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_7.Font = Enum.Font.Code
 TextLabel_7.Text = "Z Angle"
-TextLabel_7.TextColor3 = Color3.fromRGB(53, 53, 53)
+TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextSize = 14.000
 
 Frame_6.Parent = Frame_4
@@ -318,31 +318,31 @@ UICorner_12.Parent = Frame_6
 TextLabel_8.Parent = Frame_6
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
-TextLabel_8.Position = UDim2.new(0.420560747, 0, 0.0349650346, 0)
+TextLabel_8.Position = UDim2.new(0, 44, 0, 4)
 TextLabel_8.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_8.Font = Enum.Font.Code
 TextLabel_8.Text = "X Wave"
-TextLabel_8.TextColor3 = Color3.fromRGB(53, 53, 53)
+TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextSize = 14.000
 
 TextLabel_9.Parent = Frame_6
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.Position = UDim2.new(0.420560747, 0, 0.384615391, 0)
+TextLabel_9.Position = UDim2.new(0, 44, 0, 54)
 TextLabel_9.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_9.Font = Enum.Font.Code
 TextLabel_9.Text = "Y Wave"
-TextLabel_9.TextColor3 = Color3.fromRGB(53, 53, 53)
+TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.TextSize = 14.000
 
 TextLabel_10.Parent = Frame_6
 TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.Position = UDim2.new(0.420560747, 0, 0.720279694, 0)
+TextLabel_10.Position = UDim2.new(0, 44, 0, 103)
 TextLabel_10.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_10.Font = Enum.Font.Code
 TextLabel_10.Text = "Z Wave"
-TextLabel_10.TextColor3 = Color3.fromRGB(53, 53, 53)
+TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextSize = 14.000
 
 TextLabel_11.Parent = Frame_4
@@ -538,7 +538,7 @@ UICorner_22.Parent = Frame
 
 -- Scripts:
 
-local function SEDI_fake_script() -- TextBox.LocalScript 
+local function OBXMXA_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local currentid=""
@@ -740,8 +740,8 @@ local function SEDI_fake_script() -- TextBox.LocalScript
 		vis(script.Parent.Parent.AudioId.Text:gsub("%D+", ""),0)
 	end)
 end
-coroutine.wrap(SEDI_fake_script)()
-local function YVOCIJH_fake_script() -- TextBox_2.LocalScript 
+coroutine.wrap(OBXMXA_fake_script)()
+local function YBBFAGV_fake_script() -- TextBox_2.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -781,8 +781,8 @@ local function YVOCIJH_fake_script() -- TextBox_2.LocalScript
 		print("done")
 	end)
 end
-coroutine.wrap(YVOCIJH_fake_script)()
-local function TQWJD_fake_script() -- MAX.LocalScript 
+coroutine.wrap(YBBFAGV_fake_script)()
+local function SFKAA_fake_script() -- MAX.LocalScript 
 	local script = Instance.new('LocalScript', MAX)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -798,8 +798,8 @@ local function TQWJD_fake_script() -- MAX.LocalScript
 		end
 	end
 end
-coroutine.wrap(TQWJD_fake_script)()
-local function UIGSTZ_fake_script() -- MAY.LocalScript 
+coroutine.wrap(SFKAA_fake_script)()
+local function OEXW_fake_script() -- MAY.LocalScript 
 	local script = Instance.new('LocalScript', MAY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -815,8 +815,8 @@ local function UIGSTZ_fake_script() -- MAY.LocalScript
 		end
 	end
 end
-coroutine.wrap(UIGSTZ_fake_script)()
-local function QHAFI_fake_script() -- MAZ.LocalScript 
+coroutine.wrap(OEXW_fake_script)()
+local function BLUGY_fake_script() -- MAZ.LocalScript 
 	local script = Instance.new('LocalScript', MAZ)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -832,8 +832,8 @@ local function QHAFI_fake_script() -- MAZ.LocalScript
 		end
 	end
 end
-coroutine.wrap(QHAFI_fake_script)()
-local function HMQTSO_fake_script() -- WAX.LocalScript 
+coroutine.wrap(BLUGY_fake_script)()
+local function PPKN_fake_script() -- WAX.LocalScript 
 	local script = Instance.new('LocalScript', WAX)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -849,8 +849,8 @@ local function HMQTSO_fake_script() -- WAX.LocalScript
 		end
 	end
 end
-coroutine.wrap(HMQTSO_fake_script)()
-local function KSMV_fake_script() -- WAY.LocalScript 
+coroutine.wrap(PPKN_fake_script)()
+local function MSRCLZ_fake_script() -- WAY.LocalScript 
 	local script = Instance.new('LocalScript', WAY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -866,8 +866,8 @@ local function KSMV_fake_script() -- WAY.LocalScript
 		end
 	end
 end
-coroutine.wrap(KSMV_fake_script)()
-local function PFQK_fake_script() -- WAZ.LocalScript 
+coroutine.wrap(MSRCLZ_fake_script)()
+local function QWRJH_fake_script() -- WAZ.LocalScript 
 	local script = Instance.new('LocalScript', WAZ)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -883,8 +883,8 @@ local function PFQK_fake_script() -- WAZ.LocalScript
 		end
 	end
 end
-coroutine.wrap(PFQK_fake_script)()
-local function DPNROB_fake_script() -- WavesOn.LocalScript 
+coroutine.wrap(QWRJH_fake_script)()
+local function RZGMABG_fake_script() -- WavesOn.LocalScript 
 	local script = Instance.new('LocalScript', WavesOn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -902,8 +902,8 @@ local function DPNROB_fake_script() -- WavesOn.LocalScript
 		end
 	end 
 end
-coroutine.wrap(DPNROB_fake_script)()
-local function RYJX_fake_script() -- Distance.LocalScript 
+coroutine.wrap(RZGMABG_fake_script)()
+local function MHJW_fake_script() -- Distance.LocalScript 
 	local script = Instance.new('LocalScript', Distance)
 
 	_G[script.Parent.Name]=5
@@ -913,8 +913,8 @@ local function RYJX_fake_script() -- Distance.LocalScript
 		end
 	end)
 end
-coroutine.wrap(RYJX_fake_script)()
-local function BJNEH_fake_script() -- WaveInt.LocalScript 
+coroutine.wrap(MHJW_fake_script)()
+local function GUOUELF_fake_script() -- WaveInt.LocalScript 
 	local script = Instance.new('LocalScript', WaveInt)
 
 	_G[script.Parent.Name]=3
@@ -924,8 +924,8 @@ local function BJNEH_fake_script() -- WaveInt.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BJNEH_fake_script)()
-local function GCCGNVS_fake_script() -- Speed.LocalScript 
+coroutine.wrap(GUOUELF_fake_script)()
+local function PQGN_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	_G[script.Parent.Name]=1
@@ -935,8 +935,8 @@ local function GCCGNVS_fake_script() -- Speed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GCCGNVS_fake_script)()
-local function QLTS_fake_script() -- Frame.LocalScript 
+coroutine.wrap(PQGN_fake_script)()
+local function LMNYDM_fake_script() -- Frame.LocalScript 
 	local script = Instance.new('LocalScript', Frame)
 
 	_G.VisAngle="X"
@@ -944,8 +944,8 @@ local function QLTS_fake_script() -- Frame.LocalScript
 	_G.WavesAngle="Y"
 	_G.BoomboxDependantSpeed="Off"
 end
-coroutine.wrap(QLTS_fake_script)()
-local function IXOX_fake_script() -- TextBox_3.LocalScript 
+coroutine.wrap(LMNYDM_fake_script)()
+local function ZQEL_fake_script() -- TextBox_3.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -982,8 +982,8 @@ local function IXOX_fake_script() -- TextBox_3.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(IXOX_fake_script)()
-local function QDNFYK_fake_script() -- TextBox_4.LocalScript 
+coroutine.wrap(ZQEL_fake_script)()
+local function OJIVZB_fake_script() -- TextBox_4.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_4)
 
 	_G.grabtools=false
@@ -1014,8 +1014,8 @@ local function QDNFYK_fake_script() -- TextBox_4.LocalScript
 		_G.grabtools=not _G.grabtools
 	end)
 end
-coroutine.wrap(QDNFYK_fake_script)()
-local function UYFP_fake_script() -- TextBox_5.LocalScript 
+coroutine.wrap(OJIVZB_fake_script)()
+local function NAZYK_fake_script() -- TextBox_5.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1033,8 +1033,8 @@ local function UYFP_fake_script() -- TextBox_5.LocalScript
 		end))
 	end)
 end
-coroutine.wrap(UYFP_fake_script)()
-local function TCGAY_fake_script() -- Frame.Dragify 
+coroutine.wrap(NAZYK_fake_script)()
+local function JXZK_fake_script() -- Frame.Dragify 
 	local script = Instance.new('LocalScript', Frame)
 
 	local UIS = game:GetService("UserInputService")
@@ -1075,4 +1075,4 @@ local function TCGAY_fake_script() -- Frame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(TCGAY_fake_script)()
+coroutine.wrap(JXZK_fake_script)()
