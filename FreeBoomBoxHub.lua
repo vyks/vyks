@@ -1,7 +1,9 @@
---Locals--
+-- Gui to Lua
+-- Version: 3.2
 
+-- Instances:
 local toggled = false
-local TabTester = Instance.new("ScreenGui")
+local FreeHubUi = Instance.new("ScreenGui")
 local MainBackground = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TabContent = Instance.new("Frame")
@@ -24,7 +26,7 @@ local RawLinkCopy1 = Instance.new("TextButton")
 local UICorner_8 = Instance.new("UICorner")
 local DiscordCopy1 = Instance.new("TextButton")
 local UICorner_9 = Instance.new("UICorner")
-local DiscordDesc1 = Instance.new("TextLabel")
+local Warning1 = Instance.new("TextLabel")
 local RawLinkDesc1 = Instance.new("TextLabel")
 local Execute1 = Instance.new("TextButton")
 local UICorner_10 = Instance.new("UICorner")
@@ -52,6 +54,9 @@ local Execute4 = Instance.new("TextButton")
 local UICorner_16 = Instance.new("UICorner")
 local RawLinkCopy4 = Instance.new("TextButton")
 local UICorner_17 = Instance.new("UICorner")
+local DiscordCopy4 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local DiscordDesc4 = Instance.new("TextLabel")
 local Tab5Frame = Instance.new("Frame")
 local Tab5Title = Instance.new("TextLabel")
 local AboutMe2 = Instance.new("TextLabel")
@@ -59,23 +64,23 @@ local AboutMe1 = Instance.new("TextLabel")
 local AboutMe3 = Instance.new("TextLabel")
 local SupportDesc = Instance.new("TextLabel")
 local SupportLink = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
+local Warning1_2 = Instance.new("TextLabel")
 local HeaderContent = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local Minimize = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
+local UICorner_20 = Instance.new("UICorner")
 local Watermark = Instance.new("TextLabel")
-MainBackground.Active = true
 MainBackground.Draggable = true
 
 --Properties:
 
-TabTester.Name = "TabTester"
-TabTester.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-TabTester.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+FreeHubUi.Name = "FreeHubUi"
+FreeHubUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+FreeHubUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainBackground.Name = "MainBackground"
-MainBackground.Parent = TabTester
+MainBackground.Parent = FreeHubUi
 MainBackground.Active = true
 MainBackground.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
 MainBackground.ClipsDescendants = true
@@ -219,18 +224,18 @@ DiscordCopy1.TextSize = 14.000
 UICorner_9.CornerRadius = UDim.new(0, 5)
 UICorner_9.Parent = DiscordCopy1
 
-DiscordDesc1.Name = "DiscordDesc1"
-DiscordDesc1.Parent = Tab1Frame
-DiscordDesc1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc1.BackgroundTransparency = 1.000
-DiscordDesc1.Position = UDim2.new(0.286000013, 0, 0.403778315, 0)
-DiscordDesc1.Size = UDim2.new(0, 218, 0, 50)
-DiscordDesc1.Font = Enum.Font.Cartoon
-DiscordDesc1.Text = "This button will set your clipboard to the discord invite to the Aux Pineapple server!"
-DiscordDesc1.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc1.TextSize = 15.000
-DiscordDesc1.TextWrapped = true
-DiscordDesc1.TextYAlignment = Enum.TextYAlignment.Top
+Warning1.Name = "Warning1"
+Warning1.Parent = Tab1Frame
+Warning1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Warning1.BackgroundTransparency = 1.000
+Warning1.Position = UDim2.new(0.286000013, 0, 0.403778315, 0)
+Warning1.Size = UDim2.new(0, 218, 0, 50)
+Warning1.Font = Enum.Font.Cartoon
+Warning1.Text = "This button will set your clipboard to the discord invite to the Aux Pineapple server!"
+Warning1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Warning1.TextSize = 15.000
+Warning1.TextWrapped = true
+Warning1.TextYAlignment = Enum.TextYAlignment.Top
 
 RawLinkDesc1.Name = "RawLinkDesc1"
 RawLinkDesc1.Parent = Tab1Frame
@@ -415,7 +420,7 @@ RawLinkDesc4.Name = "RawLinkDesc4"
 RawLinkDesc4.Parent = Tab4Frame
 RawLinkDesc4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkDesc4.BackgroundTransparency = 1.000
-RawLinkDesc4.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
+RawLinkDesc4.Position = UDim2.new(0.286000013, 0, 0.680000007, 0)
 RawLinkDesc4.Size = UDim2.new(0, 218, 0, 50)
 RawLinkDesc4.Font = Enum.Font.Cartoon
 RawLinkDesc4.Text = "This button will set your clipboard to the github raw of the Sanity Hub obfuscated source code!"
@@ -451,7 +456,7 @@ UICorner_16.Parent = Execute4
 RawLinkCopy4.Name = "RawLinkCopy4"
 RawLinkCopy4.Parent = Tab4Frame
 RawLinkCopy4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy4.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
+RawLinkCopy4.Position = UDim2.new(0.0680000037, 0, 0.681999981, 0)
 RawLinkCopy4.Size = UDim2.new(0, 80, 0, 40)
 RawLinkCopy4.Font = Enum.Font.Cartoon
 RawLinkCopy4.Text = "Copy Lua"
@@ -460,6 +465,32 @@ RawLinkCopy4.TextSize = 14.000
 
 UICorner_17.CornerRadius = UDim.new(0, 5)
 UICorner_17.Parent = RawLinkCopy4
+
+DiscordCopy4.Name = "DiscordCopy4"
+DiscordCopy4.Parent = Tab4Frame
+DiscordCopy4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+DiscordCopy4.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
+DiscordCopy4.Size = UDim2.new(0, 80, 0, 40)
+DiscordCopy4.Font = Enum.Font.Cartoon
+DiscordCopy4.Text = "Copy Discord"
+DiscordCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordCopy4.TextSize = 14.000
+
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = DiscordCopy4
+
+DiscordDesc4.Name = "DiscordDesc4"
+DiscordDesc4.Parent = Tab4Frame
+DiscordDesc4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordDesc4.BackgroundTransparency = 1.000
+DiscordDesc4.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
+DiscordDesc4.Size = UDim2.new(0, 218, 0, 50)
+DiscordDesc4.Font = Enum.Font.Cartoon
+DiscordDesc4.Text = "This button will set your clipboard to the discord invite to the Sanity Hub server!"
+DiscordDesc4.TextColor3 = Color3.fromRGB(255, 255, 255)
+DiscordDesc4.TextSize = 15.000
+DiscordDesc4.TextWrapped = true
+DiscordDesc4.TextYAlignment = Enum.TextYAlignment.Top
 
 Tab5Frame.Name = "Tab5Frame"
 Tab5Frame.Parent = TabContent
@@ -498,7 +529,7 @@ AboutMe1.Parent = Tab5Frame
 AboutMe1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AboutMe1.BackgroundTransparency = 1.000
 AboutMe1.Position = UDim2.new(0.569810808, 0, 0.231999993, 0)
-AboutMe1.Size = UDim2.new(0, 120, 0, 18)
+AboutMe1.Size = UDim2.new(0, 118, 0, 18)
 AboutMe1.Font = Enum.Font.Cartoon
 AboutMe1.Text = "Ui Design - vykzs"
 AboutMe1.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -527,7 +558,7 @@ SupportDesc.BorderSizePixel = 0
 SupportDesc.Position = UDim2.new(0.0243243128, 0, 0.103448302, 0)
 SupportDesc.Size = UDim2.new(0, 180, 0, 70)
 SupportDesc.Font = Enum.Font.Cartoon
-SupportDesc.Text = "If you happen to have the discords to Fanta or Sanity feel free to dm me or join this server below!"
+SupportDesc.Text = "If you happen to have the discord to Fanta feel free to dm me (vyk#8174) or join this server below!"
 SupportDesc.TextColor3 = Color3.fromRGB(255, 255, 255)
 SupportDesc.TextSize = 17.000
 SupportDesc.TextWrapped = true
@@ -543,8 +574,21 @@ SupportLink.Text = "Copy Discord"
 SupportLink.TextColor3 = Color3.fromRGB(255, 255, 255)
 SupportLink.TextSize = 14.000
 
-UICorner_18.CornerRadius = UDim.new(0, 5)
-UICorner_18.Parent = SupportLink
+UICorner_19.CornerRadius = UDim.new(0, 5)
+UICorner_19.Parent = SupportLink
+
+Warning1_2.Name = "Warning1"
+Warning1_2.Parent = Tab5Frame
+Warning1_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Warning1_2.BackgroundTransparency = 1.000
+Warning1_2.Position = UDim2.new(0.426540554, 0, 0.615601063, 0)
+Warning1_2.Size = UDim2.new(0, 201, 0, 54)
+Warning1_2.Font = Enum.Font.Cartoon
+Warning1_2.Text = "Aux Pineapple doesn't work at the moment waiting for Machport to fix it"
+Warning1_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Warning1_2.TextSize = 15.000
+Warning1_2.TextWrapped = true
+Warning1_2.TextYAlignment = Enum.TextYAlignment.Top
 
 HeaderContent.Name = "HeaderContent"
 HeaderContent.Parent = MainBackground
@@ -574,8 +618,8 @@ Minimize.Text = "Minimize"
 Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
 Minimize.TextSize = 14.000
 
-UICorner_19.CornerRadius = UDim.new(0, 5)
-UICorner_19.Parent = Minimize
+UICorner_20.CornerRadius = UDim.new(0, 5)
+UICorner_20.Parent = Minimize
 
 Watermark.Name = "Watermark"
 Watermark.Parent = MainBackground
@@ -691,6 +735,11 @@ end)
 DiscordCopy3.MouseButton1Down:Connect(function()
     setclipboard("https://discord.gg/ZB9fJbED6H")
 end)
+
+DiscordCopy4.MouseButton1Down:Connect(function()
+    setclipboard("https://discord.gg/4kk3jmmsFH")
+end)
+
 
 SupportLink.MouseButton1Down:Connect(function()
 	setclipboard("https://discord.gg/28sk94mjA5")
