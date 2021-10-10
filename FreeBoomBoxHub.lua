@@ -1,80 +1,91 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
+--Locals Begin--
 local toggled = false
 local FreeHubUi = Instance.new("ScreenGui")
 local MainBackground = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
 local TabContent = Instance.new("Frame")
-local TabButtonHolder = Instance.new("Frame")
-local Tab1 = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local Tab2 = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local Tab3 = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local Tab4 = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local Tab5 = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
 local TabFrameBackground = Instance.new("Frame")
-local UICorner_7 = Instance.new("UICorner")
+local UICorner_2 = Instance.new("UICorner")
 local Tab1Frame = Instance.new("Frame")
 local Tab1Title = Instance.new("TextLabel")
 local RawLinkCopy1 = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
+local UICorner_3 = Instance.new("UICorner")
 local DiscordCopy1 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
+local UICorner_4 = Instance.new("UICorner")
 local DiscordDesc1 = Instance.new("TextLabel")
 local RawLinkDesc1 = Instance.new("TextLabel")
 local Execute1 = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
+local UICorner_5 = Instance.new("UICorner")
 local Tab2Frame = Instance.new("Frame")
 local RawLinkCopy2 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
+local UICorner_6 = Instance.new("UICorner")
 local RawLinkDesc2 = Instance.new("TextLabel")
 local Tab2Title = Instance.new("TextLabel")
 local Execute2 = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
+local UICorner_7 = Instance.new("UICorner")
 local Tab3Frame = Instance.new("Frame")
 local RawLinkCopy3 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
 local DiscordDesc3 = Instance.new("TextLabel")
 local RawLinkDesc3 = Instance.new("TextLabel")
 local Tab3Title = Instance.new("TextLabel")
 local DiscordCopy3 = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
+local UICorner_9 = Instance.new("UICorner")
 local Execute3 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local Tab4Frame = Instance.new("Frame")
 local RawLinkDesc4 = Instance.new("TextLabel")
 local Tab4Title = Instance.new("TextLabel")
 local Execute4 = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
+local UICorner_11 = Instance.new("UICorner")
 local RawLinkCopy4 = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
 local DiscordCopy4 = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
+local UICorner_13 = Instance.new("UICorner")
 local DiscordDesc4 = Instance.new("TextLabel")
-local Tab5Frame = Instance.new("Frame")
-local Tab5Title = Instance.new("TextLabel")
+local CreditsFrame = Instance.new("Frame")
+local CreditsTitle = Instance.new("TextLabel")
 local AboutMe2 = Instance.new("TextLabel")
 local AboutMe1 = Instance.new("TextLabel")
 local AboutMe3 = Instance.new("TextLabel")
 local SupportDesc = Instance.new("TextLabel")
 local SupportLink = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
+local UICorner_14 = Instance.new("UICorner")
 local Warning1 = Instance.new("TextLabel")
+local TabButtonHolder = Instance.new("ScrollingFrame")
+local Tab1 = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Tab2 = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Tab3 = Instance.new("TextButton")
+local UICorner_17 = Instance.new("UICorner")
+local Tab4 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local Tab5 = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local Tab5Frame = Instance.new("Frame")
+local _52Desc = Instance.new("TextLabel")
+local Tab5Title = Instance.new("TextLabel")
+local Execute52 = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local _51Desc = Instance.new("TextLabel")
+local Execute51 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local CopyTutorial1 = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local CopyPresets = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
 local HeaderContent = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
 local Minimize = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
+local UICorner_24 = Instance.new("UICorner")
 local Watermark = Instance.new("TextLabel")
+local CreditsButton = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
 MainBackground.Draggable = true
+--Locals End--
 
---Properties:
-
+--Ui Stuff Begin--
 FreeHubUi.Name = "FreeHubUi"
 FreeHubUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 FreeHubUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -97,77 +108,6 @@ TabContent.BackgroundTransparency = 1.000
 TabContent.Position = UDim2.new(0, 0, 0.168750018, 0)
 TabContent.Size = UDim2.new(0, 500, 0, 210)
 
-TabButtonHolder.Name = "TabButtonHolder"
-TabButtonHolder.Parent = TabContent
-TabButtonHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TabButtonHolder.BackgroundTransparency = 1.000
-TabButtonHolder.Size = UDim2.new(0, 124, 0, 253)
-
-Tab1.Name = "Tab1"
-Tab1.Parent = TabButtonHolder
-Tab1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab1.Position = UDim2.new(0.0563225821, 0, 0.0480000004, 0)
-Tab1.Size = UDim2.new(0, 110, 0, 35)
-Tab1.Font = Enum.Font.Cartoon
-Tab1.Text = "Aux Pineapple"
-Tab1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab1.TextSize = 16.000
-
-UICorner_2.CornerRadius = UDim.new(0, 5)
-UICorner_2.Parent = Tab1
-
-Tab2.Name = "Tab2"
-Tab2.Parent = TabButtonHolder
-Tab2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab2.Position = UDim2.new(0.0563225821, 0, 0.201527253, 0)
-Tab2.Size = UDim2.new(0, 110, 0, 35)
-Tab2.Font = Enum.Font.Cartoon
-Tab2.Text = "Fanta Hub"
-Tab2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab2.TextSize = 16.000
-
-UICorner_3.CornerRadius = UDim.new(0, 5)
-UICorner_3.Parent = Tab2
-
-Tab3.Name = "Tab3"
-Tab3.Parent = TabButtonHolder
-Tab3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab3.Position = UDim2.new(0.0563225821, 0, 0.355968058, 0)
-Tab3.Size = UDim2.new(0, 110, 0, 35)
-Tab3.Font = Enum.Font.Cartoon
-Tab3.Text = "Verts Hub"
-Tab3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab3.TextSize = 16.000
-
-UICorner_4.CornerRadius = UDim.new(0, 5)
-UICorner_4.Parent = Tab3
-
-Tab4.Name = "Tab4"
-Tab4.Parent = TabButtonHolder
-Tab4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab4.Position = UDim2.new(0.0563225821, 0, 0.510408759, 0)
-Tab4.Size = UDim2.new(0, 110, 0, 35)
-Tab4.Font = Enum.Font.Cartoon
-Tab4.Text = "Sanity Hub"
-Tab4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab4.TextSize = 16.000
-
-UICorner_5.CornerRadius = UDim.new(0, 5)
-UICorner_5.Parent = Tab4
-
-Tab5.Name = "Tab5"
-Tab5.Parent = TabButtonHolder
-Tab5.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab5.Position = UDim2.new(0.0563225821, 0, 0.664849639, 0)
-Tab5.Size = UDim2.new(0, 110, 0, 35)
-Tab5.Font = Enum.Font.Cartoon
-Tab5.Text = "Credits"
-Tab5.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab5.TextSize = 16.000
-
-UICorner_6.CornerRadius = UDim.new(0, 5)
-UICorner_6.Parent = Tab5
-
 TabFrameBackground.Name = "TabFrameBackground"
 TabFrameBackground.Parent = TabContent
 TabFrameBackground.BackgroundColor3 = Color3.fromRGB(61, 63, 67)
@@ -175,9 +115,11 @@ TabFrameBackground.BackgroundTransparency = 0.500
 TabFrameBackground.Position = UDim2.new(0.247999996, 0, 0, 0)
 TabFrameBackground.Size = UDim2.new(0, 370, 0, 203)
 
-UICorner_7.CornerRadius = UDim.new(0, 5)
-UICorner_7.Parent = TabFrameBackground
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = TabFrameBackground
+--Ui Stuff End--
 
+--Aux Pineapple Begin--
 Tab1Frame.Name = "Tab1Frame"
 Tab1Frame.Parent = TabContent
 Tab1Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -208,8 +150,8 @@ RawLinkCopy1.Text = "Copy Lua"
 RawLinkCopy1.TextColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkCopy1.TextSize = 14.000
 
-UICorner_8.CornerRadius = UDim.new(0, 5)
-UICorner_8.Parent = RawLinkCopy1
+UICorner_3.CornerRadius = UDim.new(0, 5)
+UICorner_3.Parent = RawLinkCopy1
 
 DiscordCopy1.Name = "DiscordCopy1"
 DiscordCopy1.Parent = Tab1Frame
@@ -221,8 +163,8 @@ DiscordCopy1.Text = "Copy Discord"
 DiscordCopy1.TextColor3 = Color3.fromRGB(255, 255, 255)
 DiscordCopy1.TextSize = 14.000
 
-UICorner_9.CornerRadius = UDim.new(0, 5)
-UICorner_9.Parent = DiscordCopy1
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = DiscordCopy1
 
 DiscordDesc1.Name = "DiscordDesc1"
 DiscordDesc1.Parent = Tab1Frame
@@ -260,9 +202,11 @@ Execute1.Text = "Console!"
 Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute1.TextSize = 17.000
 
-UICorner_10.CornerRadius = UDim.new(0, 5)
-UICorner_10.Parent = Execute1
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = Execute1
+--Aux Pineapple End--
 
+--Fanta Hub Begin--
 Tab2Frame.Name = "Tab2Frame"
 Tab2Frame.Parent = TabContent
 Tab2Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -282,8 +226,8 @@ RawLinkCopy2.Text = "Copy Lua"
 RawLinkCopy2.TextColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkCopy2.TextSize = 14.000
 
-UICorner_11.CornerRadius = UDim.new(0, 5)
-UICorner_11.Parent = RawLinkCopy2
+UICorner_6.CornerRadius = UDim.new(0, 5)
+UICorner_6.Parent = RawLinkCopy2
 
 RawLinkDesc2.Name = "RawLinkDesc2"
 RawLinkDesc2.Parent = Tab2Frame
@@ -319,9 +263,11 @@ Execute2.Text = "Execute!"
 Execute2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute2.TextSize = 17.000
 
-UICorner_12.CornerRadius = UDim.new(0, 5)
-UICorner_12.Parent = Execute2
+UICorner_7.CornerRadius = UDim.new(0, 5)
+UICorner_7.Parent = Execute2
+--Fanta Hub End--
 
+--Verts Hub Begin--
 Tab3Frame.Name = "Tab3Frame"
 Tab3Frame.Parent = TabContent
 Tab3Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -341,8 +287,8 @@ RawLinkCopy3.Text = "Copy Lua"
 RawLinkCopy3.TextColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkCopy3.TextSize = 14.000
 
-UICorner_13.CornerRadius = UDim.new(0, 5)
-UICorner_13.Parent = RawLinkCopy3
+UICorner_8.CornerRadius = UDim.new(0, 5)
+UICorner_8.Parent = RawLinkCopy3
 
 DiscordDesc3.Name = "DiscordDesc3"
 DiscordDesc3.Parent = Tab3Frame
@@ -391,8 +337,8 @@ DiscordCopy3.Text = "Copy Discord"
 DiscordCopy3.TextColor3 = Color3.fromRGB(255, 255, 255)
 DiscordCopy3.TextSize = 14.000
 
-UICorner_14.CornerRadius = UDim.new(0, 5)
-UICorner_14.Parent = DiscordCopy3
+UICorner_9.CornerRadius = UDim.new(0, 5)
+UICorner_9.Parent = DiscordCopy3
 
 Execute3.Name = "Execute3"
 Execute3.Parent = Tab3Frame
@@ -404,9 +350,11 @@ Execute3.Text = "Execute!"
 Execute3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute3.TextSize = 17.000
 
-UICorner_15.CornerRadius = UDim.new(0, 5)
-UICorner_15.Parent = Execute3
+UICorner_10.CornerRadius = UDim.new(0, 5)
+UICorner_10.Parent = Execute3
+--Verts Hub End--
 
+--Sanity Hub Begin--
 Tab4Frame.Name = "Tab4Frame"
 Tab4Frame.Parent = TabContent
 Tab4Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -450,8 +398,8 @@ Execute4.Text = "Execute!"
 Execute4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute4.TextSize = 17.000
 
-UICorner_16.CornerRadius = UDim.new(0, 5)
-UICorner_16.Parent = Execute4
+UICorner_11.CornerRadius = UDim.new(0, 5)
+UICorner_11.Parent = Execute4
 
 RawLinkCopy4.Name = "RawLinkCopy4"
 RawLinkCopy4.Parent = Tab4Frame
@@ -463,8 +411,8 @@ RawLinkCopy4.Text = "Copy Lua"
 RawLinkCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
 RawLinkCopy4.TextSize = 14.000
 
-UICorner_17.CornerRadius = UDim.new(0, 5)
-UICorner_17.Parent = RawLinkCopy4
+UICorner_12.CornerRadius = UDim.new(0, 5)
+UICorner_12.Parent = RawLinkCopy4
 
 DiscordCopy4.Name = "DiscordCopy4"
 DiscordCopy4.Parent = Tab4Frame
@@ -476,8 +424,8 @@ DiscordCopy4.Text = "Copy Discord"
 DiscordCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
 DiscordCopy4.TextSize = 14.000
 
-UICorner_18.CornerRadius = UDim.new(0, 5)
-UICorner_18.Parent = DiscordCopy4
+UICorner_13.CornerRadius = UDim.new(0, 5)
+UICorner_13.Parent = DiscordCopy4
 
 DiscordDesc4.Name = "DiscordDesc4"
 DiscordDesc4.Parent = Tab4Frame
@@ -491,28 +439,30 @@ DiscordDesc4.TextColor3 = Color3.fromRGB(255, 255, 255)
 DiscordDesc4.TextSize = 15.000
 DiscordDesc4.TextWrapped = true
 DiscordDesc4.TextYAlignment = Enum.TextYAlignment.Top
+--Verts Hub End--
 
-Tab5Frame.Name = "Tab5Frame"
-Tab5Frame.Parent = TabContent
-Tab5Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab5Frame.BackgroundTransparency = 1.000
-Tab5Frame.ClipsDescendants = true
-Tab5Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
-Tab5Frame.Size = UDim2.new(0, 370, 0, 203)
+--Credits Begin--
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = TabContent
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsFrame.BackgroundTransparency = 1.000
+CreditsFrame.ClipsDescendants = true
+CreditsFrame.Position = UDim2.new(0.247999996, 0, 0, 0)
+CreditsFrame.Size = UDim2.new(0, 370, 0, 203)
 
-Tab5Title.Name = "Tab5Title"
-Tab5Title.Parent = Tab5Frame
-Tab5Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab5Title.BackgroundTransparency = 1.000
-Tab5Title.Position = UDim2.new(0.459459454, 0, 0, 0)
-Tab5Title.Size = UDim2.new(0, 200, 0, 50)
-Tab5Title.Font = Enum.Font.Cartoon
-Tab5Title.Text = "Credits"
-Tab5Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab5Title.TextSize = 20.000
+CreditsTitle.Name = "CreditsTitle"
+CreditsTitle.Parent = CreditsFrame
+CreditsTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsTitle.BackgroundTransparency = 1.000
+CreditsTitle.Position = UDim2.new(0.459459454, 0, 0, 0)
+CreditsTitle.Size = UDim2.new(0, 200, 0, 50)
+CreditsTitle.Font = Enum.Font.Cartoon
+CreditsTitle.Text = "Credits"
+CreditsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditsTitle.TextSize = 20.000
 
 AboutMe2.Name = "AboutMe2"
-AboutMe2.Parent = Tab5Frame
+AboutMe2.Parent = CreditsFrame
 AboutMe2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AboutMe2.BackgroundTransparency = 1.000
 AboutMe2.Position = UDim2.new(0.513243258, 0, 0.330000013, 0)
@@ -525,11 +475,11 @@ AboutMe2.TextWrapped = true
 AboutMe2.TextYAlignment = Enum.TextYAlignment.Top
 
 AboutMe1.Name = "AboutMe1"
-AboutMe1.Parent = Tab5Frame
+AboutMe1.Parent = CreditsFrame
 AboutMe1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AboutMe1.BackgroundTransparency = 1.000
 AboutMe1.Position = UDim2.new(0.569810808, 0, 0.231999993, 0)
-AboutMe1.Size = UDim2.new(0, 118, 0, 18)
+AboutMe1.Size = UDim2.new(0, 120, 0, 18)
 AboutMe1.Font = Enum.Font.Cartoon
 AboutMe1.Text = "Ui Design - vykzs"
 AboutMe1.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -538,7 +488,7 @@ AboutMe1.TextWrapped = true
 AboutMe1.TextYAlignment = Enum.TextYAlignment.Top
 
 AboutMe3.Name = "AboutMe3"
-AboutMe3.Parent = Tab5Frame
+AboutMe3.Parent = CreditsFrame
 AboutMe3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 AboutMe3.BackgroundTransparency = 1.000
 AboutMe3.Position = UDim2.new(0.483783782, 0, 0.418719232, 0)
@@ -551,7 +501,7 @@ AboutMe3.TextWrapped = true
 AboutMe3.TextYAlignment = Enum.TextYAlignment.Top
 
 SupportDesc.Name = "SupportDesc"
-SupportDesc.Parent = Tab5Frame
+SupportDesc.Parent = CreditsFrame
 SupportDesc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SupportDesc.BackgroundTransparency = 1.000
 SupportDesc.BorderSizePixel = 0
@@ -565,7 +515,7 @@ SupportDesc.TextWrapped = true
 SupportDesc.TextYAlignment = Enum.TextYAlignment.Top
 
 SupportLink.Name = "SupportLink"
-SupportLink.Parent = Tab5Frame
+SupportLink.Parent = CreditsFrame
 SupportLink.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 SupportLink.Position = UDim2.new(0.0972972959, 0, 0.507389188, 0)
 SupportLink.Size = UDim2.new(0, 110, 0, 35)
@@ -574,11 +524,11 @@ SupportLink.Text = "Copy Discord"
 SupportLink.TextColor3 = Color3.fromRGB(255, 255, 255)
 SupportLink.TextSize = 14.000
 
-UICorner_19.CornerRadius = UDim.new(0, 5)
-UICorner_19.Parent = SupportLink
+UICorner_14.CornerRadius = UDim.new(0, 5)
+UICorner_14.Parent = SupportLink
 
 Warning1.Name = "Warning1"
-Warning1.Parent = Tab5Frame
+Warning1.Parent = CreditsFrame
 Warning1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Warning1.BackgroundTransparency = 1.000
 Warning1.Position = UDim2.new(0.426540554, 0, 0.615601063, 0)
@@ -589,7 +539,187 @@ Warning1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Warning1.TextSize = 15.000
 Warning1.TextWrapped = true
 Warning1.TextYAlignment = Enum.TextYAlignment.Top
+--Credits End--
 
+--Button Holder Begin--
+TabButtonHolder.Name = "TabButtonHolder"
+TabButtonHolder.Parent = TabContent
+TabButtonHolder.Active = true
+TabButtonHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TabButtonHolder.BackgroundTransparency = 1.000
+TabButtonHolder.ScrollBarImageColor3 = Color3.fromRGB(138, 161, 177)
+TabButtonHolder.BorderSizePixel = 0
+TabButtonHolder.Position = UDim2.new(0, 0, 0, 13)
+TabButtonHolder.Size = UDim2.new(0, 124, 0, 148)
+TabButtonHolder.ScrollBarThickness = 6
+
+Tab1.Name = "Tab1"
+Tab1.Parent = TabButtonHolder
+Tab1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Tab1.Position = UDim2.new(0, 6, 0, 0)
+Tab1.Size = UDim2.new(0, 110, 0, 35)
+Tab1.Font = Enum.Font.Cartoon
+Tab1.Text = "Aux Pineapple"
+Tab1.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab1.TextSize = 16.000
+
+UICorner_15.CornerRadius = UDim.new(0, 5)
+UICorner_15.Parent = Tab1
+
+Tab2.Name = "Tab2"
+Tab2.Parent = TabButtonHolder
+Tab2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Tab2.Position = UDim2.new(0, 6, 0, 37)
+Tab2.Size = UDim2.new(0, 110, 0, 35)
+Tab2.Font = Enum.Font.Cartoon
+Tab2.Text = "Fanta Hub"
+Tab2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab2.TextSize = 16.000
+
+UICorner_16.CornerRadius = UDim.new(0, 5)
+UICorner_16.Parent = Tab2
+
+Tab3.Name = "Tab3"
+Tab3.Parent = TabButtonHolder
+Tab3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Tab3.Position = UDim2.new(0, 6, 0, 74)
+Tab3.Size = UDim2.new(0, 110, 0, 35)
+Tab3.Font = Enum.Font.Cartoon
+Tab3.Text = "Verts Hub"
+Tab3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab3.TextSize = 16.000
+
+UICorner_17.CornerRadius = UDim.new(0, 5)
+UICorner_17.Parent = Tab3
+
+Tab4.Name = "Tab4"
+Tab4.Parent = TabButtonHolder
+Tab4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Tab4.Position = UDim2.new(0, 6, 0, 111)
+Tab4.Size = UDim2.new(0, 110, 0, 35)
+Tab4.Font = Enum.Font.Cartoon
+Tab4.Text = "Sanity Hub"
+Tab4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab4.TextSize = 16.000
+
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = Tab4
+
+Tab5.Name = "Tab5"
+Tab5.Parent = TabButtonHolder
+Tab5.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Tab5.Position = UDim2.new(0, 6, 0, 148)
+Tab5.Size = UDim2.new(0, 110, 0, 35)
+Tab5.Font = Enum.Font.Cartoon
+Tab5.Text = "Lucious Hub"
+Tab5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab5.TextSize = 16.000
+
+UICorner_19.CornerRadius = UDim.new(0, 5)
+UICorner_19.Parent = Tab5
+--Button Holder End--
+
+--Lucious Hub Begin--
+Tab5Frame.Name = "Tab5Frame"
+Tab5Frame.Parent = TabContent
+Tab5Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab5Frame.BackgroundTransparency = 1.000
+Tab5Frame.ClipsDescendants = true
+Tab5Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
+Tab5Frame.Size = UDim2.new(0, 370, 0, 203)
+Tab5Frame.Visible = false
+
+_52Desc.Name = "5.2Desc"
+_52Desc.Parent = Tab5Frame
+_52Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_52Desc.BackgroundTransparency = 1.000
+_52Desc.Position = UDim2.new(0.286000013, 0, 0.680000067, 0)
+_52Desc.Size = UDim2.new(0, 226, 0, 50)
+_52Desc.Font = Enum.Font.Cartoon
+_52Desc.Text = "This will execute the premium version of Lucious Hub which doesn't work on Mac and might work on Windows."
+_52Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+_52Desc.TextSize = 15.000
+_52Desc.TextWrapped = true
+_52Desc.TextYAlignment = Enum.TextYAlignment.Top
+
+Tab5Title.Name = "Tab5Title"
+Tab5Title.Parent = Tab5Frame
+Tab5Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Tab5Title.BackgroundTransparency = 1.000
+Tab5Title.Position = UDim2.new(0.229459465, 0, 0.0442216769, 0)
+Tab5Title.Size = UDim2.new(0, 200, 0, 50)
+Tab5Title.Font = Enum.Font.Cartoon
+Tab5Title.Text = "Lucious Hub"
+Tab5Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab5Title.TextSize = 20.000
+
+Execute52.Name = "Execute5.2"
+Execute52.Parent = Tab5Frame
+Execute52.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Execute52.Position = UDim2.new(0.0680000037, 0, 0.681999981, 0)
+Execute52.Size = UDim2.new(0, 80, 0, 40)
+Execute52.Font = Enum.Font.Cartoon
+Execute52.Text = "Premium Hub"
+Execute52.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute52.TextSize = 14.000
+
+UICorner_20.CornerRadius = UDim.new(0, 5)
+UICorner_20.Parent = Execute52
+
+_51Desc.Name = "5.1Desc"
+_51Desc.Parent = Tab5Frame
+_51Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+_51Desc.BackgroundTransparency = 1.000
+_51Desc.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
+_51Desc.Size = UDim2.new(0, 218, 0, 50)
+_51Desc.Font = Enum.Font.Cartoon
+_51Desc.Text = "This will execute the normal version of Lucious Hub which works on both Mac and Windows."
+_51Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
+_51Desc.TextSize = 15.000
+_51Desc.TextWrapped = true
+_51Desc.TextYAlignment = Enum.TextYAlignment.Top
+
+Execute51.Name = "Execute5.1"
+Execute51.Parent = Tab5Frame
+Execute51.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Execute51.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
+Execute51.Size = UDim2.new(0, 80, 0, 40)
+Execute51.Font = Enum.Font.Cartoon
+Execute51.Text = "Normal Hub"
+Execute51.TextColor3 = Color3.fromRGB(255, 255, 255)
+Execute51.TextSize = 14.000
+
+UICorner_21.CornerRadius = UDim.new(0, 5)
+UICorner_21.Parent = Execute51
+
+CopyTutorial1.Name = "CopyTutorial1"
+CopyTutorial1.Parent = Tab5Frame
+CopyTutorial1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+CopyTutorial1.Position = UDim2.new(0, 29, 0, 18)
+CopyTutorial1.Size = UDim2.new(0, 90, 0, 40)
+CopyTutorial1.Font = Enum.Font.Cartoon
+CopyTutorial1.Text = "Copy Tutorial"
+CopyTutorial1.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyTutorial1.TextSize = 14.000
+
+UICorner_22.CornerRadius = UDim.new(0, 5)
+UICorner_22.Parent = CopyTutorial1
+
+CopyPresets.Name = "CopyPresets"
+CopyPresets.Parent = Tab5Frame
+CopyPresets.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+CopyPresets.Position = UDim2.new(0, 251, 0, 18)
+CopyPresets.Size = UDim2.new(0, 90, 0, 40)
+CopyPresets.Font = Enum.Font.Cartoon
+CopyPresets.Text = "Copy Presets"
+CopyPresets.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyPresets.TextSize = 14.000
+
+UICorner_23.CornerRadius = UDim.new(0, 5)
+UICorner_23.Parent = CopyPresets
+--Lucious Hub End--
+
+--Header Content Begin--
 HeaderContent.Name = "HeaderContent"
 HeaderContent.Parent = MainBackground
 HeaderContent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -618,8 +748,8 @@ Minimize.Text = "Minimize"
 Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
 Minimize.TextSize = 14.000
 
-UICorner_20.CornerRadius = UDim.new(0, 5)
-UICorner_20.Parent = Minimize
+UICorner_24.CornerRadius = UDim.new(0, 5)
+UICorner_24.Parent = Minimize
 
 Watermark.Name = "Watermark"
 Watermark.Parent = MainBackground
@@ -634,14 +764,28 @@ Watermark.TextColor3 = Color3.fromRGB(61, 63, 67)
 Watermark.TextSize = 14.000
 Watermark.TextTransparency = 0.800
 
---Scripts--
+CreditsButton.Name = "CreditsButton"
+CreditsButton.Parent = MainBackground
+CreditsButton.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+CreditsButton.Position = UDim2.new(0, 6, 0, 210)
+CreditsButton.Size = UDim2.new(0, 110, 0, 35)
+CreditsButton.Font = Enum.Font.Cartoon
+CreditsButton.Text = "Credits"
+CreditsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditsButton.TextSize = 16.000
 
+UICorner_25.CornerRadius = UDim.new(0, 5)
+UICorner_25.Parent = CreditsButton
+--Header Content End--
+
+--Tab Button Scripts Begin--
 Tab1.MouseButton1Down:Connect(function()
 	Tab1Frame.Visible = true
 	Tab2Frame.Visible = false
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = false
+	CreditsFrame.Visible = false
 end)
 
 Tab2.MouseButton1Down:connect(function()
@@ -650,6 +794,7 @@ Tab2.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = false
+	CreditsFrame.Visible = false
 end)
 
 Tab3.MouseButton1Down:connect(function()
@@ -658,8 +803,8 @@ Tab3.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = true
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = false
+	CreditsFrame.Visible = false
 end)
-
 
 Tab4.MouseButton1Down:connect(function()
 	Tab1Frame.Visible = false
@@ -667,8 +812,8 @@ Tab4.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = true
 	Tab5Frame.Visible = false
+	CreditsFrame.Visible = false
 end)
-
 
 Tab5.MouseButton1Down:connect(function()
 	Tab1Frame.Visible = false
@@ -676,8 +821,20 @@ Tab5.MouseButton1Down:connect(function()
 	Tab3Frame.Visible = false
 	Tab4Frame.Visible = false
 	Tab5Frame.Visible = true
+	CreditsFrame.Visible = false
 end)
 
+CreditsButton.MouseButton1Down:Connect(function()
+	Tab1Frame.Visible = false
+	Tab2Frame.Visible = false
+	Tab3Frame.Visible = false
+	Tab4Frame.Visible = false
+	Tab5Frame.Visible = false
+	CreditsFrame.Visible = true
+end)
+--Tab Button Scripts End--
+
+--Execution Button Scripts Begin--
 Execute1.MouseButton1Down:Connect(function()
 	--loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
     warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
@@ -699,6 +856,16 @@ Execute4.MouseButton1Down:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
 end)
 
+Execute51.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/NormalLucious.lua", true))()
+end)
+
+Execute52.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/PremiumLucious.lua", true))()
+end)
+--Execution Button Scripts End--
+
+--Minimzation Button Script Begin--
 Minimize.MouseButton1Down:Connect(function()
 	if toggled then
 		toggled = false
@@ -711,7 +878,9 @@ Minimize.MouseButton1Down:Connect(function()
 		TabContent.Visible = true
 	end
 end)
+--Minimization Button Script End--
 
+--Raw Link Button Scripts Begin--
 RawLinkCopy1.MouseButton1Down:Connect(function()
     setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua")
 end)
@@ -727,7 +896,9 @@ end)
 RawLinkCopy4.MouseButton1Down:Connect(function()
     setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua")
 end)
+--Raw Link Button Scripts End--
 
+--Discord Link Button Scripts Begin--
 DiscordCopy1.MouseButton1Down:Connect(function()
     setclipboard("https://discord.gg/B47nj3GbKe")
 end)
@@ -740,8 +911,19 @@ DiscordCopy4.MouseButton1Down:Connect(function()
     setclipboard("https://discord.gg/4kk3jmmsFH")
 end)
 
-
 SupportLink.MouseButton1Down:Connect(function()
 	setclipboard("https://discord.gg/28sk94mjA5")
 end)
-warn("Enjoy!")
+--Discord Link Button Scripts End--
+
+--Lucious Hub Extra Buttons Begin--
+CopyTutorial1.MouseButton1Down:Connect(function()
+	setclipboard("https://www.youtube.com/watch?v=JpW_w5hgxJo")
+end)
+
+CopyPresets.MouseButton1Down:Connect(function()
+	setclipboard("https://github.com/vyks/vyks/blob/main/LuciousPremiumPresets.zip?raw=true")
+end)
+--Lucious Hub Extra Buttons End--
+
+warn("Enjoy! - vykzs")
