@@ -4,40 +4,50 @@
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
+local DraggyHolder = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ForceClose = Instance.new("TextButton")
+local MiniPine = Instance.new("TextButton")
+local Launcher = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Image1 = Instance.new("ImageButton")
+local Image2 = Instance.new("ImageButton")
+local FakeLoader = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local Pineapple = Instance.new("Frame")
 local Frame = Instance.new("Frame")
-local Frame_2 = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
 local TextLabel_2 = Instance.new("TextLabel")
-local UICorner = Instance.new("UICorner")
-local TextBox = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
-local TextBox_2 = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local Frame_3 = Instance.new("Frame")
-local TextLabel_3 = Instance.new("TextLabel")
-local Frame_4 = Instance.new("Frame")
-local TextLabel_4 = Instance.new("TextLabel")
-local Frame_5 = Instance.new("Frame")
-local MAX = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
-local MAY = Instance.new("TextButton")
+local TextBox = Instance.new("TextButton")
 local UICorner_5 = Instance.new("UICorner")
-local MAZ = Instance.new("TextButton")
+local TextBox_2 = Instance.new("TextButton")
 local UICorner_6 = Instance.new("UICorner")
+local Frame_2 = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local Frame_3 = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local Frame_4 = Instance.new("Frame")
+local MAX = Instance.new("TextButton")
 local UICorner_7 = Instance.new("UICorner")
+local MAY = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local MAZ = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local UICorner_10 = Instance.new("UICorner")
 local TextLabel_5 = Instance.new("TextLabel")
 local TextLabel_6 = Instance.new("TextLabel")
 local TextLabel_7 = Instance.new("TextLabel")
-local Frame_6 = Instance.new("Frame")
+local Frame_5 = Instance.new("Frame")
 local WAX = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local WAY = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local WAZ = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
-local WavesOn = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
+local WAY = Instance.new("TextButton")
 local UICorner_12 = Instance.new("UICorner")
+local WAZ = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local WavesOn = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
 local TextLabel_8 = Instance.new("TextLabel")
 local TextLabel_9 = Instance.new("TextLabel")
 local TextLabel_10 = Instance.new("TextLabel")
@@ -45,26 +55,28 @@ local TextLabel_11 = Instance.new("TextLabel")
 local TextLabel_12 = Instance.new("TextLabel")
 local TextLabel_13 = Instance.new("TextLabel")
 local Distance = Instance.new("TextBox")
-local UICorner_13 = Instance.new("UICorner")
-local WaveInt = Instance.new("TextBox")
-local UICorner_14 = Instance.new("UICorner")
-local Speed = Instance.new("TextBox")
-local UICorner_15 = Instance.new("UICorner")
 local UICorner_16 = Instance.new("UICorner")
+local WaveInt = Instance.new("TextBox")
+local UICorner_17 = Instance.new("UICorner")
+local Speed = Instance.new("TextBox")
+local UICorner_18 = Instance.new("UICorner")
+local UICorner_19 = Instance.new("UICorner")
 local TextLabel_14 = Instance.new("TextLabel")
 local TextLabel_15 = Instance.new("TextLabel")
 local TextLabel_16 = Instance.new("TextLabel")
 local AudioId = Instance.new("TextBox")
-local UICorner_17 = Instance.new("UICorner")
-local Amount = Instance.new("TextBox")
-local UICorner_18 = Instance.new("UICorner")
-local TextBox_3 = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
-local TextBox_4 = Instance.new("TextButton")
 local UICorner_20 = Instance.new("UICorner")
-local TextBox_5 = Instance.new("TextButton")
+local Amount = Instance.new("TextBox")
 local UICorner_21 = Instance.new("UICorner")
+local TextBox_3 = Instance.new("TextButton")
 local UICorner_22 = Instance.new("UICorner")
+local TextBox_4 = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local TextBox_5 = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+local UICorner_25 = Instance.new("UICorner")
+DraggyHolder.Active = true
+DraggyHolder.Draggable = true
 
 --Properties:
 
@@ -72,22 +84,104 @@ ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 ScreenGui.ResetOnSpawn = false
 
-Frame.Parent = ScreenGui
-Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+DraggyHolder.Name = "DraggyHolder"
+DraggyHolder.Parent = ScreenGui
+DraggyHolder.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
+DraggyHolder.ClipsDescendants = true
+DraggyHolder.Position = UDim2.new(0.432569623, 0, 0.0374251604, 0)
+DraggyHolder.Size = UDim2.new(0, 100, 0, 70)
+
+UICorner.CornerRadius = UDim.new(0, 5)
+UICorner.Parent = DraggyHolder
+
+ForceClose.Name = "ForceClose"
+ForceClose.Parent = DraggyHolder
+ForceClose.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ForceClose.BackgroundTransparency = 1.000
+ForceClose.Size = UDim2.new(0, 25, 0, 25)
+ForceClose.ZIndex = 2
+ForceClose.Font = Enum.Font.SourceSans
+ForceClose.Text = ""
+ForceClose.TextColor3 = Color3.fromRGB(0, 0, 0)
+ForceClose.TextSize = 14.000
+
+MiniPine.Name = "MiniPine"
+MiniPine.Parent = DraggyHolder
+MiniPine.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MiniPine.BackgroundTransparency = 1.000
+MiniPine.Position = UDim2.new(0.75, 0, 3.7252903e-09, 0)
+MiniPine.Size = UDim2.new(0, 25, 0, 25)
+MiniPine.ZIndex = 2
+MiniPine.Font = Enum.Font.SourceSans
+MiniPine.Text = ""
+MiniPine.TextColor3 = Color3.fromRGB(0, 0, 0)
+MiniPine.TextSize = 14.000
+
+Launcher.Name = "Launcher"
+Launcher.Parent = DraggyHolder
+Launcher.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Launcher.BackgroundTransparency = 0.300
+Launcher.Position = UDim2.new(0, 7, 0, 34)
+Launcher.Size = UDim2.new(0, 85, 0, 25)
+Launcher.Font = Enum.Font.Code
+Launcher.Text = "Launch!"
+Launcher.TextColor3 = Color3.fromRGB(255, 255, 255)
+Launcher.TextSize = 17.000
+Launcher.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 5)
+UICorner_2.Parent = Launcher
+
+Image1.Name = "Image1"
+Image1.Parent = DraggyHolder
+Image1.BackgroundColor3 = Color3.fromRGB(163, 0, 6)
+Image1.BackgroundTransparency = 1.000
+Image1.Position = UDim2.new(0, 0, 0, -1)
+Image1.Size = UDim2.new(0, 25, 0, 25)
+Image1.Image = "rbxassetid://6764432408"
+Image1.ImageColor3 = Color3.fromRGB(138, 161, 177)
+Image1.ImageRectOffset = Vector2.new(100, 400)
+Image1.ImageRectSize = Vector2.new(50, 50)
+
+Image2.Name = "Image2"
+Image2.Parent = DraggyHolder
+Image2.BackgroundTransparency = 1.000
+Image2.Position = UDim2.new(0, 75, 0, -1)
+Image2.Size = UDim2.new(0, 25, 0, 25)
+Image2.Image = "rbxassetid://6764432408"
+Image2.ImageColor3 = Color3.fromRGB(138, 161, 177)
+Image2.ImageRectOffset = Vector2.new(50, 550)
+Image2.ImageRectSize = Vector2.new(50, 50)
+Image2.ImageTransparency = 0.300
+
+FakeLoader.Name = "FakeLoader"
+FakeLoader.Parent = ScreenGui
+FakeLoader.AnchorPoint = Vector2.new(0.5, 0.5)
+FakeLoader.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
+FakeLoader.Position = UDim2.new(0.85, 0, 0.76, 0)
+FakeLoader.Visible = false
+
+UICorner_3.CornerRadius = UDim.new(0, 5)
+UICorner_3.Parent = FakeLoader
+
+Pineapple.Name = "Pineapple"
+Pineapple.Parent = FakeLoader
+Pineapple.AnchorPoint = Vector2.new(0.5, 0.5)
+Pineapple.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
+Pineapple.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Pineapple.BorderSizePixel = 2
+Pineapple.ClipsDescendants = true
+Pineapple.Position = UDim2.new(0.5, 0, 0.5, 0)
+Pineapple.Size = UDim2.new(0, 429, 0, 385)
+Pineapple.Visible = false
+
+Frame.Parent = Pineapple
 Frame.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
-Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderSizePixel = 2
-Frame.ClipsDescendants = true
-Frame.Position = UDim2.new(0.5, 0, 0.564318538, 0)
-Frame.Size = UDim2.new(0, 429, 0, 385)
+Frame.BorderColor3 = Color3.fromRGB(61, 63, 67)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 429, 0, 30)
 
-Frame_2.Parent = Frame
-Frame_2.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
-Frame_2.BorderColor3 = Color3.fromRGB(61, 63, 67)
-Frame_2.BorderSizePixel = 0
-Frame_2.Size = UDim2.new(0, 429, 0, 30)
-
-TextLabel.Parent = Frame_2
+TextLabel.Parent = Frame
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.BackgroundTransparency = 1.000
 TextLabel.Position = UDim2.new(0.03737773, 0, 0.0666666701, 0)
@@ -98,7 +192,7 @@ TextLabel.TextColor3 = Color3.fromRGB(138, 161, 177)
 TextLabel.TextSize = 18.000
 TextLabel.TextXAlignment = Enum.TextXAlignment.Left
 
-TextLabel_2.Parent = Frame_2
+TextLabel_2.Parent = Frame
 TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Position = UDim2.new(0.837467074, 0, 0.0333333351, 0)
@@ -110,11 +204,11 @@ TextLabel_2.TextSize = 15.000
 TextLabel_2.TextTransparency = 0.700
 TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
 
-UICorner.CornerRadius = UDim.new(0, 5)
-UICorner.Parent = Frame_2
+UICorner_4.CornerRadius = UDim.new(0, 5)
+UICorner_4.Parent = Frame
 
 TextBox.Name = "TextBox"
-TextBox.Parent = Frame
+TextBox.Parent = Pineapple
 TextBox.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 TextBox.BorderColor3 = Color3.fromRGB(54, 54, 54)
 TextBox.Position = UDim2.new(0.345004708, 0, 0.104059465, 0)
@@ -124,11 +218,11 @@ TextBox.Text = "Visualize"
 TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.TextSize = 14.000
 
-UICorner_2.CornerRadius = UDim.new(0, 5)
-UICorner_2.Parent = TextBox
+UICorner_5.CornerRadius = UDim.new(0, 5)
+UICorner_5.Parent = TextBox
 
 TextBox_2.Name = "TextBox"
-TextBox_2.Parent = Frame
+TextBox_2.Parent = Pineapple
 TextBox_2.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 TextBox_2.BorderColor3 = Color3.fromRGB(54, 54, 54)
 TextBox_2.Position = UDim2.new(0.678338051, 0, 0.104059465, 0)
@@ -138,16 +232,16 @@ TextBox_2.Text = "Mass-Play"
 TextBox_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_2.TextSize = 14.000
 
-UICorner_3.CornerRadius = UDim.new(0, 5)
-UICorner_3.Parent = TextBox_2
+UICorner_6.CornerRadius = UDim.new(0, 5)
+UICorner_6.Parent = TextBox_2
 
-Frame_3.Parent = Frame
-Frame_3.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
-Frame_3.BackgroundTransparency = 0.550
-Frame_3.Position = UDim2.new(0.00932400953, 0, 0.296949506, 0)
-Frame_3.Size = UDim2.new(0, 420, 0, 1)
+Frame_2.Parent = Pineapple
+Frame_2.BackgroundColor3 = Color3.fromRGB(131, 131, 131)
+Frame_2.BackgroundTransparency = 0.550
+Frame_2.Position = UDim2.new(0.00932400953, 0, 0.296949506, 0)
+Frame_2.Size = UDim2.new(0, 420, 0, 1)
 
-TextLabel_3.Parent = Frame
+TextLabel_3.Parent = Pineapple
 TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.Position = UDim2.new(0.40856266, 0, 0.297674388, 0)
@@ -157,14 +251,14 @@ TextLabel_3.Text = "Settings"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 15.000
 
-Frame_4.Parent = Frame
-Frame_4.BackgroundColor3 = Color3.fromRGB(61, 63, 67)
-Frame_4.BackgroundTransparency = 0.500
-Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_4.Position = UDim2.new(0.0233100224, 0, 0.384053171, 0)
-Frame_4.Size = UDim2.new(0, 408, 0, 224)
+Frame_3.Parent = Pineapple
+Frame_3.BackgroundColor3 = Color3.fromRGB(61, 63, 67)
+Frame_3.BackgroundTransparency = 0.500
+Frame_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_3.Position = UDim2.new(0.0233100224, 0, 0.384053171, 0)
+Frame_3.Size = UDim2.new(0, 408, 0, 224)
 
-TextLabel_4.Parent = Frame_4
+TextLabel_4.Parent = Frame_3
 TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.BackgroundTransparency = 1.000
 TextLabel_4.Position = UDim2.new(0.0606433637, 0, 0.0342337564, 0)
@@ -174,93 +268,93 @@ TextLabel_4.Text = "Main Angle"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 13.000
 
-Frame_5.Parent = Frame_4
-Frame_5.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Frame_5.BackgroundTransparency = 0.800
-Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_5.Position = UDim2.new(0.0147058824, 0, 0.163043424, 0)
-Frame_5.Size = UDim2.new(0, 107, 0, 173)
+Frame_4.Parent = Frame_3
+Frame_4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Frame_4.BackgroundTransparency = 0.800
+Frame_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_4.Position = UDim2.new(0.0147058824, 0, 0.163043424, 0)
+Frame_4.Size = UDim2.new(0, 107, 0, 173)
 
 MAX.Name = "MAX"
-MAX.Parent = Frame_5
+MAX.Parent = Frame_4
 MAX.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-MAX.Position = UDim2.new(0, 10, 0, 10)
+MAX.Position = UDim2.new(0, 10, 0, 15)
 MAX.Size = UDim2.new(0, 34, 0, 24)
 MAX.Font = Enum.Font.Code
 MAX.Text = "X"
 MAX.TextColor3 = Color3.fromRGB(53, 53, 53)
 MAX.TextSize = 14.000
 
-UICorner_4.CornerRadius = UDim.new(0, 5)
-UICorner_4.Parent = MAX
+UICorner_7.CornerRadius = UDim.new(0, 5)
+UICorner_7.Parent = MAX
 
 MAY.Name = "MAY"
-MAY.Parent = Frame_5
+MAY.Parent = Frame_4
 MAY.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-MAY.Position = UDim2.new(0, 9, 0, 70)
+MAY.Position = UDim2.new(0, 9, 0, 75)
 MAY.Size = UDim2.new(0, 35, 0, 24)
 MAY.Font = Enum.Font.Code
 MAY.Text = "Y"
 MAY.TextColor3 = Color3.fromRGB(53, 53, 53)
 MAY.TextSize = 14.000
 
-UICorner_5.CornerRadius = UDim.new(0, 5)
-UICorner_5.Parent = MAY
+UICorner_8.CornerRadius = UDim.new(0, 5)
+UICorner_8.Parent = MAY
 
 MAZ.Name = "MAZ"
-MAZ.Parent = Frame_5
+MAZ.Parent = Frame_4
 MAZ.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-MAZ.Position = UDim2.new(0, 9, 0, 130)
+MAZ.Position = UDim2.new(0, 9, 0, 135)
 MAZ.Size = UDim2.new(0, 35, 0, 24)
 MAZ.Font = Enum.Font.Code
 MAZ.Text = "Z"
 MAZ.TextColor3 = Color3.fromRGB(53, 53, 53)
 MAZ.TextSize = 14.000
 
-UICorner_6.CornerRadius = UDim.new(0, 5)
-UICorner_6.Parent = MAZ
+UICorner_9.CornerRadius = UDim.new(0, 5)
+UICorner_9.Parent = MAZ
 
-UICorner_7.Parent = Frame_5
+UICorner_10.Parent = Frame_4
 
-TextLabel_5.Parent = Frame_5
+TextLabel_5.Parent = Frame_4
 TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.BackgroundTransparency = 1.000
-TextLabel_5.Position = UDim2.new(0.411214948, 0, 0.0289017335, 0)
+TextLabel_5.Position = UDim2.new(0, 43, 0, 10)
 TextLabel_5.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_5.Font = Enum.Font.Code
 TextLabel_5.Text = "X Angle"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 14.000
 
-TextLabel_6.Parent = Frame_5
+TextLabel_6.Parent = Frame_4
 TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0.411214948, 0, 0.375722528, 0)
+TextLabel_6.Position = UDim2.new(0, 43, 0, 70)
 TextLabel_6.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_6.Font = Enum.Font.Code
 TextLabel_6.Text = "Y Angle"
 TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 14.000
 
-TextLabel_7.Parent = Frame_5
+TextLabel_7.Parent = Frame_4
 TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.Position = UDim2.new(0.411214948, 0, 0.722543359, 0)
+TextLabel_7.Position = UDim2.new(0, 43, 0, 130)
 TextLabel_7.Size = UDim2.new(0, 57, 0, 33)
 TextLabel_7.Font = Enum.Font.Code
 TextLabel_7.Text = "Z Angle"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextSize = 14.000
 
-Frame_6.Parent = Frame_4
-Frame_6.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Frame_6.BackgroundTransparency = 0.800
-Frame_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Frame_6.Position = UDim2.new(0.685294032, 0, 0.293434829, 0)
-Frame_6.Size = UDim2.new(0, 107, 0, 143)
+Frame_5.Parent = Frame_3
+Frame_5.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
+Frame_5.BackgroundTransparency = 0.800
+Frame_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame_5.Position = UDim2.new(0.685294032, 0, 0.293434829, 0)
+Frame_5.Size = UDim2.new(0, 107, 0, 143)
 
 WAX.Name = "WAX"
-WAX.Parent = Frame_6
+WAX.Parent = Frame_5
 WAX.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 WAX.Position = UDim2.new(0, 10, 0, 10)
 WAX.Size = UDim2.new(0, 35, 0, 24)
@@ -269,11 +363,11 @@ WAX.Text = "X"
 WAX.TextColor3 = Color3.fromRGB(53, 53, 53)
 WAX.TextSize = 14.000
 
-UICorner_8.CornerRadius = UDim.new(0, 5)
-UICorner_8.Parent = WAX
+UICorner_11.CornerRadius = UDim.new(0, 5)
+UICorner_11.Parent = WAX
 
 WAY.Name = "WAY"
-WAY.Parent = Frame_6
+WAY.Parent = Frame_5
 WAY.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 WAY.BorderColor3 = Color3.fromRGB(27, 42, 53)
 WAY.Position = UDim2.new(0, 10, 0, 59)
@@ -283,11 +377,11 @@ WAY.Text = "Y"
 WAY.TextColor3 = Color3.fromRGB(53, 53, 53)
 WAY.TextSize = 14.000
 
-UICorner_9.CornerRadius = UDim.new(0, 5)
-UICorner_9.Parent = WAY
+UICorner_12.CornerRadius = UDim.new(0, 5)
+UICorner_12.Parent = WAY
 
 WAZ.Name = "WAZ"
-WAZ.Parent = Frame_6
+WAZ.Parent = Frame_5
 WAZ.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 WAZ.Position = UDim2.new(0, 10, 0, 108)
 WAZ.Size = UDim2.new(0, 35, 0, 24)
@@ -296,11 +390,11 @@ WAZ.Text = "Z"
 WAZ.TextColor3 = Color3.fromRGB(53, 53, 53)
 WAZ.TextSize = 14.000
 
-UICorner_10.CornerRadius = UDim.new(0, 5)
-UICorner_10.Parent = WAZ
+UICorner_13.CornerRadius = UDim.new(0, 5)
+UICorner_13.Parent = WAZ
 
 WavesOn.Name = "WavesOn"
-WavesOn.Parent = Frame_6
+WavesOn.Parent = Frame_5
 WavesOn.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 WavesOn.Position = UDim2.new(0.739650309, 0, -0.191300154, 0)
 WavesOn.Size = UDim2.new(0, 18, 0, 18)
@@ -309,13 +403,13 @@ WavesOn.Text = ""
 WavesOn.TextColor3 = Color3.fromRGB(53, 53, 53)
 WavesOn.TextSize = 14.000
 
-UICorner_11.CornerRadius = UDim.new(0, 3)
-UICorner_11.Parent = WavesOn
+UICorner_14.CornerRadius = UDim.new(0, 3)
+UICorner_14.Parent = WavesOn
 
-UICorner_12.CornerRadius = UDim.new(0, 5)
-UICorner_12.Parent = Frame_6
+UICorner_15.CornerRadius = UDim.new(0, 5)
+UICorner_15.Parent = Frame_5
 
-TextLabel_8.Parent = Frame_6
+TextLabel_8.Parent = Frame_5
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.Position = UDim2.new(0, 44, 0, 4)
@@ -325,7 +419,7 @@ TextLabel_8.Text = "X Wave"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextSize = 14.000
 
-TextLabel_9.Parent = Frame_6
+TextLabel_9.Parent = Frame_5
 TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.BackgroundTransparency = 1.000
 TextLabel_9.Position = UDim2.new(0, 44, 0, 54)
@@ -335,7 +429,7 @@ TextLabel_9.Text = "Y Wave"
 TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.TextSize = 14.000
 
-TextLabel_10.Parent = Frame_6
+TextLabel_10.Parent = Frame_5
 TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.BackgroundTransparency = 1.000
 TextLabel_10.Position = UDim2.new(0, 44, 0, 103)
@@ -345,7 +439,7 @@ TextLabel_10.Text = "Z Wave"
 TextLabel_10.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_10.TextSize = 14.000
 
-TextLabel_11.Parent = Frame_4
+TextLabel_11.Parent = Frame_3
 TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_11.BackgroundTransparency = 1.000
 TextLabel_11.Position = UDim2.new(0.729761064, 0, 0.0342337564, 0)
@@ -355,7 +449,7 @@ TextLabel_11.Text = "Waves"
 TextLabel_11.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_11.TextSize = 13.000
 
-TextLabel_12.Parent = Frame_4
+TextLabel_12.Parent = Frame_3
 TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.BackgroundTransparency = 1.000
 TextLabel_12.Position = UDim2.new(0.715055227, 0, 0.18601948, 0)
@@ -365,7 +459,7 @@ TextLabel_12.Text = "Enabled"
 TextLabel_12.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_12.TextSize = 13.000
 
-TextLabel_13.Parent = Frame_4
+TextLabel_13.Parent = Frame_3
 TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_13.BackgroundTransparency = 1.000
 TextLabel_13.Position = UDim2.new(0.401329696, 0, 0.0342337564, 0)
@@ -376,7 +470,7 @@ TextLabel_13.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_13.TextSize = 13.000
 
 Distance.Name = "Distance"
-Distance.Parent = Frame_4
+Distance.Parent = Frame_3
 Distance.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 Distance.BorderColor3 = Color3.fromRGB(54, 54, 54)
 Distance.Position = UDim2.new(0.339382857, 0, 0.36220783, 0)
@@ -388,11 +482,11 @@ Distance.TextColor3 = Color3.fromRGB(255, 255, 255)
 Distance.TextSize = 14.000
 Distance.TextWrapped = true
 
-UICorner_13.CornerRadius = UDim.new(0, 5)
-UICorner_13.Parent = Distance
+UICorner_16.CornerRadius = UDim.new(0, 5)
+UICorner_16.Parent = Distance
 
 WaveInt.Name = "WaveInt"
-WaveInt.Parent = Frame_4
+WaveInt.Parent = Frame_3
 WaveInt.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 WaveInt.BorderColor3 = Color3.fromRGB(54, 54, 54)
 WaveInt.Position = UDim2.new(0.339000016, 0, 0.581853449, 0)
@@ -403,11 +497,11 @@ WaveInt.Text = ""
 WaveInt.TextColor3 = Color3.fromRGB(255, 255, 255)
 WaveInt.TextSize = 14.000
 
-UICorner_14.CornerRadius = UDim.new(0, 5)
-UICorner_14.Parent = WaveInt
+UICorner_17.CornerRadius = UDim.new(0, 5)
+UICorner_17.Parent = WaveInt
 
 Speed.Name = "Speed"
-Speed.Parent = Frame_4
+Speed.Parent = Frame_3
 Speed.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 Speed.BorderColor3 = Color3.fromRGB(54, 54, 54)
 Speed.Position = UDim2.new(0, 138, 0, 180)
@@ -419,13 +513,13 @@ Speed.Text = ""
 Speed.TextColor3 = Color3.fromRGB(255, 255, 255)
 Speed.TextSize = 14.000
 
-UICorner_15.CornerRadius = UDim.new(0, 5)
-UICorner_15.Parent = Speed
+UICorner_18.CornerRadius = UDim.new(0, 5)
+UICorner_18.Parent = Speed
 
-UICorner_16.CornerRadius = UDim.new(0, 5)
-UICorner_16.Parent = Frame_4
+UICorner_19.CornerRadius = UDim.new(0, 5)
+UICorner_19.Parent = Frame_3
 
-TextLabel_14.Parent = Frame_4
+TextLabel_14.Parent = Frame_3
 TextLabel_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_14.BackgroundTransparency = 1.000
 TextLabel_14.Position = UDim2.new(0, 145, 0, 58)
@@ -436,7 +530,7 @@ TextLabel_14.TextColor3 = Color3.fromRGB(138, 161, 177)
 TextLabel_14.TextSize = 14.000
 TextLabel_14.TextTransparency = 0.500
 
-TextLabel_15.Parent = Frame_4
+TextLabel_15.Parent = Frame_3
 TextLabel_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_15.BackgroundTransparency = 1.000
 TextLabel_15.Position = UDim2.new(0, 145, 0, 110)
@@ -447,7 +541,7 @@ TextLabel_15.TextColor3 = Color3.fromRGB(138, 161, 177)
 TextLabel_15.TextSize = 14.000
 TextLabel_15.TextTransparency = 0.500
 
-TextLabel_16.Parent = Frame_4
+TextLabel_16.Parent = Frame_3
 TextLabel_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_16.BackgroundTransparency = 1.000
 TextLabel_16.Position = UDim2.new(0, 145, 0, 159)
@@ -459,7 +553,7 @@ TextLabel_16.TextSize = 14.000
 TextLabel_16.TextTransparency = 0.500
 
 AudioId.Name = "AudioId"
-AudioId.Parent = Frame
+AudioId.Parent = Pineapple
 AudioId.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 AudioId.BackgroundTransparency = 0.800
 AudioId.BorderColor3 = Color3.fromRGB(54, 54, 54)
@@ -471,11 +565,11 @@ AudioId.Text = ""
 AudioId.TextColor3 = Color3.fromRGB(255, 255, 255)
 AudioId.TextSize = 14.000
 
-UICorner_17.CornerRadius = UDim.new(0, 5)
-UICorner_17.Parent = AudioId
+UICorner_20.CornerRadius = UDim.new(0, 5)
+UICorner_20.Parent = AudioId
 
 Amount.Name = "Amount"
-Amount.Parent = Frame
+Amount.Parent = Pineapple
 Amount.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 Amount.BackgroundTransparency = 0.800
 Amount.BorderColor3 = Color3.fromRGB(54, 54, 54)
@@ -488,11 +582,11 @@ Amount.Text = ""
 Amount.TextColor3 = Color3.fromRGB(255, 255, 255)
 Amount.TextSize = 14.000
 
-UICorner_18.CornerRadius = UDim.new(0, 5)
-UICorner_18.Parent = Amount
+UICorner_21.CornerRadius = UDim.new(0, 5)
+UICorner_21.Parent = Amount
 
 TextBox_3.Name = "TextBox"
-TextBox_3.Parent = Frame
+TextBox_3.Parent = Pineapple
 TextBox_3.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 TextBox_3.BorderColor3 = Color3.fromRGB(54, 54, 54)
 TextBox_3.Position = UDim2.new(0.345004708, 0, 0.202760756, 0)
@@ -502,11 +596,11 @@ TextBox_3.Text = "Dupe Amount"
 TextBox_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_3.TextSize = 14.000
 
-UICorner_19.CornerRadius = UDim.new(0, 5)
-UICorner_19.Parent = TextBox_3
+UICorner_22.CornerRadius = UDim.new(0, 5)
+UICorner_22.Parent = TextBox_3
 
 TextBox_4.Name = "TextBox"
-TextBox_4.Parent = Frame
+TextBox_4.Parent = Pineapple
 TextBox_4.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 TextBox_4.BorderColor3 = Color3.fromRGB(54, 54, 54)
 TextBox_4.Position = UDim2.new(0.678338051, 0, 0.202760756, 0)
@@ -516,11 +610,11 @@ TextBox_4.Text = "Steal Tools"
 TextBox_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_4.TextSize = 14.000
 
-UICorner_20.CornerRadius = UDim.new(0, 5)
-UICorner_20.Parent = TextBox_4
+UICorner_23.CornerRadius = UDim.new(0, 5)
+UICorner_23.Parent = TextBox_4
 
 TextBox_5.Name = "TextBox"
-TextBox_5.Parent = Frame
+TextBox_5.Parent = Pineapple
 TextBox_5.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
 TextBox_5.BorderColor3 = Color3.fromRGB(54, 54, 54)
 TextBox_5.Position = UDim2.new(0.347335726, 0, 0.475488037, 0)
@@ -530,15 +624,57 @@ TextBox_5.Text = "Sync"
 TextBox_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextBox_5.TextSize = 14.000
 
-UICorner_21.CornerRadius = UDim.new(0, 5)
-UICorner_21.Parent = TextBox_5
+UICorner_24.CornerRadius = UDim.new(0, 5)
+UICorner_24.Parent = TextBox_5
 
-UICorner_22.CornerRadius = UDim.new(0, 5)
-UICorner_22.Parent = Frame
+UICorner_25.CornerRadius = UDim.new(0, 5)
+UICorner_25.Parent = Pineapple
 
 -- Scripts:
 
-local function OBXMXA_fake_script() -- TextBox.LocalScript 
+local function QKXWXO_fake_script() -- ForceClose.CloseAll 
+	local script = Instance.new('LocalScript', ForceClose)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.FakeLoader.Pineapple.Visible = false
+		script.Parent.Parent.Parent.FakeLoader.Visible = true
+		script.Parent.Parent.Parent.FakeLoader:TweenSize(UDim2.new(0, 0,0, 0), "InOut", "Quad", 1)
+		script.Parent.Parent.Parent.DraggyHolder.Visible = false
+		wait(1)
+		script.Parent.Parent.Parent.FakeLoader.Visible = false
+		script.Parent.Parent.Parent.FakeLoader.Position = UDim2.new(0.85, 0, 0.76, 0)
+	end)
+end
+coroutine.wrap(QKXWXO_fake_script)()
+local function NUZOVHL_fake_script() -- MiniPine.MinimizePine 
+	local script = Instance.new('LocalScript', MiniPine)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.FakeLoader.Pineapple.Visible = false
+		script.Parent.Parent.Parent.FakeLoader.Visible = true
+		script.Parent.Parent.Parent.FakeLoader:TweenSize(UDim2.new(0, 0,0, 0), "InOut", "Quad", 1)
+		script.Parent.Parent.Parent.DraggyHolder:TweenSize(UDim2.new(0, 100,0, 70), "In", "Linear", 0.5)
+		wait(1)
+		script.Parent.Parent.Parent.FakeLoader.Position = UDim2.new(0.85, 0, 0.76, 0)
+		script.Parent.Parent.Parent.FakeLoader.Visible = false
+	end)
+end
+coroutine.wrap(NUZOVHL_fake_script)()
+local function BMSR_fake_script() -- Launcher.LauncPine 
+	local script = Instance.new('LocalScript', Launcher)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent.DraggyHolder:TweenSize(UDim2.new(0, 100,0, 25), "In", "Linear", 0.5)
+		script.Parent.Parent.Parent.FakeLoader.Visible = true
+		script.Parent.Parent.Parent.FakeLoader:TweenSize(UDim2.new(0, 429,0, 385), "InOut", "Quad", 1)
+		wait(0.835)
+		script.Parent.Parent.Parent.FakeLoader.Pineapple.Visible = true
+	end)
+	
+	
+end
+coroutine.wrap(BMSR_fake_script)()
+local function QEYFXK_fake_script() -- TextBox.LocalScript 
 	local script = Instance.new('LocalScript', TextBox)
 
 	local currentid=""
@@ -740,8 +876,8 @@ local function OBXMXA_fake_script() -- TextBox.LocalScript
 		vis(script.Parent.Parent.AudioId.Text:gsub("%D+", ""),0)
 	end)
 end
-coroutine.wrap(OBXMXA_fake_script)()
-local function YBBFAGV_fake_script() -- TextBox_2.LocalScript 
+coroutine.wrap(QEYFXK_fake_script)()
+local function SLFN_fake_script() -- TextBox_2.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_2)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -781,8 +917,8 @@ local function YBBFAGV_fake_script() -- TextBox_2.LocalScript
 		print("done")
 	end)
 end
-coroutine.wrap(YBBFAGV_fake_script)()
-local function SFKAA_fake_script() -- MAX.LocalScript 
+coroutine.wrap(SLFN_fake_script)()
+local function JFIHT_fake_script() -- MAX.LocalScript 
 	local script = Instance.new('LocalScript', MAX)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -798,8 +934,8 @@ local function SFKAA_fake_script() -- MAX.LocalScript
 		end
 	end
 end
-coroutine.wrap(SFKAA_fake_script)()
-local function OEXW_fake_script() -- MAY.LocalScript 
+coroutine.wrap(JFIHT_fake_script)()
+local function TNUA_fake_script() -- MAY.LocalScript 
 	local script = Instance.new('LocalScript', MAY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -815,8 +951,8 @@ local function OEXW_fake_script() -- MAY.LocalScript
 		end
 	end
 end
-coroutine.wrap(OEXW_fake_script)()
-local function BLUGY_fake_script() -- MAZ.LocalScript 
+coroutine.wrap(TNUA_fake_script)()
+local function REWF_fake_script() -- MAZ.LocalScript 
 	local script = Instance.new('LocalScript', MAZ)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -832,8 +968,8 @@ local function BLUGY_fake_script() -- MAZ.LocalScript
 		end
 	end
 end
-coroutine.wrap(BLUGY_fake_script)()
-local function PPKN_fake_script() -- WAX.LocalScript 
+coroutine.wrap(REWF_fake_script)()
+local function IACQB_fake_script() -- WAX.LocalScript 
 	local script = Instance.new('LocalScript', WAX)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -849,8 +985,8 @@ local function PPKN_fake_script() -- WAX.LocalScript
 		end
 	end
 end
-coroutine.wrap(PPKN_fake_script)()
-local function MSRCLZ_fake_script() -- WAY.LocalScript 
+coroutine.wrap(IACQB_fake_script)()
+local function JOVCJ_fake_script() -- WAY.LocalScript 
 	local script = Instance.new('LocalScript', WAY)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -866,8 +1002,8 @@ local function MSRCLZ_fake_script() -- WAY.LocalScript
 		end
 	end
 end
-coroutine.wrap(MSRCLZ_fake_script)()
-local function QWRJH_fake_script() -- WAZ.LocalScript 
+coroutine.wrap(JOVCJ_fake_script)()
+local function ZZVN_fake_script() -- WAZ.LocalScript 
 	local script = Instance.new('LocalScript', WAZ)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -883,8 +1019,8 @@ local function QWRJH_fake_script() -- WAZ.LocalScript
 		end
 	end
 end
-coroutine.wrap(QWRJH_fake_script)()
-local function RZGMABG_fake_script() -- WavesOn.LocalScript 
+coroutine.wrap(ZZVN_fake_script)()
+local function FRCZ_fake_script() -- WavesOn.LocalScript 
 	local script = Instance.new('LocalScript', WavesOn)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -902,8 +1038,8 @@ local function RZGMABG_fake_script() -- WavesOn.LocalScript
 		end
 	end 
 end
-coroutine.wrap(RZGMABG_fake_script)()
-local function MHJW_fake_script() -- Distance.LocalScript 
+coroutine.wrap(FRCZ_fake_script)()
+local function YRYGZJD_fake_script() -- Distance.LocalScript 
 	local script = Instance.new('LocalScript', Distance)
 
 	_G[script.Parent.Name]=5
@@ -913,8 +1049,8 @@ local function MHJW_fake_script() -- Distance.LocalScript
 		end
 	end)
 end
-coroutine.wrap(MHJW_fake_script)()
-local function GUOUELF_fake_script() -- WaveInt.LocalScript 
+coroutine.wrap(YRYGZJD_fake_script)()
+local function KWYMAXO_fake_script() -- WaveInt.LocalScript 
 	local script = Instance.new('LocalScript', WaveInt)
 
 	_G[script.Parent.Name]=3
@@ -924,8 +1060,8 @@ local function GUOUELF_fake_script() -- WaveInt.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GUOUELF_fake_script)()
-local function PQGN_fake_script() -- Speed.LocalScript 
+coroutine.wrap(KWYMAXO_fake_script)()
+local function SMWSS_fake_script() -- Speed.LocalScript 
 	local script = Instance.new('LocalScript', Speed)
 
 	_G[script.Parent.Name]=1
@@ -935,17 +1071,17 @@ local function PQGN_fake_script() -- Speed.LocalScript
 		end
 	end)
 end
-coroutine.wrap(PQGN_fake_script)()
-local function LMNYDM_fake_script() -- Frame.LocalScript 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(SMWSS_fake_script)()
+local function LQQTE_fake_script() -- Pineapple.LocalScript 
+	local script = Instance.new('LocalScript', Pineapple)
 
 	_G.VisAngle="X"
 	_G.WavesOn="Off"
 	_G.WavesAngle="Y"
 	_G.BoomboxDependantSpeed="Off"
 end
-coroutine.wrap(LMNYDM_fake_script)()
-local function ZQEL_fake_script() -- TextBox_3.LocalScript 
+coroutine.wrap(LQQTE_fake_script)()
+local function BZBN_fake_script() -- TextBox_3.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_3)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -982,8 +1118,8 @@ local function ZQEL_fake_script() -- TextBox_3.LocalScript
 		end	
 	end)
 end
-coroutine.wrap(ZQEL_fake_script)()
-local function OJIVZB_fake_script() -- TextBox_4.LocalScript 
+coroutine.wrap(BZBN_fake_script)()
+local function TGONAV_fake_script() -- TextBox_4.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_4)
 
 	_G.grabtools=false
@@ -1003,10 +1139,10 @@ local function OJIVZB_fake_script() -- TextBox_4.LocalScript
 		while wait() do
 			if _G.grabtools==true then
 				script.Parent.TextColor3=Color3.fromRGB(53, 53, 53)
-				script.Parent.BackgroundColor3=Color3.fromRGB(255, 255, 127)
+				script.Parent.BackgroundColor3=Color3.fromRGB(138, 161, 177)
 			else
 				script.Parent.TextColor3=Color3.fromRGB(255,255,255)
-				script.Parent.BackgroundColor3=Color3.fromRGB(20, 20, 20)
+				script.Parent.BackgroundColor3=Color3.fromRGB(31, 31, 31)
 			end
 		end 	
 	end)
@@ -1014,8 +1150,8 @@ local function OJIVZB_fake_script() -- TextBox_4.LocalScript
 		_G.grabtools=not _G.grabtools
 	end)
 end
-coroutine.wrap(OJIVZB_fake_script)()
-local function NAZYK_fake_script() -- TextBox_5.LocalScript 
+coroutine.wrap(TGONAV_fake_script)()
+local function HRGAF_fake_script() -- TextBox_5.LocalScript 
 	local script = Instance.new('LocalScript', TextBox_5)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1033,12 +1169,12 @@ local function NAZYK_fake_script() -- TextBox_5.LocalScript
 		end))
 	end)
 end
-coroutine.wrap(NAZYK_fake_script)()
-local function JXZK_fake_script() -- Frame.Dragify 
-	local script = Instance.new('LocalScript', Frame)
+coroutine.wrap(HRGAF_fake_script)()
+local function WHOLD_fake_script() -- FakeLoader.Dragify 
+	local script = Instance.new('LocalScript', FakeLoader)
 
 	local UIS = game:GetService("UserInputService")
-	function dragify(Frame)
+	function dragify(FakeLoader)
 	    dragToggle = nil
 	    local dragSpeed = 0.50
 	    dragInput = nil
@@ -1047,13 +1183,13 @@ local function JXZK_fake_script() -- Frame.Dragify
 	    function updateInput(input)
 	        local Delta = input.Position - dragStart
 	        local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y)
-	        game:GetService("TweenService"):Create(Frame, TweenInfo.new(0), {Position = Position}):Play()
+			game:GetService("TweenService"):Create(FakeLoader, TweenInfo.new(0), {Position = Position}):Play()
 	    end
-	    Frame.InputBegan:Connect(function(input)
+		FakeLoader.InputBegan:Connect(function(input)
 	        if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) and UIS:GetFocusedTextBox() == nil then
 	            dragToggle = true
 	            dragStart = input.Position
-	            startPos = Frame.Position
+				startPos = FakeLoader.Position
 	            input.Changed:Connect(function()
 	                if input.UserInputState == Enum.UserInputState.End then
 	                    dragToggle = false
@@ -1061,7 +1197,7 @@ local function JXZK_fake_script() -- Frame.Dragify
 	            end)
 	        end
 	    end)
-	    Frame.InputChanged:Connect(function(input)
+		FakeLoader.InputChanged:Connect(function(input)
 	        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
 	            dragInput = input
 	        end
@@ -1075,4 +1211,4 @@ local function JXZK_fake_script() -- Frame.Dragify
 	
 	dragify(script.Parent)
 end
-coroutine.wrap(JXZK_fake_script)()
+coroutine.wrap(WHOLD_fake_script)()
