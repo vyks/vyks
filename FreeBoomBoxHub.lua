@@ -198,7 +198,7 @@ Execute1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 Execute1.Position = UDim2.new(0.140540496, 0, 0.0591133088, 0)
 Execute1.Size = UDim2.new(0, 100, 0, 50)
 Execute1.Font = Enum.Font.Cartoon
-Execute1.Text = "Console!"
+Execute1.Text = "Execute!"
 Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute1.TextSize = 17.000
 
@@ -836,12 +836,12 @@ end)
 
 --Execution Button Scripts Begin--
 Execute1.MouseButton1Down:Connect(function()
-	--loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
-    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
-    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
-    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
-    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
-    warn("AUX PINEAPPLE IS NOT WORKING ATM SORRY! - vyk")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineappleUi2.lua", true))()
+    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
+    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
+    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
+    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
+    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
 end)
 
 Execute2.MouseButton1Down:Connect(function()
