@@ -837,6 +837,7 @@ end)
 --Execution Button Scripts Begin--
 Execute1.MouseButton1Down:Connect(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineappleUi2.lua", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
     warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
     warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
     warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
