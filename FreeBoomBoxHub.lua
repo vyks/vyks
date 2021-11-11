@@ -394,7 +394,7 @@ Execute4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
 Execute4.Position = UDim2.new(0.141000003, 0, 0.0590000004, 0)
 Execute4.Size = UDim2.new(0, 100, 0, 50)
 Execute4.Font = Enum.Font.Cartoon
-Execute4.Text = "Execute!"
+Execute4.Text = "Console!"
 Execute4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Execute4.TextSize = 17.000
 
@@ -854,7 +854,8 @@ Execute3.MouseButton1Down:Connect(function()
 end)
 
 Execute4.MouseButton1Down:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
+    --loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
+    warn("\n Sanity Hub no longer works until Sanity either gets the webhost up, or releases the newest version. \n \n My apologies - vyk")
 end)
 
 Execute51.MouseButton1Down:Connect(function()
