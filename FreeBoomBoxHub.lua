@@ -1,930 +1,1540 @@
---Locals Begin--
-local toggled = false
-local FreeHubUi = Instance.new("ScreenGui")
-local MainBackground = Instance.new("Frame")
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("NordUi") then
+    game.Players.LocalPlayer.PlayerGui:FindFirstChild("NordUi"):Destroy()
+    game.StarterGui:SetCore('SendNotification',
+        {
+            Title = "Free Hub",
+            Text = "Reloading UI? - grifin",
+            Duration = 2,
+        }
+    )
+else
+    game.StarterGui:SetCore('SendNotification',
+        {
+            Title = "Free Hub",
+            Text = "Loading UI? - grifin",
+            Duration = 2,
+        }
+    )
+end
+
+local NordUi = Instance.new("ScreenGui")
+local NordScheme = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local TabContent = Instance.new("Frame")
-local TabFrameBackground = Instance.new("Frame")
+local TabDecor = Instance.new("Frame")
 local UICorner_2 = Instance.new("UICorner")
-local Tab1Frame = Instance.new("Frame")
-local Tab1Title = Instance.new("TextLabel")
-local RawLinkCopy1 = Instance.new("TextButton")
+local SubDecor1 = Instance.new("Frame")
+local PlayerName = Instance.new("TextLabel")
+local PlayerProfile = Instance.new("ImageLabel")
 local UICorner_3 = Instance.new("UICorner")
-local DiscordCopy1 = Instance.new("TextButton")
+local SubDecor2 = Instance.new("Frame")
 local UICorner_4 = Instance.new("UICorner")
-local DiscordDesc1 = Instance.new("TextLabel")
-local RawLinkDesc1 = Instance.new("TextLabel")
-local Execute1 = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local Tab2Frame = Instance.new("Frame")
-local RawLinkCopy2 = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
-local RawLinkDesc2 = Instance.new("TextLabel")
-local Tab2Title = Instance.new("TextLabel")
-local Execute2 = Instance.new("TextButton")
-local UICorner_7 = Instance.new("UICorner")
-local Tab3Frame = Instance.new("Frame")
-local RawLinkCopy3 = Instance.new("TextButton")
-local UICorner_8 = Instance.new("UICorner")
-local DiscordDesc3 = Instance.new("TextLabel")
-local RawLinkDesc3 = Instance.new("TextLabel")
-local Tab3Title = Instance.new("TextLabel")
-local DiscordCopy3 = Instance.new("TextButton")
-local UICorner_9 = Instance.new("UICorner")
-local Execute3 = Instance.new("TextButton")
-local UICorner_10 = Instance.new("UICorner")
-local Tab4Frame = Instance.new("Frame")
-local RawLinkDesc4 = Instance.new("TextLabel")
-local Tab4Title = Instance.new("TextLabel")
-local Execute4 = Instance.new("TextButton")
-local UICorner_11 = Instance.new("UICorner")
-local RawLinkCopy4 = Instance.new("TextButton")
-local UICorner_12 = Instance.new("UICorner")
-local DiscordCopy4 = Instance.new("TextButton")
-local UICorner_13 = Instance.new("UICorner")
-local DiscordDesc4 = Instance.new("TextLabel")
-local CreditsFrame = Instance.new("Frame")
-local CreditsTitle = Instance.new("TextLabel")
-local AboutMe2 = Instance.new("TextLabel")
-local AboutMe1 = Instance.new("TextLabel")
-local AboutMe3 = Instance.new("TextLabel")
-local SupportDesc = Instance.new("TextLabel")
-local SupportLink = Instance.new("TextButton")
-local UICorner_14 = Instance.new("UICorner")
-local Warning1 = Instance.new("TextLabel")
-local TabButtonHolder = Instance.new("ScrollingFrame")
-local Tab1 = Instance.new("TextButton")
-local UICorner_15 = Instance.new("UICorner")
-local Tab2 = Instance.new("TextButton")
-local UICorner_16 = Instance.new("UICorner")
-local Tab3 = Instance.new("TextButton")
-local UICorner_17 = Instance.new("UICorner")
-local Tab4 = Instance.new("TextButton")
-local UICorner_18 = Instance.new("UICorner")
-local Tab5 = Instance.new("TextButton")
-local UICorner_19 = Instance.new("UICorner")
-local Tab5Frame = Instance.new("Frame")
-local _52Desc = Instance.new("TextLabel")
-local Tab5Title = Instance.new("TextLabel")
-local Execute52 = Instance.new("TextButton")
-local UICorner_20 = Instance.new("UICorner")
-local _51Desc = Instance.new("TextLabel")
-local Execute51 = Instance.new("TextButton")
-local UICorner_21 = Instance.new("UICorner")
-local CopyTutorial1 = Instance.new("TextButton")
-local UICorner_22 = Instance.new("UICorner")
-local CopyPresets = Instance.new("TextButton")
-local UICorner_23 = Instance.new("UICorner")
-local HeaderContent = Instance.new("Frame")
 local Title = Instance.new("TextLabel")
+local ButtonsFrame = Instance.new("Frame")
+local UIPadding = Instance.new("UIPadding")
+local Section1Button = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Button1Name = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local Section2Button = Instance.new("TextButton")
+local Frame_2 = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local Button2Name = Instance.new("TextLabel")
+local Section3Button = Instance.new("TextButton")
+local Frame_3 = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Button3Name = Instance.new("TextLabel")
+local Section4Button = Instance.new("TextButton")
+local Frame_4 = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local Button4Name = Instance.new("TextLabel")
+local Section5Button = Instance.new("TextButton")
+local Frame_5 = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Section5Name = Instance.new("TextLabel")
+local SectionsFrame = Instance.new("Frame")
+local UIPageLayout = Instance.new("UIPageLayout")
+local UIPadding_2 = Instance.new("UIPadding")
+local FirstFrame = Instance.new("Frame")
+local Execute1 = Instance.new("TextButton")
+local Frame_6 = Instance.new("Frame")
+local UICorner_10 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local AboutScript1 = Instance.new("TextLabel")
+local Discord1 = Instance.new("TextButton")
+local Frame_7 = Instance.new("Frame")
+local UICorner_11 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local Source1 = Instance.new("TextButton")
+local Frame_8 = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local TextLabel_3 = Instance.new("TextLabel")
+local SecondFrame = Instance.new("Frame")
+local Execute2 = Instance.new("TextButton")
+local Frame_9 = Instance.new("Frame")
+local UICorner_13 = Instance.new("UICorner")
+local TextLabel_4 = Instance.new("TextLabel")
+local Source2 = Instance.new("TextButton")
+local Frame_10 = Instance.new("Frame")
+local UICorner_14 = Instance.new("UICorner")
+local TextLabel_5 = Instance.new("TextLabel")
+local AboutScript2 = Instance.new("TextLabel")
+local ThirdFrame = Instance.new("Frame")
+local Discord3 = Instance.new("TextButton")
+local Frame_11 = Instance.new("Frame")
+local UICorner_15 = Instance.new("UICorner")
+local TextLabel_6 = Instance.new("TextLabel")
+local Execute3 = Instance.new("TextButton")
+local Frame_12 = Instance.new("Frame")
+local UICorner_16 = Instance.new("UICorner")
+local TextLabel_7 = Instance.new("TextLabel")
+local Source3 = Instance.new("TextButton")
+local Frame_13 = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local TextLabel_8 = Instance.new("TextLabel")
+local AboutScript3 = Instance.new("TextLabel")
+local ForthFrame = Instance.new("Frame")
+local Execute4 = Instance.new("TextButton")
+local Frame_14 = Instance.new("Frame")
+local UICorner_18 = Instance.new("UICorner")
+local TextLabel_9 = Instance.new("TextLabel")
+local Source4 = Instance.new("TextButton")
+local Frame_15 = Instance.new("Frame")
+local UICorner_19 = Instance.new("UICorner")
+local TextLabel_10 = Instance.new("TextLabel")
+local AboutScript4 = Instance.new("TextLabel")
+local Presets1 = Instance.new("TextButton")
+local Frame_16 = Instance.new("Frame")
+local UICorner_20 = Instance.new("UICorner")
+local TextLabel_11 = Instance.new("TextLabel")
+local FifthFrame = Instance.new("Frame")
+local Discord5 = Instance.new("TextButton")
+local Frame_17 = Instance.new("Frame")
+local UICorner_21 = Instance.new("UICorner")
+local TextLabel_12 = Instance.new("TextLabel")
+local Support1 = Instance.new("TextLabel")
+local Credits1 = Instance.new("TextLabel")
+local Credits2 = Instance.new("TextLabel")
+local CloseDecor = Instance.new("Frame")
 local Minimize = Instance.new("TextButton")
-local UICorner_24 = Instance.new("UICorner")
-local Watermark = Instance.new("TextLabel")
-local CreditsButton = Instance.new("TextButton")
-local UICorner_25 = Instance.new("UICorner")
-MainBackground.Draggable = true
---Locals End--
-
---Ui Stuff Begin--
-FreeHubUi.Name = "FreeHubUi"
-FreeHubUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-FreeHubUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-MainBackground.Name = "MainBackground"
-MainBackground.Parent = FreeHubUi
-MainBackground.Active = true
-MainBackground.BackgroundColor3 = Color3.fromRGB(40, 42, 45)
-MainBackground.ClipsDescendants = true
-MainBackground.Position = UDim2.new(0.197611958, 0, 0.281808108, 0)
-MainBackground.Size = UDim2.new(0, 500, 0, 253)
-
-UICorner.CornerRadius = UDim.new(0, 5)
-UICorner.Parent = MainBackground
-
-TabContent.Name = "TabContent"
-TabContent.Parent = MainBackground
-TabContent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TabContent.BackgroundTransparency = 1.000
-TabContent.Position = UDim2.new(0, 0, 0.168750018, 0)
-TabContent.Size = UDim2.new(0, 500, 0, 210)
-
-TabFrameBackground.Name = "TabFrameBackground"
-TabFrameBackground.Parent = TabContent
-TabFrameBackground.BackgroundColor3 = Color3.fromRGB(61, 63, 67)
-TabFrameBackground.BackgroundTransparency = 0.500
-TabFrameBackground.Position = UDim2.new(0.247999996, 0, 0, 0)
-TabFrameBackground.Size = UDim2.new(0, 370, 0, 203)
-
-UICorner_2.CornerRadius = UDim.new(0, 5)
-UICorner_2.Parent = TabFrameBackground
---Ui Stuff End--
-
---Aux Pineapple Begin--
-Tab1Frame.Name = "Tab1Frame"
-Tab1Frame.Parent = TabContent
-Tab1Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab1Frame.BackgroundTransparency = 1.000
-Tab1Frame.ClipsDescendants = true
-Tab1Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
-Tab1Frame.Size = UDim2.new(0, 370, 0, 203)
-Tab1Frame.Visible = false
-
-Tab1Title.Name = "Tab1Title"
-Tab1Title.Parent = Tab1Frame
-Tab1Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab1Title.BackgroundTransparency = 1.000
-Tab1Title.Position = UDim2.new(0.370270252, 0, 0.0591133013, 0)
-Tab1Title.Size = UDim2.new(0, 200, 0, 50)
-Tab1Title.Font = Enum.Font.Cartoon
-Tab1Title.Text = "Aux Pineapple"
-Tab1Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab1Title.TextSize = 20.000
-
-RawLinkCopy1.Name = "RawLinkCopy1"
-RawLinkCopy1.Parent = Tab1Frame
-RawLinkCopy1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy1.Position = UDim2.new(0.0676757097, 0, 0.681640387, 0)
-RawLinkCopy1.Size = UDim2.new(0, 80, 0, 40)
-RawLinkCopy1.Font = Enum.Font.Cartoon
-RawLinkCopy1.Text = "Copy Lua"
-RawLinkCopy1.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy1.TextSize = 14.000
-
-UICorner_3.CornerRadius = UDim.new(0, 5)
-UICorner_3.Parent = RawLinkCopy1
-
-DiscordCopy1.Name = "DiscordCopy1"
-DiscordCopy1.Parent = Tab1Frame
-DiscordCopy1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-DiscordCopy1.Position = UDim2.new(0.0702702701, 0, 0.40115577, 0)
-DiscordCopy1.Size = UDim2.new(0, 80, 0, 40)
-DiscordCopy1.Font = Enum.Font.Cartoon
-DiscordCopy1.Text = "Copy Discord"
-DiscordCopy1.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordCopy1.TextSize = 14.000
-
-UICorner_4.CornerRadius = UDim.new(0, 5)
-UICorner_4.Parent = DiscordCopy1
-
-DiscordDesc1.Name = "DiscordDesc1"
-DiscordDesc1.Parent = Tab1Frame
-DiscordDesc1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc1.BackgroundTransparency = 1.000
-DiscordDesc1.Position = UDim2.new(0.286000013, 0, 0.403778315, 0)
-DiscordDesc1.Size = UDim2.new(0, 218, 0, 50)
-DiscordDesc1.Font = Enum.Font.Cartoon
-DiscordDesc1.Text = "This button will set your clipboard to the discord invite to the Aux Pineapple server!"
-DiscordDesc1.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc1.TextSize = 15.000
-DiscordDesc1.TextWrapped = true
-DiscordDesc1.TextYAlignment = Enum.TextYAlignment.Top
-
-RawLinkDesc1.Name = "RawLinkDesc1"
-RawLinkDesc1.Parent = Tab1Frame
-RawLinkDesc1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc1.BackgroundTransparency = 1.000
-RawLinkDesc1.Position = UDim2.new(0.286351383, 0, 0.679802895, 0)
-RawLinkDesc1.Size = UDim2.new(0, 218, 0, 50)
-RawLinkDesc1.Font = Enum.Font.Cartoon
-RawLinkDesc1.Text = "This button will set your clipboard to the github raw of the Aux Pinapple open source code!"
-RawLinkDesc1.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc1.TextSize = 15.000
-RawLinkDesc1.TextWrapped = true
-RawLinkDesc1.TextYAlignment = Enum.TextYAlignment.Top
-
-Execute1.Name = "Execute1"
-Execute1.Parent = Tab1Frame
-Execute1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Execute1.Position = UDim2.new(0.140540496, 0, 0.0591133088, 0)
-Execute1.Size = UDim2.new(0, 100, 0, 50)
-Execute1.Font = Enum.Font.Cartoon
-Execute1.Text = "Execute!"
-Execute1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute1.TextSize = 17.000
-
-UICorner_5.CornerRadius = UDim.new(0, 5)
-UICorner_5.Parent = Execute1
---Aux Pineapple End--
-
---Fanta Hub Begin--
-Tab2Frame.Name = "Tab2Frame"
-Tab2Frame.Parent = TabContent
-Tab2Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab2Frame.BackgroundTransparency = 1.000
-Tab2Frame.ClipsDescendants = true
-Tab2Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
-Tab2Frame.Size = UDim2.new(0, 370, 0, 203)
-Tab2Frame.Visible = false
-
-RawLinkCopy2.Name = "RawLinkCopy2"
-RawLinkCopy2.Parent = Tab2Frame
-RawLinkCopy2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy2.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
-RawLinkCopy2.Size = UDim2.new(0, 80, 0, 40)
-RawLinkCopy2.Font = Enum.Font.Cartoon
-RawLinkCopy2.Text = "Copy Lua"
-RawLinkCopy2.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy2.TextSize = 14.000
-
-UICorner_6.CornerRadius = UDim.new(0, 5)
-UICorner_6.Parent = RawLinkCopy2
-
-RawLinkDesc2.Name = "RawLinkDesc2"
-RawLinkDesc2.Parent = Tab2Frame
-RawLinkDesc2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc2.BackgroundTransparency = 1.000
-RawLinkDesc2.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
-RawLinkDesc2.Size = UDim2.new(0, 218, 0, 50)
-RawLinkDesc2.Font = Enum.Font.Cartoon
-RawLinkDesc2.Text = "This button will set your clipboard to the github raw of the Fanta Hub obfuscated source code!"
-RawLinkDesc2.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc2.TextSize = 15.000
-RawLinkDesc2.TextWrapped = true
-RawLinkDesc2.TextYAlignment = Enum.TextYAlignment.Top
-
-Tab2Title.Name = "Tab2Title"
-Tab2Title.Parent = Tab2Frame
-Tab2Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab2Title.BackgroundTransparency = 1.000
-Tab2Title.Position = UDim2.new(0.370000005, 0, 0.0590000004, 0)
-Tab2Title.Size = UDim2.new(0, 200, 0, 50)
-Tab2Title.Font = Enum.Font.Cartoon
-Tab2Title.Text = "Fanta Hub"
-Tab2Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab2Title.TextSize = 20.000
-
-Execute2.Name = "Execute2"
-Execute2.Parent = Tab2Frame
-Execute2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Execute2.Position = UDim2.new(0.141000003, 0, 0.0590000004, 0)
-Execute2.Size = UDim2.new(0, 100, 0, 50)
-Execute2.Font = Enum.Font.Cartoon
-Execute2.Text = "Execute!"
-Execute2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute2.TextSize = 17.000
-
-UICorner_7.CornerRadius = UDim.new(0, 5)
-UICorner_7.Parent = Execute2
---Fanta Hub End--
-
---Verts Hub Begin--
-Tab3Frame.Name = "Tab3Frame"
-Tab3Frame.Parent = TabContent
-Tab3Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab3Frame.BackgroundTransparency = 1.000
-Tab3Frame.ClipsDescendants = true
-Tab3Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
-Tab3Frame.Size = UDim2.new(0, 370, 0, 203)
-Tab3Frame.Visible = false
-
-RawLinkCopy3.Name = "RawLinkCopy3"
-RawLinkCopy3.Parent = Tab3Frame
-RawLinkCopy3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy3.Position = UDim2.new(0.0680000037, 0, 0.681999981, 0)
-RawLinkCopy3.Size = UDim2.new(0, 80, 0, 40)
-RawLinkCopy3.Font = Enum.Font.Cartoon
-RawLinkCopy3.Text = "Copy Lua"
-RawLinkCopy3.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy3.TextSize = 14.000
-
-UICorner_8.CornerRadius = UDim.new(0, 5)
-UICorner_8.Parent = RawLinkCopy3
-
-DiscordDesc3.Name = "DiscordDesc3"
-DiscordDesc3.Parent = Tab3Frame
-DiscordDesc3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc3.BackgroundTransparency = 1.000
-DiscordDesc3.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
-DiscordDesc3.Size = UDim2.new(0, 218, 0, 50)
-DiscordDesc3.Font = Enum.Font.Cartoon
-DiscordDesc3.Text = "This button will set your clipboard to the discord invite to the Verts Hub server!"
-DiscordDesc3.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc3.TextSize = 15.000
-DiscordDesc3.TextWrapped = true
-DiscordDesc3.TextYAlignment = Enum.TextYAlignment.Top
-
-RawLinkDesc3.Name = "RawLinkDesc3"
-RawLinkDesc3.Parent = Tab3Frame
-RawLinkDesc3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc3.BackgroundTransparency = 1.000
-RawLinkDesc3.Position = UDim2.new(0.286000013, 0, 0.680000007, 0)
-RawLinkDesc3.Size = UDim2.new(0, 218, 0, 50)
-RawLinkDesc3.Font = Enum.Font.Cartoon
-RawLinkDesc3.Text = "This button will set your clipboard to the github raw of the Verts Hub open source code!"
-RawLinkDesc3.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc3.TextSize = 15.000
-RawLinkDesc3.TextWrapped = true
-RawLinkDesc3.TextYAlignment = Enum.TextYAlignment.Top
-
-Tab3Title.Name = "Tab3Title"
-Tab3Title.Parent = Tab3Frame
-Tab3Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab3Title.BackgroundTransparency = 1.000
-Tab3Title.Position = UDim2.new(0.370000005, 0, 0.0590000004, 0)
-Tab3Title.Size = UDim2.new(0, 200, 0, 50)
-Tab3Title.Font = Enum.Font.Cartoon
-Tab3Title.Text = "Verts Hub"
-Tab3Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab3Title.TextSize = 20.000
-
-DiscordCopy3.Name = "DiscordCopy3"
-DiscordCopy3.Parent = Tab3Frame
-DiscordCopy3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-DiscordCopy3.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
-DiscordCopy3.Size = UDim2.new(0, 80, 0, 40)
-DiscordCopy3.Font = Enum.Font.Cartoon
-DiscordCopy3.Text = "Copy Discord"
-DiscordCopy3.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordCopy3.TextSize = 14.000
-
-UICorner_9.CornerRadius = UDim.new(0, 5)
-UICorner_9.Parent = DiscordCopy3
-
-Execute3.Name = "Execute3"
-Execute3.Parent = Tab3Frame
-Execute3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Execute3.Position = UDim2.new(0.141000003, 0, 0.0590000004, 0)
-Execute3.Size = UDim2.new(0, 100, 0, 50)
-Execute3.Font = Enum.Font.Cartoon
-Execute3.Text = "Execute!"
-Execute3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute3.TextSize = 17.000
-
-UICorner_10.CornerRadius = UDim.new(0, 5)
-UICorner_10.Parent = Execute3
---Verts Hub End--
-
---Sanity Hub Begin--
-Tab4Frame.Name = "Tab4Frame"
-Tab4Frame.Parent = TabContent
-Tab4Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab4Frame.BackgroundTransparency = 1.000
-Tab4Frame.ClipsDescendants = true
-Tab4Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
-Tab4Frame.Size = UDim2.new(0, 370, 0, 203)
-Tab4Frame.Visible = false
-
-RawLinkDesc4.Name = "RawLinkDesc4"
-RawLinkDesc4.Parent = Tab4Frame
-RawLinkDesc4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc4.BackgroundTransparency = 1.000
-RawLinkDesc4.Position = UDim2.new(0.286000013, 0, 0.680000007, 0)
-RawLinkDesc4.Size = UDim2.new(0, 218, 0, 50)
-RawLinkDesc4.Font = Enum.Font.Cartoon
-RawLinkDesc4.Text = "This button will set your clipboard to the github raw of the Sanity Hub obfuscated source code!"
-RawLinkDesc4.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkDesc4.TextSize = 15.000
-RawLinkDesc4.TextWrapped = true
-RawLinkDesc4.TextYAlignment = Enum.TextYAlignment.Top
-
-Tab4Title.Name = "Tab4Title"
-Tab4Title.Parent = Tab4Frame
-Tab4Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab4Title.BackgroundTransparency = 1.000
-Tab4Title.Position = UDim2.new(0.370000005, 0, 0.0590000004, 0)
-Tab4Title.Size = UDim2.new(0, 200, 0, 50)
-Tab4Title.Font = Enum.Font.Cartoon
-Tab4Title.Text = "Sanity Hub"
-Tab4Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab4Title.TextSize = 20.000
-
-Execute4.Name = "Execute4"
-Execute4.Parent = Tab4Frame
-Execute4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Execute4.Position = UDim2.new(0.141000003, 0, 0.0590000004, 0)
-Execute4.Size = UDim2.new(0, 100, 0, 50)
-Execute4.Font = Enum.Font.Cartoon
-Execute4.Text = "Console!"
-Execute4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute4.TextSize = 17.000
-
-UICorner_11.CornerRadius = UDim.new(0, 5)
-UICorner_11.Parent = Execute4
-
-RawLinkCopy4.Name = "RawLinkCopy4"
-RawLinkCopy4.Parent = Tab4Frame
-RawLinkCopy4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-RawLinkCopy4.Position = UDim2.new(0.0680000037, 0, 0.681999981, 0)
-RawLinkCopy4.Size = UDim2.new(0, 80, 0, 40)
-RawLinkCopy4.Font = Enum.Font.Cartoon
-RawLinkCopy4.Text = "Copy Lua"
-RawLinkCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
-RawLinkCopy4.TextSize = 14.000
-
-UICorner_12.CornerRadius = UDim.new(0, 5)
-UICorner_12.Parent = RawLinkCopy4
-
-DiscordCopy4.Name = "DiscordCopy4"
-DiscordCopy4.Parent = Tab4Frame
-DiscordCopy4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-DiscordCopy4.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
-DiscordCopy4.Size = UDim2.new(0, 80, 0, 40)
-DiscordCopy4.Font = Enum.Font.Cartoon
-DiscordCopy4.Text = "Copy Discord"
-DiscordCopy4.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordCopy4.TextSize = 14.000
-
-UICorner_13.CornerRadius = UDim.new(0, 5)
-UICorner_13.Parent = DiscordCopy4
-
-DiscordDesc4.Name = "DiscordDesc4"
-DiscordDesc4.Parent = Tab4Frame
-DiscordDesc4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc4.BackgroundTransparency = 1.000
-DiscordDesc4.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
-DiscordDesc4.Size = UDim2.new(0, 218, 0, 50)
-DiscordDesc4.Font = Enum.Font.Cartoon
-DiscordDesc4.Text = "This button will set your clipboard to the discord invite to the Sanity Hub server!"
-DiscordDesc4.TextColor3 = Color3.fromRGB(255, 255, 255)
-DiscordDesc4.TextSize = 15.000
-DiscordDesc4.TextWrapped = true
-DiscordDesc4.TextYAlignment = Enum.TextYAlignment.Top
---Verts Hub End--
-
---Credits Begin--
-CreditsFrame.Name = "CreditsFrame"
-CreditsFrame.Parent = TabContent
-CreditsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CreditsFrame.BackgroundTransparency = 1.000
-CreditsFrame.ClipsDescendants = true
-CreditsFrame.Position = UDim2.new(0.247999996, 0, 0, 0)
-CreditsFrame.Size = UDim2.new(0, 370, 0, 203)
-
-CreditsTitle.Name = "CreditsTitle"
-CreditsTitle.Parent = CreditsFrame
-CreditsTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CreditsTitle.BackgroundTransparency = 1.000
-CreditsTitle.Position = UDim2.new(0.459459454, 0, 0, 0)
-CreditsTitle.Size = UDim2.new(0, 200, 0, 50)
-CreditsTitle.Font = Enum.Font.Cartoon
-CreditsTitle.Text = "Credits"
-CreditsTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditsTitle.TextSize = 20.000
-
-AboutMe2.Name = "AboutMe2"
-AboutMe2.Parent = CreditsFrame
-AboutMe2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AboutMe2.BackgroundTransparency = 1.000
-AboutMe2.Position = UDim2.new(0.513243258, 0, 0.330000013, 0)
-AboutMe2.Size = UDim2.new(0, 159, 0, 18)
-AboutMe2.Font = Enum.Font.Cartoon
-AboutMe2.Text = "Button things - vykzs"
-AboutMe2.TextColor3 = Color3.fromRGB(255, 255, 255)
-AboutMe2.TextSize = 17.000
-AboutMe2.TextWrapped = true
-AboutMe2.TextYAlignment = Enum.TextYAlignment.Top
-
-AboutMe1.Name = "AboutMe1"
-AboutMe1.Parent = CreditsFrame
-AboutMe1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AboutMe1.BackgroundTransparency = 1.000
-AboutMe1.Position = UDim2.new(0.569810808, 0, 0.231999993, 0)
-AboutMe1.Size = UDim2.new(0, 120, 0, 18)
-AboutMe1.Font = Enum.Font.Cartoon
-AboutMe1.Text = "Ui Design - vykzs"
-AboutMe1.TextColor3 = Color3.fromRGB(255, 255, 255)
-AboutMe1.TextSize = 17.000
-AboutMe1.TextWrapped = true
-AboutMe1.TextYAlignment = Enum.TextYAlignment.Top
-
-AboutMe3.Name = "AboutMe3"
-AboutMe3.Parent = CreditsFrame
-AboutMe3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-AboutMe3.BackgroundTransparency = 1.000
-AboutMe3.Position = UDim2.new(0.483783782, 0, 0.418719232, 0)
-AboutMe3.Size = UDim2.new(0, 180, 0, 18)
-AboutMe3.Font = Enum.Font.Cartoon
-AboutMe3.Text = "Scripts - a lot of people"
-AboutMe3.TextColor3 = Color3.fromRGB(255, 255, 255)
-AboutMe3.TextSize = 17.000
-AboutMe3.TextWrapped = true
-AboutMe3.TextYAlignment = Enum.TextYAlignment.Top
-
-SupportDesc.Name = "SupportDesc"
-SupportDesc.Parent = CreditsFrame
-SupportDesc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-SupportDesc.BackgroundTransparency = 1.000
-SupportDesc.BorderSizePixel = 0
-SupportDesc.Position = UDim2.new(0.0243243128, 0, 0.103448302, 0)
-SupportDesc.Size = UDim2.new(0, 180, 0, 70)
-SupportDesc.Font = Enum.Font.Cartoon
-SupportDesc.Text = "If you happen to have the discord to Fanta feel free to dm me (vyk#8174) or join this server below!"
-SupportDesc.TextColor3 = Color3.fromRGB(255, 255, 255)
-SupportDesc.TextSize = 17.000
-SupportDesc.TextWrapped = true
-SupportDesc.TextYAlignment = Enum.TextYAlignment.Top
-
-SupportLink.Name = "SupportLink"
-SupportLink.Parent = CreditsFrame
-SupportLink.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-SupportLink.Position = UDim2.new(0.0972972959, 0, 0.507389188, 0)
-SupportLink.Size = UDim2.new(0, 110, 0, 35)
-SupportLink.Font = Enum.Font.Cartoon
-SupportLink.Text = "Copy Discord"
-SupportLink.TextColor3 = Color3.fromRGB(255, 255, 255)
-SupportLink.TextSize = 14.000
-
-UICorner_14.CornerRadius = UDim.new(0, 5)
-UICorner_14.Parent = SupportLink
-
-Warning1.Name = "Warning1"
-Warning1.Parent = CreditsFrame
-Warning1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Warning1.BackgroundTransparency = 1.000
-Warning1.Position = UDim2.new(0.426540554, 0, 0.615601063, 0)
-Warning1.Size = UDim2.new(0, 201, 0, 54)
-Warning1.Font = Enum.Font.Cartoon
-Warning1.Text = "Aux Pineapple doesn't work at the moment waiting for Machport to fix it"
-Warning1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Warning1.TextSize = 15.000
-Warning1.TextWrapped = true
-Warning1.TextYAlignment = Enum.TextYAlignment.Top
---Credits End--
-
---Button Holder Begin--
-TabButtonHolder.Name = "TabButtonHolder"
-TabButtonHolder.Parent = TabContent
-TabButtonHolder.Active = true
-TabButtonHolder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TabButtonHolder.BackgroundTransparency = 1.000
-TabButtonHolder.ScrollBarImageColor3 = Color3.fromRGB(138, 161, 177)
-TabButtonHolder.BorderSizePixel = 0
-TabButtonHolder.Position = UDim2.new(0, 0, 0, 13)
-TabButtonHolder.Size = UDim2.new(0, 124, 0, 148)
-TabButtonHolder.ScrollBarThickness = 6
-
-Tab1.Name = "Tab1"
-Tab1.Parent = TabButtonHolder
-Tab1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab1.Position = UDim2.new(0, 6, 0, 0)
-Tab1.Size = UDim2.new(0, 110, 0, 35)
-Tab1.Font = Enum.Font.Cartoon
-Tab1.Text = "Aux Pineapple"
-Tab1.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab1.TextSize = 16.000
-
-UICorner_15.CornerRadius = UDim.new(0, 5)
-UICorner_15.Parent = Tab1
-
-Tab2.Name = "Tab2"
-Tab2.Parent = TabButtonHolder
-Tab2.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab2.Position = UDim2.new(0, 6, 0, 37)
-Tab2.Size = UDim2.new(0, 110, 0, 35)
-Tab2.Font = Enum.Font.Cartoon
-Tab2.Text = "Fanta Hub"
-Tab2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab2.TextSize = 16.000
-
-UICorner_16.CornerRadius = UDim.new(0, 5)
-UICorner_16.Parent = Tab2
-
-Tab3.Name = "Tab3"
-Tab3.Parent = TabButtonHolder
-Tab3.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab3.Position = UDim2.new(0, 6, 0, 74)
-Tab3.Size = UDim2.new(0, 110, 0, 35)
-Tab3.Font = Enum.Font.Cartoon
-Tab3.Text = "Verts Hub"
-Tab3.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab3.TextSize = 16.000
-
-UICorner_17.CornerRadius = UDim.new(0, 5)
-UICorner_17.Parent = Tab3
-
-Tab4.Name = "Tab4"
-Tab4.Parent = TabButtonHolder
-Tab4.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab4.Position = UDim2.new(0, 6, 0, 111)
-Tab4.Size = UDim2.new(0, 110, 0, 35)
-Tab4.Font = Enum.Font.Cartoon
-Tab4.Text = "Sanity Hub"
-Tab4.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab4.TextSize = 16.000
-
-UICorner_18.CornerRadius = UDim.new(0, 5)
-UICorner_18.Parent = Tab4
-
-Tab5.Name = "Tab5"
-Tab5.Parent = TabButtonHolder
-Tab5.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Tab5.Position = UDim2.new(0, 6, 0, 148)
-Tab5.Size = UDim2.new(0, 110, 0, 35)
-Tab5.Font = Enum.Font.Cartoon
-Tab5.Text = "Lucious Hub"
-Tab5.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab5.TextSize = 16.000
-
-UICorner_19.CornerRadius = UDim.new(0, 5)
-UICorner_19.Parent = Tab5
---Button Holder End--
-
---Lucious Hub Begin--
-Tab5Frame.Name = "Tab5Frame"
-Tab5Frame.Parent = TabContent
-Tab5Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab5Frame.BackgroundTransparency = 1.000
-Tab5Frame.ClipsDescendants = true
-Tab5Frame.Position = UDim2.new(0.247999996, 0, 0, 0)
-Tab5Frame.Size = UDim2.new(0, 370, 0, 203)
-Tab5Frame.Visible = false
-
-_52Desc.Name = "5.2Desc"
-_52Desc.Parent = Tab5Frame
-_52Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_52Desc.BackgroundTransparency = 1.000
-_52Desc.Position = UDim2.new(0.286000013, 0, 0.680000067, 0)
-_52Desc.Size = UDim2.new(0, 226, 0, 50)
-_52Desc.Font = Enum.Font.Cartoon
-_52Desc.Text = "This will execute the premium version of Lucious Hub which doesn't work on Mac and might work on Windows."
-_52Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
-_52Desc.TextSize = 15.000
-_52Desc.TextWrapped = true
-_52Desc.TextYAlignment = Enum.TextYAlignment.Top
-
-Tab5Title.Name = "Tab5Title"
-Tab5Title.Parent = Tab5Frame
-Tab5Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Tab5Title.BackgroundTransparency = 1.000
-Tab5Title.Position = UDim2.new(0.229459465, 0, 0.0442216769, 0)
-Tab5Title.Size = UDim2.new(0, 200, 0, 50)
-Tab5Title.Font = Enum.Font.Cartoon
-Tab5Title.Text = "Lucious Hub"
-Tab5Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tab5Title.TextSize = 20.000
-
-Execute52.Name = "Execute5.2"
-Execute52.Parent = Tab5Frame
-Execute52.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Execute52.Position = UDim2.new(0.0680000037, 0, 0.681999981, 0)
-Execute52.Size = UDim2.new(0, 80, 0, 40)
-Execute52.Font = Enum.Font.Cartoon
-Execute52.Text = "Premium Hub"
-Execute52.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute52.TextSize = 14.000
-
-UICorner_20.CornerRadius = UDim.new(0, 5)
-UICorner_20.Parent = Execute52
-
-_51Desc.Name = "5.1Desc"
-_51Desc.Parent = Tab5Frame
-_51Desc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-_51Desc.BackgroundTransparency = 1.000
-_51Desc.Position = UDim2.new(0.286000013, 0, 0.404000014, 0)
-_51Desc.Size = UDim2.new(0, 218, 0, 50)
-_51Desc.Font = Enum.Font.Cartoon
-_51Desc.Text = "This will execute the normal version of Lucious Hub which works on both Mac and Windows."
-_51Desc.TextColor3 = Color3.fromRGB(255, 255, 255)
-_51Desc.TextSize = 15.000
-_51Desc.TextWrapped = true
-_51Desc.TextYAlignment = Enum.TextYAlignment.Top
-
-Execute51.Name = "Execute5.1"
-Execute51.Parent = Tab5Frame
-Execute51.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Execute51.Position = UDim2.new(0.0700000003, 0, 0.400999993, 0)
-Execute51.Size = UDim2.new(0, 80, 0, 40)
-Execute51.Font = Enum.Font.Cartoon
-Execute51.Text = "Normal Hub"
-Execute51.TextColor3 = Color3.fromRGB(255, 255, 255)
-Execute51.TextSize = 14.000
-
-UICorner_21.CornerRadius = UDim.new(0, 5)
-UICorner_21.Parent = Execute51
-
-CopyTutorial1.Name = "CopyTutorial1"
-CopyTutorial1.Parent = Tab5Frame
-CopyTutorial1.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-CopyTutorial1.Position = UDim2.new(0, 29, 0, 18)
-CopyTutorial1.Size = UDim2.new(0, 90, 0, 40)
-CopyTutorial1.Font = Enum.Font.Cartoon
-CopyTutorial1.Text = "Copy Tutorial"
-CopyTutorial1.TextColor3 = Color3.fromRGB(255, 255, 255)
-CopyTutorial1.TextSize = 14.000
-
-UICorner_22.CornerRadius = UDim.new(0, 5)
-UICorner_22.Parent = CopyTutorial1
-
-CopyPresets.Name = "CopyPresets"
-CopyPresets.Parent = Tab5Frame
-CopyPresets.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-CopyPresets.Position = UDim2.new(0, 251, 0, 18)
-CopyPresets.Size = UDim2.new(0, 90, 0, 40)
-CopyPresets.Font = Enum.Font.Cartoon
-CopyPresets.Text = "Copy Presets"
-CopyPresets.TextColor3 = Color3.fromRGB(255, 255, 255)
-CopyPresets.TextSize = 14.000
-
-UICorner_23.CornerRadius = UDim.new(0, 5)
-UICorner_23.Parent = CopyPresets
---Lucious Hub End--
-
---Header Content Begin--
-HeaderContent.Name = "HeaderContent"
-HeaderContent.Parent = MainBackground
-HeaderContent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-HeaderContent.BackgroundTransparency = 1.000
-HeaderContent.Size = UDim2.new(0, 124, 0, 54)
+local CloseUi = Instance.new("TextButton")
+
+NordUi.Name = "NordUi"
+NordUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NordUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NordUi.ResetOnSpawn = false
+
+NordScheme.Name = "NordScheme"
+NordScheme.Parent = NordUi
+NordScheme.AnchorPoint = Vector2.new(0.5, 0)
+NordScheme.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+NordScheme.BorderColor3 = Color3.fromRGB(46, 52, 64)
+NordScheme.ClipsDescendants = true
+NordScheme.Position = UDim2.new(0.5, 0, 0.312874258, 0)
+NordScheme.Size = UDim2.new(0, 350, 0, 250)
+
+UICorner.Parent = NordScheme
+
+TabDecor.Name = "TabDecor"
+TabDecor.Parent = NordScheme
+TabDecor.AnchorPoint = Vector2.new(0.5, 0.5)
+TabDecor.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+TabDecor.BorderColor3 = Color3.fromRGB(59, 66, 82)
+TabDecor.Position = UDim2.new(0, 50, 0, 125)
+TabDecor.Size = UDim2.new(0, 100, 0, 250)
+TabDecor.ZIndex = 0
+
+UICorner_2.Parent = TabDecor
+
+SubDecor1.Name = "SubDecor1"
+SubDecor1.Parent = TabDecor
+SubDecor1.AnchorPoint = Vector2.new(1, 0.5)
+SubDecor1.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+SubDecor1.BorderColor3 = Color3.fromRGB(59, 66, 82)
+SubDecor1.BorderSizePixel = 0
+SubDecor1.Position = UDim2.new(1, 0, 0.5, 0)
+SubDecor1.Size = UDim2.new(0, 20, 0, 250)
+SubDecor1.ZIndex = 0
+
+PlayerName.Name = "PlayerName"
+PlayerName.Parent = TabDecor
+PlayerName.AnchorPoint = Vector2.new(0, 0.5)
+PlayerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerName.BackgroundTransparency = 1.000
+PlayerName.Position = UDim2.new(0, 30, 0, 14)
+PlayerName.Size = UDim2.new(0, 70, 0, 14)
+PlayerName.Font = Enum.Font.SourceSans
+PlayerName.Text = "Name"
+PlayerName.TextColor3 = Color3.fromRGB(216, 222, 233)
+PlayerName.TextScaled = true
+PlayerName.TextSize = 14.000
+PlayerName.TextWrapped = true
+PlayerName.TextXAlignment = Enum.TextXAlignment.Left
+
+PlayerProfile.Name = "PlayerProfile"
+PlayerProfile.Parent = TabDecor
+PlayerProfile.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+PlayerProfile.BackgroundTransparency = 0.500
+PlayerProfile.Position = UDim2.new(0, 5, 0, 4)
+PlayerProfile.Size = UDim2.new(0, 20, 0, 20)
+PlayerProfile.ZIndex = 0
+PlayerProfile.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_3.CornerRadius = UDim.new(0, 100)
+UICorner_3.Parent = PlayerProfile
+
+SubDecor2.Name = "SubDecor2"
+SubDecor2.Parent = TabDecor
+SubDecor2.AnchorPoint = Vector2.new(0.5, 0.5)
+SubDecor2.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+SubDecor2.BorderColor3 = Color3.fromRGB(46, 52, 64)
+SubDecor2.BorderSizePixel = 0
+SubDecor2.Position = UDim2.new(0, 325, 0, 125)
+SubDecor2.Size = UDim2.new(0, 50, 0, 250)
+SubDecor2.ZIndex = 0
+
+UICorner_4.Parent = SubDecor2
 
 Title.Name = "Title"
-Title.Parent = HeaderContent
-Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.Parent = NordScheme
+Title.AnchorPoint = Vector2.new(0.5, 0)
+Title.BackgroundColor3 = Color3.fromRGB(216, 222, 233)
 Title.BackgroundTransparency = 1.000
-Title.Position = UDim2.new(0.0241935477, 0, 0, 0)
-Title.Size = UDim2.new(0, 117, 0, 32)
-Title.Font = Enum.Font.Cartoon
-Title.Text = "Free Hubs"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 25.000
+Title.BorderColor3 = Color3.fromRGB(216, 222, 233)
+Title.Position = UDim2.new(0, 185, 0, 0)
+Title.Size = UDim2.new(0, 160, 0, 20)
+Title.Font = Enum.Font.Gotham
+Title.Text = "Free Boombox Visualizer"
+Title.TextColor3 = Color3.fromRGB(216, 222, 233)
+Title.TextSize = 14.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+ButtonsFrame.Name = "ButtonsFrame"
+ButtonsFrame.Parent = NordScheme
+ButtonsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ButtonsFrame.BackgroundTransparency = 1.000
+ButtonsFrame.Position = UDim2.new(0, 0, 0, 30)
+ButtonsFrame.Size = UDim2.new(0, 100, 0, 220)
+
+UIPadding.Parent = ButtonsFrame
+UIPadding.PaddingBottom = UDim.new(0, 5)
+UIPadding.PaddingLeft = UDim.new(0, 5)
+UIPadding.PaddingTop = UDim.new(0, 5)
+
+Section1Button.Name = "Section1Button"
+Section1Button.Parent = ButtonsFrame
+Section1Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Section1Button.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Section1Button.BackgroundTransparency = 1.000
+Section1Button.BorderColor3 = Color3.fromRGB(76, 86, 106)
+Section1Button.Position = UDim2.new(0, 47, 0, 25)
+Section1Button.Size = UDim2.new(0, 84, 0, 35)
+Section1Button.Font = Enum.Font.SourceSans
+Section1Button.Text = "Button1"
+Section1Button.TextColor3 = Color3.fromRGB(216, 222, 233)
+Section1Button.TextSize = 14.000
+Section1Button.TextTransparency = 1.000
+
+Frame.Parent = Section1Button
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Frame.BackgroundTransparency = 1.000
+Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame.Size = UDim2.new(0, 84, 0, 40)
+Frame.ZIndex = 0
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = Frame
+
+Button1Name.Name = "Button1Name"
+Button1Name.Parent = Frame
+Button1Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Button1Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button1Name.BackgroundTransparency = 1.000
+Button1Name.Position = UDim2.new(0.5, 0, 0.5, 0)
+Button1Name.Size = UDim2.new(0, 84, 0, 40)
+Button1Name.ZIndex = 0
+Button1Name.Font = Enum.Font.Gotham
+Button1Name.Text = "Pineapple"
+Button1Name.TextColor3 = Color3.fromRGB(216, 222, 233)
+Button1Name.TextSize = 14.000
+
+UIListLayout.Parent = ButtonsFrame
+UIListLayout.Padding = UDim.new(0, 8)
+
+Section2Button.Name = "Section2Button"
+Section2Button.Parent = ButtonsFrame
+Section2Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Section2Button.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Section2Button.BackgroundTransparency = 1.000
+Section2Button.BorderColor3 = Color3.fromRGB(76, 86, 106)
+Section2Button.Position = UDim2.new(0, 47, 0, 25)
+Section2Button.Size = UDim2.new(0, 84, 0, 35)
+Section2Button.Font = Enum.Font.SourceSans
+Section2Button.Text = "Button1"
+Section2Button.TextColor3 = Color3.fromRGB(216, 222, 233)
+Section2Button.TextSize = 14.000
+Section2Button.TextTransparency = 1.000
+
+Frame_2.Parent = Section2Button
+Frame_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_2.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Frame_2.BackgroundTransparency = 1.000
+Frame_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_2.Size = UDim2.new(0, 84, 0, 40)
+Frame_2.ZIndex = 0
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = Frame_2
+
+Button2Name.Name = "Button2Name"
+Button2Name.Parent = Frame_2
+Button2Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Button2Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button2Name.BackgroundTransparency = 1.000
+Button2Name.Position = UDim2.new(0.5, 0, 0.5, 0)
+Button2Name.Size = UDim2.new(0, 84, 0, 40)
+Button2Name.ZIndex = 0
+Button2Name.Font = Enum.Font.Gotham
+Button2Name.Text = "Fanta"
+Button2Name.TextColor3 = Color3.fromRGB(216, 222, 233)
+Button2Name.TextSize = 14.000
+
+Section3Button.Name = "Section3Button"
+Section3Button.Parent = ButtonsFrame
+Section3Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Section3Button.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Section3Button.BackgroundTransparency = 1.000
+Section3Button.BorderColor3 = Color3.fromRGB(76, 86, 106)
+Section3Button.Position = UDim2.new(0, 47, 0, 25)
+Section3Button.Size = UDim2.new(0, 84, 0, 35)
+Section3Button.Font = Enum.Font.SourceSans
+Section3Button.Text = "Button1"
+Section3Button.TextColor3 = Color3.fromRGB(216, 222, 233)
+Section3Button.TextSize = 14.000
+Section3Button.TextTransparency = 1.000
+
+Frame_3.Parent = Section3Button
+Frame_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_3.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Frame_3.BackgroundTransparency = 1.000
+Frame_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_3.Size = UDim2.new(0, 84, 0, 40)
+Frame_3.ZIndex = 0
+
+UICorner_7.CornerRadius = UDim.new(0, 4)
+UICorner_7.Parent = Frame_3
+
+Button3Name.Name = "Button3Name"
+Button3Name.Parent = Frame_3
+Button3Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Button3Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button3Name.BackgroundTransparency = 1.000
+Button3Name.Position = UDim2.new(0.5, 0, 0.5, 0)
+Button3Name.Size = UDim2.new(0, 84, 0, 40)
+Button3Name.ZIndex = 0
+Button3Name.Font = Enum.Font.Gotham
+Button3Name.Text = "Sanity"
+Button3Name.TextColor3 = Color3.fromRGB(216, 222, 233)
+Button3Name.TextSize = 14.000
+
+Section4Button.Name = "Section4Button"
+Section4Button.Parent = ButtonsFrame
+Section4Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Section4Button.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Section4Button.BackgroundTransparency = 1.000
+Section4Button.BorderColor3 = Color3.fromRGB(76, 86, 106)
+Section4Button.Position = UDim2.new(0, 47, 0, 25)
+Section4Button.Size = UDim2.new(0, 84, 0, 35)
+Section4Button.Font = Enum.Font.SourceSans
+Section4Button.Text = "Button1"
+Section4Button.TextColor3 = Color3.fromRGB(216, 222, 233)
+Section4Button.TextSize = 14.000
+Section4Button.TextTransparency = 1.000
+
+Frame_4.Parent = Section4Button
+Frame_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_4.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Frame_4.BackgroundTransparency = 1.000
+Frame_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_4.Size = UDim2.new(0, 84, 0, 40)
+Frame_4.ZIndex = 0
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = Frame_4
+
+Button4Name.Name = "Button4Name"
+Button4Name.Parent = Frame_4
+Button4Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Button4Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Button4Name.BackgroundTransparency = 1.000
+Button4Name.Position = UDim2.new(0.5, 0, 0.5, 0)
+Button4Name.Size = UDim2.new(0, 84, 0, 40)
+Button4Name.ZIndex = 0
+Button4Name.Font = Enum.Font.Gotham
+Button4Name.Text = "Verts"
+Button4Name.TextColor3 = Color3.fromRGB(216, 222, 233)
+Button4Name.TextSize = 14.000
+
+Section5Button.Name = "Section5Button"
+Section5Button.Parent = ButtonsFrame
+Section5Button.AnchorPoint = Vector2.new(0.5, 0.5)
+Section5Button.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Section5Button.BackgroundTransparency = 1.000
+Section5Button.BorderColor3 = Color3.fromRGB(76, 86, 106)
+Section5Button.Position = UDim2.new(0, 47, 0, 25)
+Section5Button.Size = UDim2.new(0, 84, 0, 35)
+Section5Button.Font = Enum.Font.SourceSans
+Section5Button.Text = "Button1"
+Section5Button.TextColor3 = Color3.fromRGB(216, 222, 233)
+Section5Button.TextSize = 14.000
+Section5Button.TextTransparency = 1.000
+
+Frame_5.Parent = Section5Button
+Frame_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_5.BackgroundColor3 = Color3.fromRGB(76, 86, 106)
+Frame_5.BackgroundTransparency = 1.000
+Frame_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_5.Size = UDim2.new(0, 84, 0, 40)
+Frame_5.ZIndex = 0
+
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = Frame_5
+
+Section5Name.Name = "Section5Name"
+Section5Name.Parent = Frame_5
+Section5Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Section5Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Section5Name.BackgroundTransparency = 1.000
+Section5Name.Position = UDim2.new(0.5, 0, 0.5, 0)
+Section5Name.Size = UDim2.new(0, 84, 0, 40)
+Section5Name.ZIndex = 0
+Section5Name.Font = Enum.Font.Gotham
+Section5Name.Text = "Misc."
+Section5Name.TextColor3 = Color3.fromRGB(216, 222, 233)
+Section5Name.TextSize = 14.000
+
+SectionsFrame.Name = "SectionsFrame"
+SectionsFrame.Parent = NordScheme
+SectionsFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SectionsFrame.BackgroundTransparency = 1.000
+SectionsFrame.BorderSizePixel = 0
+SectionsFrame.ClipsDescendants = true
+SectionsFrame.Position = UDim2.new(0, 105, 0, 25)
+SectionsFrame.Size = UDim2.new(0, 240, 0, 220)
+
+UIPageLayout.Parent = SectionsFrame
+UIPageLayout.FillDirection = Enum.FillDirection.Vertical
+UIPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIPageLayout.EasingStyle = Enum.EasingStyle.Exponential
+
+UIPadding_2.Parent = SectionsFrame
+UIPadding_2.PaddingLeft = UDim.new(0, 5)
+UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+FirstFrame.Name = "FirstFrame"
+FirstFrame.Parent = SectionsFrame
+FirstFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+FirstFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FirstFrame.BackgroundTransparency = 1.000
+FirstFrame.Size = UDim2.new(0, 230, 0, 210)
+FirstFrame.ZIndex = 0
+
+Execute1.Name = "Execute1"
+Execute1.Parent = FirstFrame
+Execute1.AnchorPoint = Vector2.new(0.5, 0.5)
+Execute1.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Execute1.BackgroundTransparency = 1.000
+Execute1.ClipsDescendants = true
+Execute1.Position = UDim2.new(0.5, 0, 0.0690476224, 0)
+Execute1.Size = UDim2.new(0, 200, 0, 25)
+Execute1.Font = Enum.Font.Gotham
+Execute1.Text = "Execute ScriptName"
+Execute1.TextColor3 = Color3.fromRGB(216, 222, 233)
+Execute1.TextSize = 14.000
+
+Frame_6.Parent = Execute1
+Frame_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_6.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_6.Size = UDim2.new(0, 200, 0, 25)
+Frame_6.ZIndex = 0
+
+UICorner_10.Parent = Frame_6
+
+TextLabel.Parent = Execute1
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 25)
+TextLabel.ZIndex = 0
+TextLabel.Font = Enum.Font.Gotham
+TextLabel.Text = "Execute Pineapple"
+TextLabel.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel.TextSize = 14.000
+
+AboutScript1.Name = "AboutScript1"
+AboutScript1.Parent = FirstFrame
+AboutScript1.AnchorPoint = Vector2.new(0.5, 0.5)
+AboutScript1.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+AboutScript1.BorderColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript1.Position = UDim2.new(0.5, 0, 0.285714298, 0)
+AboutScript1.Size = UDim2.new(0, 200, 0, 50)
+AboutScript1.Font = Enum.Font.Gotham
+AboutScript1.Text = "This is Pineapple developed by Aux and as of now hasn't been updated since the initial release."
+AboutScript1.TextColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript1.TextSize = 13.000
+AboutScript1.TextWrapped = true
+
+Discord1.Name = "Discord1"
+Discord1.Parent = FirstFrame
+Discord1.AnchorPoint = Vector2.new(0.5, 0.5)
+Discord1.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Discord1.BackgroundTransparency = 1.000
+Discord1.ClipsDescendants = true
+Discord1.Position = UDim2.new(0, 115, 0, 104)
+Discord1.Size = UDim2.new(0, 200, 0, 25)
+Discord1.Font = Enum.Font.Gotham
+Discord1.Text = "0"
+Discord1.TextColor3 = Color3.fromRGB(216, 222, 233)
+Discord1.TextSize = 14.000
+
+Frame_7.Parent = Discord1
+Frame_7.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_7.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_7.Size = UDim2.new(0, 200, 0, 25)
+Frame_7.ZIndex = 0
+
+UICorner_11.Parent = Frame_7
+
+TextLabel_2.Parent = Discord1
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_2.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_2.ZIndex = 0
+TextLabel_2.Font = Enum.Font.Gotham
+TextLabel_2.Text = "Copy Discord"
+TextLabel_2.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_2.TextSize = 14.000
+
+Source1.Name = "Source1"
+Source1.Parent = FirstFrame
+Source1.AnchorPoint = Vector2.new(0.5, 0.5)
+Source1.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Source1.BackgroundTransparency = 1.000
+Source1.ClipsDescendants = true
+Source1.Position = UDim2.new(0, 115, 0, 135)
+Source1.Size = UDim2.new(0, 200, 0, 25)
+Source1.Font = Enum.Font.Gotham
+Source1.Text = "0"
+Source1.TextColor3 = Color3.fromRGB(216, 222, 233)
+Source1.TextSize = 14.000
+
+Frame_8.Parent = Source1
+Frame_8.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_8.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_8.Size = UDim2.new(0, 200, 0, 25)
+Frame_8.ZIndex = 0
+
+UICorner_12.Parent = Frame_8
+
+TextLabel_3.Parent = Source1
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_3.ZIndex = 0
+TextLabel_3.Font = Enum.Font.Gotham
+TextLabel_3.Text = "Copy Source Code"
+TextLabel_3.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_3.TextSize = 14.000
+
+SecondFrame.Name = "SecondFrame"
+SecondFrame.Parent = SectionsFrame
+SecondFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+SecondFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SecondFrame.BackgroundTransparency = 1.000
+SecondFrame.Size = UDim2.new(0, 230, 0, 210)
+SecondFrame.ZIndex = 0
+
+Execute2.Name = "Execute2"
+Execute2.Parent = SecondFrame
+Execute2.AnchorPoint = Vector2.new(0.5, 0.5)
+Execute2.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Execute2.BackgroundTransparency = 1.000
+Execute2.ClipsDescendants = true
+Execute2.Position = UDim2.new(0.5, 0, 0.0738095269, 0)
+Execute2.Size = UDim2.new(0, 200, 0, 25)
+Execute2.Font = Enum.Font.Gotham
+Execute2.Text = "Execute ScriptName"
+Execute2.TextColor3 = Color3.fromRGB(216, 222, 233)
+Execute2.TextSize = 14.000
+
+Frame_9.Parent = Execute2
+Frame_9.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_9.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_9.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_9.Size = UDim2.new(0, 200, 0, 25)
+Frame_9.ZIndex = 0
+
+UICorner_13.Parent = Frame_9
+
+TextLabel_4.Parent = Execute2
+TextLabel_4.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_4.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_4.ZIndex = 0
+TextLabel_4.Font = Enum.Font.Gotham
+TextLabel_4.Text = "Execute Fanta"
+TextLabel_4.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_4.TextSize = 14.000
+
+Source2.Name = "Source2"
+Source2.Parent = SecondFrame
+Source2.AnchorPoint = Vector2.new(0.5, 0.5)
+Source2.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Source2.BackgroundTransparency = 1.000
+Source2.ClipsDescendants = true
+Source2.Position = UDim2.new(0, 115, 0, 108)
+Source2.Size = UDim2.new(0, 200, 0, 25)
+Source2.Font = Enum.Font.Gotham
+Source2.Text = "0"
+Source2.TextColor3 = Color3.fromRGB(216, 222, 233)
+Source2.TextSize = 14.000
+
+Frame_10.Parent = Source2
+Frame_10.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_10.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_10.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_10.Size = UDim2.new(0, 200, 0, 25)
+Frame_10.ZIndex = 0
+
+UICorner_14.Parent = Frame_10
+
+TextLabel_5.Parent = Source2
+TextLabel_5.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_5.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_5.ZIndex = 0
+TextLabel_5.Font = Enum.Font.Gotham
+TextLabel_5.Text = "Copy Source Code"
+TextLabel_5.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_5.TextSize = 14.000
+
+AboutScript2.Name = "AboutScript2"
+AboutScript2.Parent = SecondFrame
+AboutScript2.AnchorPoint = Vector2.new(0.5, 0.5)
+AboutScript2.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+AboutScript2.BorderColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript2.Position = UDim2.new(0.5, 0, 0.294047624, 0)
+AboutScript2.Size = UDim2.new(0, 200, 0, 53)
+AboutScript2.Font = Enum.Font.Gotham
+AboutScript2.Text = "This is Fanta Hub developed by an unknown persons. It hasn't recieved updates since what I would think is the initial release."
+AboutScript2.TextColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript2.TextSize = 13.000
+AboutScript2.TextWrapped = true
+
+ThirdFrame.Name = "ThirdFrame"
+ThirdFrame.Parent = SectionsFrame
+ThirdFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+ThirdFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ThirdFrame.BackgroundTransparency = 1.000
+ThirdFrame.Size = UDim2.new(0, 230, 0, 210)
+ThirdFrame.ZIndex = 0
+
+Discord3.Name = "Discord3"
+Discord3.Parent = ThirdFrame
+Discord3.AnchorPoint = Vector2.new(0.5, 0.5)
+Discord3.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Discord3.BackgroundTransparency = 1.000
+Discord3.ClipsDescendants = true
+Discord3.Position = UDim2.new(0, 115, 0, 104)
+Discord3.Size = UDim2.new(0, 200, 0, 25)
+Discord3.Font = Enum.Font.Gotham
+Discord3.Text = "0"
+Discord3.TextColor3 = Color3.fromRGB(216, 222, 233)
+Discord3.TextSize = 14.000
+
+Frame_11.Parent = Discord3
+Frame_11.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_11.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_11.Size = UDim2.new(0, 200, 0, 25)
+Frame_11.ZIndex = 0
+
+UICorner_15.Parent = Frame_11
+
+TextLabel_6.Parent = Discord3
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_6.ZIndex = 0
+TextLabel_6.Font = Enum.Font.Gotham
+TextLabel_6.Text = "Copy Discord"
+TextLabel_6.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_6.TextSize = 14.000
+
+Execute3.Name = "Execute3"
+Execute3.Parent = ThirdFrame
+Execute3.AnchorPoint = Vector2.new(0.5, 0.5)
+Execute3.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Execute3.BackgroundTransparency = 1.000
+Execute3.ClipsDescendants = true
+Execute3.Position = UDim2.new(0.5, 0, 0.0690476224, 0)
+Execute3.Size = UDim2.new(0, 200, 0, 25)
+Execute3.Font = Enum.Font.Gotham
+Execute3.Text = "Execute ScriptName"
+Execute3.TextColor3 = Color3.fromRGB(216, 222, 233)
+Execute3.TextSize = 14.000
+
+Frame_12.Parent = Execute3
+Frame_12.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_12.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_12.Size = UDim2.new(0, 200, 0, 25)
+Frame_12.ZIndex = 0
+
+UICorner_16.Parent = Frame_12
+
+TextLabel_7.Parent = Execute3
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_7.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_7.ZIndex = 0
+TextLabel_7.Font = Enum.Font.Gotham
+TextLabel_7.Text = "Execute Sanity"
+TextLabel_7.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_7.TextSize = 14.000
+
+Source3.Name = "Source3"
+Source3.Parent = ThirdFrame
+Source3.AnchorPoint = Vector2.new(0.5, 0.5)
+Source3.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Source3.BackgroundTransparency = 1.000
+Source3.ClipsDescendants = true
+Source3.Position = UDim2.new(0, 115, 0, 135)
+Source3.Size = UDim2.new(0, 200, 0, 25)
+Source3.Font = Enum.Font.Gotham
+Source3.Text = "0"
+Source3.TextColor3 = Color3.fromRGB(216, 222, 233)
+Source3.TextSize = 14.000
+
+Frame_13.Parent = Source3
+Frame_13.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_13.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_13.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_13.Size = UDim2.new(0, 200, 0, 25)
+Frame_13.ZIndex = 0
+
+UICorner_17.Parent = Frame_13
+
+TextLabel_8.Parent = Source3
+TextLabel_8.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_8.BackgroundTransparency = 1.000
+TextLabel_8.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_8.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_8.ZIndex = 0
+TextLabel_8.Font = Enum.Font.Gotham
+TextLabel_8.Text = "Copy Source Code"
+TextLabel_8.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_8.TextSize = 14.000
+
+AboutScript3.Name = "AboutScript3"
+AboutScript3.Parent = ThirdFrame
+AboutScript3.AnchorPoint = Vector2.new(0.5, 0.5)
+AboutScript3.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+AboutScript3.BorderColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript3.Position = UDim2.new(0.5, 0, 0.285714298, 0)
+AboutScript3.Size = UDim2.new(0, 200, 0, 50)
+AboutScript3.Font = Enum.Font.Gotham
+AboutScript3.Text = "This script doesn't work rn"
+AboutScript3.TextColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript3.TextSize = 13.000
+AboutScript3.TextWrapped = true
+
+ForthFrame.Name = "ForthFrame"
+ForthFrame.Parent = SectionsFrame
+ForthFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+ForthFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ForthFrame.BackgroundTransparency = 1.000
+ForthFrame.Size = UDim2.new(0, 230, 0, 210)
+ForthFrame.ZIndex = 0
+
+Execute4.Name = "Execute4"
+Execute4.Parent = ForthFrame
+Execute4.AnchorPoint = Vector2.new(0.5, 0.5)
+Execute4.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Execute4.BackgroundTransparency = 1.000
+Execute4.ClipsDescendants = true
+Execute4.Position = UDim2.new(0.5, 0, 0.0690476224, 0)
+Execute4.Size = UDim2.new(0, 200, 0, 25)
+Execute4.Font = Enum.Font.Gotham
+Execute4.Text = "Execute ScriptName"
+Execute4.TextColor3 = Color3.fromRGB(216, 222, 233)
+Execute4.TextSize = 14.000
+
+Frame_14.Parent = Execute4
+Frame_14.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_14.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_14.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_14.Size = UDim2.new(0, 200, 0, 25)
+Frame_14.ZIndex = 0
+
+UICorner_18.Parent = Frame_14
+
+TextLabel_9.Parent = Execute4
+TextLabel_9.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_9.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_9.ZIndex = 0
+TextLabel_9.Font = Enum.Font.Gotham
+TextLabel_9.Text = "Execute Verts"
+TextLabel_9.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_9.TextSize = 14.000
+
+Source4.Name = "Source4"
+Source4.Parent = ForthFrame
+Source4.AnchorPoint = Vector2.new(0.5, 0.5)
+Source4.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Source4.BackgroundTransparency = 1.000
+Source4.ClipsDescendants = true
+Source4.Position = UDim2.new(0, 115, 0, 104)
+Source4.Size = UDim2.new(0, 200, 0, 25)
+Source4.Font = Enum.Font.Gotham
+Source4.Text = "0"
+Source4.TextColor3 = Color3.fromRGB(216, 222, 233)
+Source4.TextSize = 14.000
+
+Frame_15.Parent = Source4
+Frame_15.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_15.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_15.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_15.Size = UDim2.new(0, 200, 0, 25)
+Frame_15.ZIndex = 0
+
+UICorner_19.Parent = Frame_15
+
+TextLabel_10.Parent = Source4
+TextLabel_10.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_10.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_10.ZIndex = 0
+TextLabel_10.Font = Enum.Font.Gotham
+TextLabel_10.Text = "Copy Source Code"
+TextLabel_10.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_10.TextSize = 14.000
+
+AboutScript4.Name = "AboutScript4"
+AboutScript4.Parent = ForthFrame
+AboutScript4.AnchorPoint = Vector2.new(0.5, 0.5)
+AboutScript4.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+AboutScript4.BorderColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript4.Position = UDim2.new(0.5, 0, 0.285714298, 0)
+AboutScript4.Size = UDim2.new(0, 200, 0, 50)
+AboutScript4.Font = Enum.Font.Gotham
+AboutScript4.Text = "This is Verts Hub developed by Vert I believe. It hasn't recieved updates since he quit."
+AboutScript4.TextColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript4.TextSize = 13.000
+AboutScript4.TextWrapped = true
+
+Presets1.Name = "Presets1"
+Presets1.Parent = ForthFrame
+Presets1.AnchorPoint = Vector2.new(0.5, 0.5)
+Presets1.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Presets1.BackgroundTransparency = 1.000
+Presets1.ClipsDescendants = true
+Presets1.Position = UDim2.new(0, 115, 0, 135)
+Presets1.Size = UDim2.new(0, 200, 0, 25)
+Presets1.Font = Enum.Font.Gotham
+Presets1.Text = "0"
+Presets1.TextColor3 = Color3.fromRGB(216, 222, 233)
+Presets1.TextSize = 14.000
+
+Frame_16.Parent = Presets1
+Frame_16.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_16.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_16.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_16.Size = UDim2.new(0, 200, 0, 25)
+Frame_16.ZIndex = 0
+
+UICorner_20.Parent = Frame_16
+
+TextLabel_11.Parent = Presets1
+TextLabel_11.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_11.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_11.ZIndex = 0
+TextLabel_11.Font = Enum.Font.Gotham
+TextLabel_11.Text = "Copy Presets Zip"
+TextLabel_11.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_11.TextSize = 14.000
+
+FifthFrame.Name = "FifthFrame"
+FifthFrame.Parent = SectionsFrame
+FifthFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+FifthFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FifthFrame.BackgroundTransparency = 1.000
+FifthFrame.Size = UDim2.new(0, 230, 0, 210)
+FifthFrame.ZIndex = 0
+
+Discord5.Name = "Discord5"
+Discord5.Parent = FifthFrame
+Discord5.AnchorPoint = Vector2.new(0.5, 0.5)
+Discord5.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Discord5.BackgroundTransparency = 1.000
+Discord5.ClipsDescendants = true
+Discord5.Position = UDim2.new(0, 115, 0, 104)
+Discord5.Size = UDim2.new(0, 200, 0, 25)
+Discord5.Font = Enum.Font.Gotham
+Discord5.Text = "0"
+Discord5.TextColor3 = Color3.fromRGB(216, 222, 233)
+Discord5.TextSize = 14.000
+
+Frame_17.Parent = Discord5
+Frame_17.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_17.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_17.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_17.Size = UDim2.new(0, 200, 0, 25)
+Frame_17.ZIndex = 0
+
+UICorner_21.Parent = Frame_17
+
+TextLabel_12.Parent = Discord5
+TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_12.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_12.ZIndex = 0
+TextLabel_12.Font = Enum.Font.Gotham
+TextLabel_12.Text = "Copy Discord"
+TextLabel_12.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_12.TextSize = 14.000
+
+Support1.Name = "Support1"
+Support1.Parent = FifthFrame
+Support1.AnchorPoint = Vector2.new(0.5, 0.5)
+Support1.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+Support1.BorderColor3 = Color3.fromRGB(216, 222, 233)
+Support1.Position = UDim2.new(0, 115, 0, 45)
+Support1.Size = UDim2.new(0, 200, 0, 80)
+Support1.Font = Enum.Font.Gotham
+Support1.Text = "The button below will set your clipboard to a discord server dedicated to this hub. If you wish to provide another visualizer or a Discord not added you can join and dm the owner it!"
+Support1.TextColor3 = Color3.fromRGB(216, 222, 233)
+Support1.TextSize = 13.000
+Support1.TextWrapped = true
+
+Credits1.Name = "Credits1"
+Credits1.Parent = FifthFrame
+Credits1.AnchorPoint = Vector2.new(0.5, 0.5)
+Credits1.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+Credits1.BorderColor3 = Color3.fromRGB(216, 222, 233)
+Credits1.Position = UDim2.new(0, 115, 0, 132)
+Credits1.Size = UDim2.new(0, 200, 0, 15)
+Credits1.Font = Enum.Font.Gotham
+Credits1.Text = "Credits"
+Credits1.TextColor3 = Color3.fromRGB(216, 222, 233)
+Credits1.TextSize = 15.000
+Credits1.TextWrapped = true
+
+Credits2.Name = "Credits2"
+Credits2.Parent = FifthFrame
+Credits2.AnchorPoint = Vector2.new(0.5, 0.5)
+Credits2.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+Credits2.BorderColor3 = Color3.fromRGB(216, 222, 233)
+Credits2.Position = UDim2.new(0, 115, 0, 160)
+Credits2.Size = UDim2.new(0, 200, 0, 40)
+Credits2.Font = Enum.Font.Gotham
+Credits2.Text = "Ui - griffin/vykzs/grifin, bunch of people on devforum\\nHubs - lotta people so credit to respective owners of those"
+Credits2.TextColor3 = Color3.fromRGB(216, 222, 233)
+Credits2.TextSize = 9.000
+Credits2.TextWrapped = true
+Credits2.TextXAlignment = Enum.TextXAlignment.Left
+Credits2.TextYAlignment = Enum.TextYAlignment.Top
+
+CloseDecor.Name = "CloseDecor"
+CloseDecor.Parent = NordScheme
+CloseDecor.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseDecor.BackgroundTransparency = 1.000
+CloseDecor.Position = UDim2.new(0.842857122, 0, 0, 0)
+CloseDecor.Size = UDim2.new(0, 55, 0, 20)
 
 Minimize.Name = "Minimize"
-Minimize.Parent = HeaderContent
-Minimize.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-Minimize.BackgroundTransparency = 0.300
-Minimize.Position = UDim2.new(0.0526776612, 0, 0.604071975, 0)
-Minimize.Size = UDim2.new(0, 110, 0, 20)
-Minimize.Font = Enum.Font.Cartoon
-Minimize.Text = "Minimize"
-Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.Parent = CloseDecor
+Minimize.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.BackgroundTransparency = 1.000
+Minimize.Position = UDim2.new(0, 10, 0, 0)
+Minimize.Size = UDim2.new(0, 25, 0, 20)
+Minimize.Font = Enum.Font.Gotham
+Minimize.Text = "_"
+Minimize.TextColor3 = Color3.fromRGB(216, 222, 233)
 Minimize.TextSize = 14.000
 
-UICorner_24.CornerRadius = UDim.new(0, 5)
-UICorner_24.Parent = Minimize
+CloseUi.Name = "CloseUi"
+CloseUi.Parent = CloseDecor
+CloseUi.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseUi.BackgroundTransparency = 1.000
+CloseUi.Position = UDim2.new(0, 30, 0, 0)
+CloseUi.Size = UDim2.new(0, 25, 0, 20)
+CloseUi.Font = Enum.Font.Gotham
+CloseUi.Text = "X"
+CloseUi.TextColor3 = Color3.fromRGB(210, 60, 65)
+CloseUi.TextSize = 14.000
 
-Watermark.Name = "Watermark"
-Watermark.Parent = MainBackground
-Watermark.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Watermark.BackgroundTransparency = 1.000
-Watermark.BorderSizePixel = 0
-Watermark.Position = UDim2.new(0.486000001, 0, 0, 0)
-Watermark.Size = UDim2.new(0, 132, 0, 40)
-Watermark.Font = Enum.Font.Cartoon
-Watermark.Text = "discord.gg/scripting"
-Watermark.TextColor3 = Color3.fromRGB(61, 63, 67)
-Watermark.TextSize = 14.000
-Watermark.TextTransparency = 0.800
+local Minimized = false
+local Button1Toggled = false
+local Button2Toggled = false
+local Button3Toggled = false
+local Button4Toggled = false
+local Button5Toggled = true
 
-CreditsButton.Name = "CreditsButton"
-CreditsButton.Parent = MainBackground
-CreditsButton.BackgroundColor3 = Color3.fromRGB(138, 161, 177)
-CreditsButton.Position = UDim2.new(0, 6, 0, 210)
-CreditsButton.Size = UDim2.new(0, 110, 0, 35)
-CreditsButton.Font = Enum.Font.Cartoon
-CreditsButton.Text = "Credits"
-CreditsButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-CreditsButton.TextSize = 16.000
+local function OMFDZ_fake_script() -- Section1Button.SectionScript1 
+	local script = Instance.new('LocalScript', Section1Button)
 
-UICorner_25.CornerRadius = UDim.new(0, 5)
-UICorner_25.Parent = CreditsButton
---Header Content End--
+	local Button = script.Parent
+	local Object = Button.Frame
+	local InFaderGoal = {
+		BackgroundTransparency = 0.5
+	}
+	local OutFaderGoal = {
+		BackgroundTransparency = 1
+	}
+	local SelectedGoal = {
+		BackgroundTransparency = 0
+	}
+	
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
+	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
+	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		if Button1Toggled then
+			wait()
+		else
+			InFader:Play()
+		end
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		if Button1Toggled then
+			wait()
+		else
+			OutFader:Play()
+		end
+	end)
+	
+	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
+	script.Parent.MouseButton1Down:Connect(function()
+		Button1Toggled = true
+		Selected:Play()
+		if Button2Toggled then
+			local Button2 = TsGet:Create(script.Parent.Parent.Section2Button.Frame, tweeninfo, OutFaderGoal)
+			Button2:Play()
+			Button2Toggled = false
+		end
+		if Button3Toggled then
+			local Button3 = TsGet:Create(script.Parent.Parent.Section3Button.Frame, tweeninfo, OutFaderGoal)
+			Button3:Play()
+			Button3Toggled = false
+		end
+		if Button4Toggled then
+			local Button4 = TsGet:Create(script.Parent.Parent.Section4Button.Frame, tweeninfo, OutFaderGoal)
+			Button4:Play()
+			Button4Toggled = false
+		end
+		if Button5Toggled then
+			local Button5 = TsGet:Create(script.Parent.Parent.Section5Button.Frame, tweeninfo, OutFaderGoal)
+			Button5:Play()
+			Button5Toggled = false
+		end
+		--Script--
+		SectionFrames.UIPageLayout:JumpTo(SectionFrames.FirstFrame)
+	end)
+end
+coroutine.wrap(OMFDZ_fake_script)()
+local function FQVIYI_fake_script() -- Section2Button.SectionScript2 
+	local script = Instance.new('LocalScript', Section2Button)
 
---Tab Button Scripts Begin--
-Tab1.MouseButton1Down:Connect(function()
-	Tab1Frame.Visible = true
-	Tab2Frame.Visible = false
-	Tab3Frame.Visible = false
-	Tab4Frame.Visible = false
-	Tab5Frame.Visible = false
-	CreditsFrame.Visible = false
-end)
+	local Button = script.Parent
+	local Object = Button.Frame
+	local InFaderGoal = {
+		BackgroundTransparency = 0.5
+	}
+	local OutFaderGoal = {
+		BackgroundTransparency = 1
+	}
+	local SelectedGoal = {
+		BackgroundTransparency = 0
+	}
+	
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
+	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
+	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		if Button2Toggled then
+			wait()
+		else
+			InFader:Play()
+		end
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		if Button2Toggled then
+			wait()
+		else
+			OutFader:Play()
+		end
+	end)
+	
+	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
+	script.Parent.MouseButton1Down:Connect(function()
+		Button2Toggled = true
+		Selected:Play()
+		if Button1Toggled then
+			local Button1 = TsGet:Create(script.Parent.Parent.Section1Button.Frame, tweeninfo, OutFaderGoal)
+			Button1:Play()
+			Button1Toggled = false
+		end
+		if Button3Toggled then
+			local Button3 = TsGet:Create(script.Parent.Parent.Section3Button.Frame, tweeninfo, OutFaderGoal)
+			Button3:Play()
+			Button3Toggled = false
+		end
+		if Button4Toggled then
+			local Button4 = TsGet:Create(script.Parent.Parent.Section4Button.Frame, tweeninfo, OutFaderGoal)
+			Button4:Play()
+			Button4Toggled = false
+		end
+		if Button5Toggled then
+			local Button5 = TsGet:Create(script.Parent.Parent.Section5Button.Frame, tweeninfo, OutFaderGoal)
+			Button5:Play()
+			Button5Toggled = false
+		end
+		--Script--
+		SectionFrames.UIPageLayout:JumpTo(SectionFrames.SecondFrame)
+	end)
+end
+coroutine.wrap(FQVIYI_fake_script)()
+local function MUVAG_fake_script() -- ButtonsFrame.ButtonGlobals 
+	local script = Instance.new('LocalScript', ButtonsFrame)
 
-Tab2.MouseButton1Down:connect(function()
-	Tab1Frame.Visible = false
-	Tab2Frame.Visible = true
-	Tab3Frame.Visible = false
-	Tab4Frame.Visible = false
-	Tab5Frame.Visible = false
-	CreditsFrame.Visible = false
-end)
+	wait(1)
+	local SectionFrames = script.Parent.Parent.SectionsFrame
+	local Button = script.Parent.Section5Button
+	local Object = Button.Frame
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+	local SelectedGoal = {
+		BackgroundTransparency = 0
+	}
+	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
+	Selected:Play()
+	SectionFrames.UIPageLayout:JumpTo(SectionFrames.FifthFrame)
+end
+coroutine.wrap(MUVAG_fake_script)()
+local function AJRII_fake_script() -- Section3Button.SectionScript3 
+	local script = Instance.new('LocalScript', Section3Button)
 
-Tab3.MouseButton1Down:connect(function()
-	Tab1Frame.Visible = false
-	Tab2Frame.Visible = false
-	Tab3Frame.Visible = true
-	Tab4Frame.Visible = false
-	Tab5Frame.Visible = false
-	CreditsFrame.Visible = false
-end)
+	local Button = script.Parent
+	local Object = Button.Frame
+	local InFaderGoal = {
+		BackgroundTransparency = 0.5
+	}
+	local OutFaderGoal = {
+		BackgroundTransparency = 1
+	}
+	local SelectedGoal = {
+		BackgroundTransparency = 0
+	}
+	
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
+	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
+	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		if Button3Toggled then
+			wait()
+		else
+			InFader:Play()
+		end
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		if Button3Toggled then
+			wait()
+		else
+			OutFader:Play()
+		end
+	end)
+	
+	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
+	script.Parent.MouseButton1Down:Connect(function()
+		Button3Toggled = true
+		Selected:Play()
+		if Button1Toggled then
+			local Button1 = TsGet:Create(script.Parent.Parent.Section1Button.Frame, tweeninfo, OutFaderGoal)
+			Button1:Play()
+			Button1Toggled = false
+		end
+		if Button2Toggled then
+			local Button2 = TsGet:Create(script.Parent.Parent.Section2Button.Frame, tweeninfo, OutFaderGoal)
+			Button2:Play()
+			Button2Toggled = false
+		end
+		if Button4Toggled then
+			local Button4 = TsGet:Create(script.Parent.Parent.Section4Button.Frame, tweeninfo, OutFaderGoal)
+			Button4:Play()
+			Button4Toggled = false
+		end
+		if Button5Toggled then
+			local Button5 = TsGet:Create(script.Parent.Parent.Section5Button.Frame, tweeninfo, OutFaderGoal)
+			Button5:Play()
+			Button5Toggled = false
+		end
+		--Script--
+		SectionFrames.UIPageLayout:JumpTo(SectionFrames.ThirdFrame)
+	end)
+end
+coroutine.wrap(AJRII_fake_script)()
+local function PRBMGY_fake_script() -- Section4Button.SectionScript4 
+	local script = Instance.new('LocalScript', Section4Button)
 
-Tab4.MouseButton1Down:connect(function()
-	Tab1Frame.Visible = false
-	Tab2Frame.Visible = false
-	Tab3Frame.Visible = false
-	Tab4Frame.Visible = true
-	Tab5Frame.Visible = false
-	CreditsFrame.Visible = false
-end)
+	local Button = script.Parent
+	local Object = Button.Frame
+	local InFaderGoal = {
+		BackgroundTransparency = 0.5
+	}
+	local OutFaderGoal = {
+		BackgroundTransparency = 1
+	}
+	local SelectedGoal = {
+		BackgroundTransparency = 0
+	}
+	
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
+	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
+	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		if Button4Toggled then
+			wait()
+		else
+			InFader:Play()
+		end
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		if Button4Toggled then
+			wait()
+		else
+			OutFader:Play()
+		end
+	end)
+	
+	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
+	script.Parent.MouseButton1Down:Connect(function()
+		Button4Toggled = true
+		Selected:Play()
+		if Button1Toggled then
+			local Button1 = TsGet:Create(script.Parent.Parent.Section1Button.Frame, tweeninfo, OutFaderGoal)
+			Button1:Play()
+			Button1Toggled = false
+		end
+		if Button2Toggled then
+			local Button2 = TsGet:Create(script.Parent.Parent.Section2Button.Frame, tweeninfo, OutFaderGoal)
+			Button2:Play()
+			Button2Toggled = false
+		end
+		if Button3Toggled then
+			local Button3 = TsGet:Create(script.Parent.Parent.Section3Button.Frame, tweeninfo, OutFaderGoal)
+			Button3:Play()
+			Button3Toggled = false
+		end
+		if Button5Toggled then
+			local Button5 = TsGet:Create(script.Parent.Parent.Section5Button.Frame, tweeninfo, OutFaderGoal)
+			Button5:Play()
+			Button5Toggled = false
+		end
+		--Script--
+		SectionFrames.UIPageLayout:JumpTo(SectionFrames.ForthFrame)
+	end)
+end
+coroutine.wrap(PRBMGY_fake_script)()
+local function PGOXUNC_fake_script() -- Section5Button.SectionScript5 
+	local script = Instance.new('LocalScript', Section5Button)
 
-Tab5.MouseButton1Down:connect(function()
-	Tab1Frame.Visible = false
-	Tab2Frame.Visible = false
-	Tab3Frame.Visible = false
-	Tab4Frame.Visible = false
-	Tab5Frame.Visible = true
-	CreditsFrame.Visible = false
-end)
+	local Button = script.Parent
+	local Object = Button.Frame
+	local InFaderGoal = {
+		BackgroundTransparency = 0.5
+	}
+	local OutFaderGoal = {
+		BackgroundTransparency = 1
+	}
+	local SelectedGoal = {
+		BackgroundTransparency = 0
+	}
+	
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
+	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
+	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
+	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
+	
+	
+	script.Parent.MouseEnter:Connect(function()
+		if Button5Toggled then
+			wait()
+		else
+			InFader:Play()
+		end
+	end)
+	script.Parent.MouseLeave:Connect(function()
+		if Button5Toggled then
+			wait()
+		else
+			OutFader:Play()
+		end
+	end)
+	
+	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
+	script.Parent.MouseButton1Down:Connect(function()
+		Button5Toggled = true
+		Selected:Play()
+		if Button1Toggled then
+			local Button1 = TsGet:Create(script.Parent.Parent.Section1Button.Frame, tweeninfo, OutFaderGoal)
+			Button1:Play()
+			Button1Toggled = false
+		end
+		if Button2Toggled then
+			local Button2 = TsGet:Create(script.Parent.Parent.Section2Button.Frame, tweeninfo, OutFaderGoal)
+			Button2:Play()
+			Button2Toggled = false
+		end
+		if Button3Toggled then
+			local Button3 = TsGet:Create(script.Parent.Parent.Section3Button.Frame, tweeninfo, OutFaderGoal)
+			Button3:Play()
+			Button3Toggled = false
+		end
+		if Button4Toggled then
+			local Button4 = TsGet:Create(script.Parent.Parent.Section4Button.Frame, tweeninfo, OutFaderGoal)
+			Button4:Play()
+			Button4Toggled = false
+		end
+		--Script--
+		SectionFrames.UIPageLayout:JumpTo(SectionFrames.FifthFrame)
+	end)
+end
+coroutine.wrap(PGOXUNC_fake_script)()
+local function JBDNPRP_fake_script() -- Execute1.ExecuteScript1 
+	local script = Instance.new('LocalScript', Execute1)
 
-CreditsButton.MouseButton1Down:Connect(function()
-	Tab1Frame.Visible = false
-	Tab2Frame.Visible = false
-	Tab3Frame.Visible = false
-	Tab4Frame.Visible = false
-	Tab5Frame.Visible = false
-	CreditsFrame.Visible = true
-end)
---Tab Button Scripts End--
+	script.Parent.MouseButton1Down:Connect(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
+	end)
+end
+coroutine.wrap(JBDNPRP_fake_script)()
+local function UVMAUO_fake_script() -- Discord1.DiscordScript1 
+	local script = Instance.new('LocalScript', Discord1)
 
---Execution Button Scripts Begin--
-Execute1.MouseButton1Down:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
-    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
-    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
-    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
-    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
-    warn("AUX PINEAPPLE MIGHT NOT BE WORKING SORRY! - vyk")
-end)
+	script.Parent.MouseButton1Down:Connect(function()
+		setclipboard("https://discord.gg/B47nj3GbKe")
+	end)
+end
+coroutine.wrap(UVMAUO_fake_script)()
+local function EPPNQ_fake_script() -- Source1.SourceScript1 
+	local script = Instance.new('LocalScript', Source1)
 
-Execute2.MouseButton1Down:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
-end)
+	script.Parent.MouseButton1Down:Connect(function()
+        setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua")
+	end)
+end
+coroutine.wrap(EPPNQ_fake_script)()
+local function FFDHY_fake_script() -- Execute2.ExecuteScript2 
+	local script = Instance.new('LocalScript', Execute2)
 
-Execute3.MouseButton1Down:Connect(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
-end)
+	script.Parent.MouseButton1Down:Connect(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
+	end)
+end
+coroutine.wrap(FFDHY_fake_script)()
+local function ALJAYA_fake_script() -- Source2.SourceScript2 
+	local script = Instance.new('LocalScript', Source2)
 
-Execute4.MouseButton1Down:Connect(function()
-    --loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
-    warn("\n Sanity Hub no longer works until Sanity either gets the webhost up, or releases the newest version. \n \n My apologies - vyk")
-end)
+	script.Parent.MouseButton1Down:Connect(function()
+	    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua")
+	end)
+end
+coroutine.wrap(ALJAYA_fake_script)()
+local function LBVIUCV_fake_script() -- Discord3.DiscordScript3 
+	local script = Instance.new('LocalScript', Discord3)
 
-Execute51.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/NormalLucious.lua", true))()
-end)
+	script.Parent.MouseButton1Down:Connect(function()
+        setclipboard("https://discord.gg/4kk3jmmsFH")
+	end)
+end
+coroutine.wrap(LBVIUCV_fake_script)()
+local function SLKC_fake_script() -- Execute3.ExecuteScript3 
+	local script = Instance.new('LocalScript', Execute3)
 
-Execute52.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/PremiumLucious.lua", true))()
-end)
---Execution Button Scripts End--
+	script.Parent.MouseButton1Down:Connect(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
+        warn("\n Sanity Hub no longer works until Sanity either gets the webhost up, or releases the newest version. \n \n My apologies - vyk")
+	end)
+end
+coroutine.wrap(SLKC_fake_script)()
+local function BZHDD_fake_script() -- Source3.SourceScript3 
+	local script = Instance.new('LocalScript', Source3)
 
---Minimzation Button Script Begin--
-Minimize.MouseButton1Down:Connect(function()
-	if toggled then
-		toggled = false
-		TabContent.Visible = false
-		MainBackground:TweenSize(UDim2.new(0, 124,0, 58), "InOut", "Linear", 0.15)
-	else
-		toggled = true
-		MainBackground:TweenSize(UDim2.new(0,500,0,253), "InOut", "Linear", 0.15)
-		wait()
-		TabContent.Visible = true
+	script.Parent.MouseButton1Down:Connect(function()
+	    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua")
+	end)
+end
+coroutine.wrap(BZHDD_fake_script)()
+local function LJWYSS_fake_script() -- Execute4.ExecuteScript4 
+	local script = Instance.new('LocalScript', Execute4)
+
+	script.Parent.MouseButton1Down:Connect(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
+	end)
+end
+coroutine.wrap(LJWYSS_fake_script)()
+local function RBAYOYA_fake_script() -- Source4.SourceScript4 
+	local script = Instance.new('LocalScript', Source4)
+
+	script.Parent.MouseButton1Down:Connect(function()
+	    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua")
+	end)
+end
+coroutine.wrap(RBAYOYA_fake_script)()
+local function AWRF_fake_script() -- Presets1.PresetsScript1 
+	local script = Instance.new('LocalScript', Presets1)
+
+	script.Parent.MouseButton1Down:Connect(function()
+	
+	end)
+end
+coroutine.wrap(AWRF_fake_script)()
+local function CPTTFIM_fake_script() -- Discord5.DiscordScript5 
+	local script = Instance.new('LocalScript', Discord5)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		setclipboard("https://discord.gg/28sk94mjA5")
+	end)
+end
+coroutine.wrap(CPTTFIM_fake_script)()
+local function PJRBDOI_fake_script() -- NordScheme.Starter 
+	local script = Instance.new('LocalScript', NordScheme)
+	
+	local UserInputService = game:GetService("UserInputService")
+	local gui = script.Parent
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = gui:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y), 'Out', 'Linear', 0.3, true); -- drag speed
 	end
-end)
---Minimization Button Script End--
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+	
+	script.Parent.TabDecor.PlayerName.Text = game:GetService("Players").LocalPlayer.DisplayName
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local userId = player.UserId	
+	local thumbType = Enum.ThumbnailType.HeadShot
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	local HeadPlace = script.Parent.TabDecor.PlayerProfile
+	HeadPlace.Image = content
+end
+coroutine.wrap(PJRBDOI_fake_script)()
+local function RZSNFG_fake_script() -- Minimize.MinimizeScript 
+	local script = Instance.new('LocalScript', Minimize)
 
---Raw Link Button Scripts Begin--
-RawLinkCopy1.MouseButton1Down:Connect(function()
-    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua")
-end)
+	local Filler = script.Parent.Parent.Parent.Parent
+	local Object = Filler.NordScheme
+	local Minimize = {
+		Size = UDim2.new(0, 350,0, 25)
+	}
+	local Maximize = {
+		Size = UDim2.new(0, 350,0, 250)
+	}
+	
+	local TsGet = game:GetService("TweenService")
+	local tweeninfo = TweenInfo.new(0.75, Enum.EasingStyle.Sine)
+	local Mini = TsGet:Create(Object, tweeninfo, Minimize)
+	local Max = TsGet:Create(Object, tweeninfo, Maximize)
+	
+	
+	script.Parent.MouseButton1Down:Connect(function()
+		if Minimized == false then
+			Mini:Play()
+			Minimized = true
+		else
+			Max:Play()
+			Minimized = false
+		end
+	end)
+end
+coroutine.wrap(RZSNFG_fake_script)()
+local function QPBXREX_fake_script() -- CloseUi.CloseScript 
+	local script = Instance.new('LocalScript', CloseUi)
 
-RawLinkCopy2.MouseButton1Down:Connect(function()
-    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua")
-end)
-
-RawLinkCopy3.MouseButton1Down:Connect(function()
-    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua")
-end)
-
-RawLinkCopy4.MouseButton1Down:Connect(function()
-    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua")
-end)
---Raw Link Button Scripts End--
-
---Discord Link Button Scripts Begin--
-DiscordCopy1.MouseButton1Down:Connect(function()
-    setclipboard("https://discord.gg/B47nj3GbKe")
-end)
-
-DiscordCopy3.MouseButton1Down:Connect(function()
-    setclipboard("https://discord.gg/ZB9fJbED6H")
-end)
-
-DiscordCopy4.MouseButton1Down:Connect(function()
-    setclipboard("https://discord.gg/4kk3jmmsFH")
-end)
-
-SupportLink.MouseButton1Down:Connect(function()
-	setclipboard("https://discord.gg/28sk94mjA5")
-end)
---Discord Link Button Scripts End--
-
---Lucious Hub Extra Buttons Begin--
-CopyTutorial1.MouseButton1Down:Connect(function()
-	setclipboard("https://www.youtube.com/watch?v=JpW_w5hgxJo")
-end)
-
-CopyPresets.MouseButton1Down:Connect(function()
-	setclipboard("https://github.com/vyks/vyks/blob/main/LuciousPremiumPresets.zip?raw=true")
-end)
---Lucious Hub Extra Buttons End--
-
-warn("Enjoy! - vykzs")
+	script.Parent.MouseButton1Down:Connect(function()
+		warn("\n NordUi for Free Hubs closed \n - grifin")
+		script.Parent.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(QPBXREX_fake_script)()
