@@ -1441,7 +1441,7 @@ local function AWRF_fake_script() -- Presets1.PresetsScript1
 	local script = Instance.new('LocalScript', Presets1)
 
 	script.Parent.MouseButton1Down:Connect(function()
-	
+		setclipboard("https://github.com/vyks/vyks/blob/main/VertsPresets.zip")
 	end)
 end
 coroutine.wrap(AWRF_fake_script)()
