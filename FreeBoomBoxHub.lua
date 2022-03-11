@@ -80,38 +80,42 @@ local UICorner_14 = Instance.new("UICorner")
 local TextLabel_5 = Instance.new("TextLabel")
 local AboutScript2 = Instance.new("TextLabel")
 local ThirdFrame = Instance.new("Frame")
-local Discord3 = Instance.new("TextButton")
+local Execute3 = Instance.new("TextButton")
 local Frame_11 = Instance.new("Frame")
 local UICorner_15 = Instance.new("UICorner")
 local TextLabel_6 = Instance.new("TextLabel")
-local Execute3 = Instance.new("TextButton")
+local Source3 = Instance.new("TextButton")
 local Frame_12 = Instance.new("Frame")
 local UICorner_16 = Instance.new("UICorner")
 local TextLabel_7 = Instance.new("TextLabel")
-local Source3 = Instance.new("TextButton")
+local AboutScript3 = Instance.new("TextLabel")
+local Execute32 = Instance.new("TextButton")
 local Frame_13 = Instance.new("Frame")
 local UICorner_17 = Instance.new("UICorner")
 local TextLabel_8 = Instance.new("TextLabel")
-local AboutScript3 = Instance.new("TextLabel")
-local ForthFrame = Instance.new("Frame")
-local Execute4 = Instance.new("TextButton")
+local Presets2 = Instance.new("TextButton")
 local Frame_14 = Instance.new("Frame")
 local UICorner_18 = Instance.new("UICorner")
 local TextLabel_9 = Instance.new("TextLabel")
-local Source4 = Instance.new("TextButton")
+local ForthFrame = Instance.new("Frame")
+local Execute4 = Instance.new("TextButton")
 local Frame_15 = Instance.new("Frame")
 local UICorner_19 = Instance.new("UICorner")
 local TextLabel_10 = Instance.new("TextLabel")
-local AboutScript4 = Instance.new("TextLabel")
-local Presets1 = Instance.new("TextButton")
+local Source4 = Instance.new("TextButton")
 local Frame_16 = Instance.new("Frame")
 local UICorner_20 = Instance.new("UICorner")
 local TextLabel_11 = Instance.new("TextLabel")
-local FifthFrame = Instance.new("Frame")
-local Discord5 = Instance.new("TextButton")
+local AboutScript4 = Instance.new("TextLabel")
+local Presets1 = Instance.new("TextButton")
 local Frame_17 = Instance.new("Frame")
 local UICorner_21 = Instance.new("UICorner")
 local TextLabel_12 = Instance.new("TextLabel")
+local FifthFrame = Instance.new("Frame")
+local Discord5 = Instance.new("TextButton")
+local Frame_18 = Instance.new("Frame")
+local UICorner_22 = Instance.new("UICorner")
+local TextLabel_13 = Instance.new("TextLabel")
 local Support1 = Instance.new("TextLabel")
 local Credits1 = Instance.new("TextLabel")
 local Credits2 = Instance.new("TextLabel")
@@ -334,7 +338,7 @@ Button3Name.Position = UDim2.new(0.5, 0, 0.5, 0)
 Button3Name.Size = UDim2.new(0, 84, 0, 40)
 Button3Name.ZIndex = 0
 Button3Name.Font = Enum.Font.Gotham
-Button3Name.Text = "Sanity"
+Button3Name.Text = "Lucious"
 Button3Name.TextColor3 = Color3.fromRGB(216, 222, 233)
 Button3Name.TextSize = 14.000
 
@@ -652,40 +656,6 @@ ThirdFrame.BackgroundTransparency = 1.000
 ThirdFrame.Size = UDim2.new(0, 230, 0, 210)
 ThirdFrame.ZIndex = 0
 
-Discord3.Name = "Discord3"
-Discord3.Parent = ThirdFrame
-Discord3.AnchorPoint = Vector2.new(0.5, 0.5)
-Discord3.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Discord3.BackgroundTransparency = 1.000
-Discord3.ClipsDescendants = true
-Discord3.Position = UDim2.new(0, 115, 0, 104)
-Discord3.Size = UDim2.new(0, 200, 0, 25)
-Discord3.Font = Enum.Font.Gotham
-Discord3.Text = "0"
-Discord3.TextColor3 = Color3.fromRGB(216, 222, 233)
-Discord3.TextSize = 14.000
-
-Frame_11.Parent = Discord3
-Frame_11.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame_11.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Frame_11.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame_11.Size = UDim2.new(0, 200, 0, 25)
-Frame_11.ZIndex = 0
-
-UICorner_15.Parent = Frame_11
-
-TextLabel_6.Parent = Discord3
-TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_6.BackgroundTransparency = 1.000
-TextLabel_6.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_6.Size = UDim2.new(0, 200, 0, 25)
-TextLabel_6.ZIndex = 0
-TextLabel_6.Font = Enum.Font.Gotham
-TextLabel_6.Text = "Copy Discord"
-TextLabel_6.TextColor3 = Color3.fromRGB(216, 222, 233)
-TextLabel_6.TextSize = 14.000
-
 Execute3.Name = "Execute3"
 Execute3.Parent = ThirdFrame
 Execute3.AnchorPoint = Vector2.new(0.5, 0.5)
@@ -699,26 +669,26 @@ Execute3.Text = "Execute ScriptName"
 Execute3.TextColor3 = Color3.fromRGB(216, 222, 233)
 Execute3.TextSize = 14.000
 
-Frame_12.Parent = Execute3
-Frame_12.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame_12.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Frame_12.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame_12.Size = UDim2.new(0, 200, 0, 25)
-Frame_12.ZIndex = 0
+Frame_11.Parent = Execute3
+Frame_11.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_11.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_11.Size = UDim2.new(0, 200, 0, 25)
+Frame_11.ZIndex = 0
 
-UICorner_16.Parent = Frame_12
+UICorner_15.Parent = Frame_11
 
-TextLabel_7.Parent = Execute3
-TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_7.BackgroundTransparency = 1.000
-TextLabel_7.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_7.Size = UDim2.new(0, 200, 0, 25)
-TextLabel_7.ZIndex = 0
-TextLabel_7.Font = Enum.Font.Gotham
-TextLabel_7.Text = "Execute Sanity"
-TextLabel_7.TextColor3 = Color3.fromRGB(216, 222, 233)
-TextLabel_7.TextSize = 14.000
+TextLabel_6.Parent = Execute3
+TextLabel_6.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_6.BackgroundTransparency = 1.000
+TextLabel_6.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_6.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_6.ZIndex = 0
+TextLabel_6.Font = Enum.Font.Gotham
+TextLabel_6.Text = "Execute Lucious"
+TextLabel_6.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_6.TextSize = 14.000
 
 Source3.Name = "Source3"
 Source3.Parent = ThirdFrame
@@ -733,7 +703,54 @@ Source3.Text = "0"
 Source3.TextColor3 = Color3.fromRGB(216, 222, 233)
 Source3.TextSize = 14.000
 
-Frame_13.Parent = Source3
+Frame_12.Parent = Source3
+Frame_12.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_12.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_12.Size = UDim2.new(0, 200, 0, 25)
+Frame_12.ZIndex = 0
+
+UICorner_16.Parent = Frame_12
+
+TextLabel_7.Parent = Source3
+TextLabel_7.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_7.BackgroundTransparency = 1.000
+TextLabel_7.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_7.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_7.ZIndex = 0
+TextLabel_7.Font = Enum.Font.Gotham
+TextLabel_7.Text = "Copy Source Code"
+TextLabel_7.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_7.TextSize = 14.000
+
+AboutScript3.Name = "AboutScript3"
+AboutScript3.Parent = ThirdFrame
+AboutScript3.AnchorPoint = Vector2.new(0.5, 0.5)
+AboutScript3.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
+AboutScript3.BorderColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript3.Position = UDim2.new(0.5, 0, 0.433333337, 0)
+AboutScript3.Size = UDim2.new(0, 200, 0, 50)
+AboutScript3.Font = Enum.Font.Gotham
+AboutScript3.Text = "This script is a recoded version of Pineapple but to what I am told it acutally works. So it's back!"
+AboutScript3.TextColor3 = Color3.fromRGB(216, 222, 233)
+AboutScript3.TextSize = 13.000
+AboutScript3.TextWrapped = true
+
+Execute32.Name = "Execute3-2"
+Execute32.Parent = ThirdFrame
+Execute32.AnchorPoint = Vector2.new(0.5, 0.5)
+Execute32.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Execute32.BackgroundTransparency = 1.000
+Execute32.ClipsDescendants = true
+Execute32.Position = UDim2.new(0.5, 0, 0.221428573, 0)
+Execute32.Size = UDim2.new(0, 200, 0, 25)
+Execute32.Font = Enum.Font.Gotham
+Execute32.Text = "Execute ScriptName"
+Execute32.TextColor3 = Color3.fromRGB(216, 222, 233)
+Execute32.TextSize = 14.000
+
+Frame_13.Parent = Execute32
 Frame_13.AnchorPoint = Vector2.new(0.5, 0.5)
 Frame_13.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
 Frame_13.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -742,7 +759,7 @@ Frame_13.ZIndex = 0
 
 UICorner_17.Parent = Frame_13
 
-TextLabel_8.Parent = Source3
+TextLabel_8.Parent = Execute32
 TextLabel_8.AnchorPoint = Vector2.new(0.5, 0.5)
 TextLabel_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.BackgroundTransparency = 1.000
@@ -750,22 +767,43 @@ TextLabel_8.Position = UDim2.new(0.5, 0, 0.5, 0)
 TextLabel_8.Size = UDim2.new(0, 200, 0, 25)
 TextLabel_8.ZIndex = 0
 TextLabel_8.Font = Enum.Font.Gotham
-TextLabel_8.Text = "Copy Source Code"
+TextLabel_8.Text = "Execute Lucious [Premium]"
 TextLabel_8.TextColor3 = Color3.fromRGB(216, 222, 233)
 TextLabel_8.TextSize = 14.000
 
-AboutScript3.Name = "AboutScript3"
-AboutScript3.Parent = ThirdFrame
-AboutScript3.AnchorPoint = Vector2.new(0.5, 0.5)
-AboutScript3.BackgroundColor3 = Color3.fromRGB(46, 52, 64)
-AboutScript3.BorderColor3 = Color3.fromRGB(216, 222, 233)
-AboutScript3.Position = UDim2.new(0.5, 0, 0.285714298, 0)
-AboutScript3.Size = UDim2.new(0, 200, 0, 50)
-AboutScript3.Font = Enum.Font.Gotham
-AboutScript3.Text = "This script doesn't work rn"
-AboutScript3.TextColor3 = Color3.fromRGB(216, 222, 233)
-AboutScript3.TextSize = 13.000
-AboutScript3.TextWrapped = true
+Presets2.Name = "Presets2"
+Presets2.Parent = ThirdFrame
+Presets2.AnchorPoint = Vector2.new(0.5, 0.5)
+Presets2.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Presets2.BackgroundTransparency = 1.000
+Presets2.ClipsDescendants = true
+Presets2.Position = UDim2.new(0, 115, 0, 166)
+Presets2.Size = UDim2.new(0, 200, 0, 25)
+Presets2.Font = Enum.Font.Gotham
+Presets2.Text = "0"
+Presets2.TextColor3 = Color3.fromRGB(216, 222, 233)
+Presets2.TextSize = 14.000
+
+Frame_14.Parent = Presets2
+Frame_14.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_14.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_14.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_14.Size = UDim2.new(0, 200, 0, 25)
+Frame_14.ZIndex = 0
+
+UICorner_18.Parent = Frame_14
+
+TextLabel_9.Parent = Presets2
+TextLabel_9.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_9.BackgroundTransparency = 1.000
+TextLabel_9.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_9.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_9.ZIndex = 0
+TextLabel_9.Font = Enum.Font.Gotham
+TextLabel_9.Text = "Copy Presets [Premium]"
+TextLabel_9.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_9.TextSize = 14.000
 
 ForthFrame.Name = "ForthFrame"
 ForthFrame.Parent = SectionsFrame
@@ -788,26 +826,26 @@ Execute4.Text = "Execute ScriptName"
 Execute4.TextColor3 = Color3.fromRGB(216, 222, 233)
 Execute4.TextSize = 14.000
 
-Frame_14.Parent = Execute4
-Frame_14.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame_14.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Frame_14.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame_14.Size = UDim2.new(0, 200, 0, 25)
-Frame_14.ZIndex = 0
+Frame_15.Parent = Execute4
+Frame_15.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_15.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_15.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_15.Size = UDim2.new(0, 200, 0, 25)
+Frame_15.ZIndex = 0
 
-UICorner_18.Parent = Frame_14
+UICorner_19.Parent = Frame_15
 
-TextLabel_9.Parent = Execute4
-TextLabel_9.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_9.BackgroundTransparency = 1.000
-TextLabel_9.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_9.Size = UDim2.new(0, 200, 0, 25)
-TextLabel_9.ZIndex = 0
-TextLabel_9.Font = Enum.Font.Gotham
-TextLabel_9.Text = "Execute Verts"
-TextLabel_9.TextColor3 = Color3.fromRGB(216, 222, 233)
-TextLabel_9.TextSize = 14.000
+TextLabel_10.Parent = Execute4
+TextLabel_10.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_10.BackgroundTransparency = 1.000
+TextLabel_10.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_10.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_10.ZIndex = 0
+TextLabel_10.Font = Enum.Font.Gotham
+TextLabel_10.Text = "Execute Verts"
+TextLabel_10.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_10.TextSize = 14.000
 
 Source4.Name = "Source4"
 Source4.Parent = ForthFrame
@@ -822,26 +860,26 @@ Source4.Text = "0"
 Source4.TextColor3 = Color3.fromRGB(216, 222, 233)
 Source4.TextSize = 14.000
 
-Frame_15.Parent = Source4
-Frame_15.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame_15.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Frame_15.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame_15.Size = UDim2.new(0, 200, 0, 25)
-Frame_15.ZIndex = 0
+Frame_16.Parent = Source4
+Frame_16.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_16.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_16.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_16.Size = UDim2.new(0, 200, 0, 25)
+Frame_16.ZIndex = 0
 
-UICorner_19.Parent = Frame_15
+UICorner_20.Parent = Frame_16
 
-TextLabel_10.Parent = Source4
-TextLabel_10.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_10.BackgroundTransparency = 1.000
-TextLabel_10.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_10.Size = UDim2.new(0, 200, 0, 25)
-TextLabel_10.ZIndex = 0
-TextLabel_10.Font = Enum.Font.Gotham
-TextLabel_10.Text = "Copy Source Code"
-TextLabel_10.TextColor3 = Color3.fromRGB(216, 222, 233)
-TextLabel_10.TextSize = 14.000
+TextLabel_11.Parent = Source4
+TextLabel_11.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_11.BackgroundTransparency = 1.000
+TextLabel_11.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_11.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_11.ZIndex = 0
+TextLabel_11.Font = Enum.Font.Gotham
+TextLabel_11.Text = "Copy Source Code"
+TextLabel_11.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_11.TextSize = 14.000
 
 AboutScript4.Name = "AboutScript4"
 AboutScript4.Parent = ForthFrame
@@ -869,26 +907,26 @@ Presets1.Text = "0"
 Presets1.TextColor3 = Color3.fromRGB(216, 222, 233)
 Presets1.TextSize = 14.000
 
-Frame_16.Parent = Presets1
-Frame_16.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame_16.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Frame_16.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame_16.Size = UDim2.new(0, 200, 0, 25)
-Frame_16.ZIndex = 0
+Frame_17.Parent = Presets1
+Frame_17.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_17.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_17.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_17.Size = UDim2.new(0, 200, 0, 25)
+Frame_17.ZIndex = 0
 
-UICorner_20.Parent = Frame_16
+UICorner_21.Parent = Frame_17
 
-TextLabel_11.Parent = Presets1
-TextLabel_11.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_11.BackgroundTransparency = 1.000
-TextLabel_11.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_11.Size = UDim2.new(0, 200, 0, 25)
-TextLabel_11.ZIndex = 0
-TextLabel_11.Font = Enum.Font.Gotham
-TextLabel_11.Text = "Copy Presets Zip"
-TextLabel_11.TextColor3 = Color3.fromRGB(216, 222, 233)
-TextLabel_11.TextSize = 14.000
+TextLabel_12.Parent = Presets1
+TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_12.BackgroundTransparency = 1.000
+TextLabel_12.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_12.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_12.ZIndex = 0
+TextLabel_12.Font = Enum.Font.Gotham
+TextLabel_12.Text = "Copy Presets Zip"
+TextLabel_12.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_12.TextSize = 14.000
 
 FifthFrame.Name = "FifthFrame"
 FifthFrame.Parent = SectionsFrame
@@ -911,26 +949,26 @@ Discord5.Text = "0"
 Discord5.TextColor3 = Color3.fromRGB(216, 222, 233)
 Discord5.TextSize = 14.000
 
-Frame_17.Parent = Discord5
-Frame_17.AnchorPoint = Vector2.new(0.5, 0.5)
-Frame_17.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
-Frame_17.Position = UDim2.new(0.5, 0, 0.5, 0)
-Frame_17.Size = UDim2.new(0, 200, 0, 25)
-Frame_17.ZIndex = 0
+Frame_18.Parent = Discord5
+Frame_18.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame_18.BackgroundColor3 = Color3.fromRGB(59, 66, 82)
+Frame_18.Position = UDim2.new(0.5, 0, 0.5, 0)
+Frame_18.Size = UDim2.new(0, 200, 0, 25)
+Frame_18.ZIndex = 0
 
-UICorner_21.Parent = Frame_17
+UICorner_22.Parent = Frame_18
 
-TextLabel_12.Parent = Discord5
-TextLabel_12.AnchorPoint = Vector2.new(0.5, 0.5)
-TextLabel_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-TextLabel_12.BackgroundTransparency = 1.000
-TextLabel_12.Position = UDim2.new(0.5, 0, 0.5, 0)
-TextLabel_12.Size = UDim2.new(0, 200, 0, 25)
-TextLabel_12.ZIndex = 0
-TextLabel_12.Font = Enum.Font.Gotham
-TextLabel_12.Text = "Copy Discord"
-TextLabel_12.TextColor3 = Color3.fromRGB(216, 222, 233)
-TextLabel_12.TextSize = 14.000
+TextLabel_13.Parent = Discord5
+TextLabel_13.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_13.BackgroundTransparency = 1.000
+TextLabel_13.Position = UDim2.new(0.5, 0, 0.5, 0)
+TextLabel_13.Size = UDim2.new(0, 200, 0, 25)
+TextLabel_13.ZIndex = 0
+TextLabel_13.Font = Enum.Font.Gotham
+TextLabel_13.Text = "Copy Discord"
+TextLabel_13.TextColor3 = Color3.fromRGB(216, 222, 233)
+TextLabel_13.TextSize = 14.000
 
 Support1.Name = "Support1"
 Support1.Parent = FifthFrame
@@ -1023,14 +1061,14 @@ local function OMFDZ_fake_script() -- Section1Button.SectionScript1
 	local SelectedGoal = {
 		BackgroundTransparency = 0
 	}
-	
+
 	local TsGet = game:GetService("TweenService")
 	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
 	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
 	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
 	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
-	
-	
+
+
 	script.Parent.MouseEnter:Connect(function()
 		if Button1Toggled then
 			wait()
@@ -1045,7 +1083,7 @@ local function OMFDZ_fake_script() -- Section1Button.SectionScript1
 			OutFader:Play()
 		end
 	end)
-	
+
 	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
 	script.Parent.MouseButton1Down:Connect(function()
 		Button1Toggled = true
@@ -1070,7 +1108,6 @@ local function OMFDZ_fake_script() -- Section1Button.SectionScript1
 			Button5:Play()
 			Button5Toggled = false
 		end
-		--Script--
 		SectionFrames.UIPageLayout:JumpTo(SectionFrames.FirstFrame)
 	end)
 end
@@ -1089,14 +1126,14 @@ local function FQVIYI_fake_script() -- Section2Button.SectionScript2
 	local SelectedGoal = {
 		BackgroundTransparency = 0
 	}
-	
+
 	local TsGet = game:GetService("TweenService")
 	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
 	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
 	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
 	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
-	
-	
+
+
 	script.Parent.MouseEnter:Connect(function()
 		if Button2Toggled then
 			wait()
@@ -1111,7 +1148,7 @@ local function FQVIYI_fake_script() -- Section2Button.SectionScript2
 			OutFader:Play()
 		end
 	end)
-	
+
 	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
 	script.Parent.MouseButton1Down:Connect(function()
 		Button2Toggled = true
@@ -1136,7 +1173,6 @@ local function FQVIYI_fake_script() -- Section2Button.SectionScript2
 			Button5:Play()
 			Button5Toggled = false
 		end
-		--Script--
 		SectionFrames.UIPageLayout:JumpTo(SectionFrames.SecondFrame)
 	end)
 end
@@ -1172,14 +1208,14 @@ local function AJRII_fake_script() -- Section3Button.SectionScript3
 	local SelectedGoal = {
 		BackgroundTransparency = 0
 	}
-	
+
 	local TsGet = game:GetService("TweenService")
 	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
 	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
 	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
 	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
-	
-	
+
+
 	script.Parent.MouseEnter:Connect(function()
 		if Button3Toggled then
 			wait()
@@ -1194,7 +1230,7 @@ local function AJRII_fake_script() -- Section3Button.SectionScript3
 			OutFader:Play()
 		end
 	end)
-	
+
 	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
 	script.Parent.MouseButton1Down:Connect(function()
 		Button3Toggled = true
@@ -1219,7 +1255,6 @@ local function AJRII_fake_script() -- Section3Button.SectionScript3
 			Button5:Play()
 			Button5Toggled = false
 		end
-		--Script--
 		SectionFrames.UIPageLayout:JumpTo(SectionFrames.ThirdFrame)
 	end)
 end
@@ -1238,14 +1273,14 @@ local function PRBMGY_fake_script() -- Section4Button.SectionScript4
 	local SelectedGoal = {
 		BackgroundTransparency = 0
 	}
-	
+
 	local TsGet = game:GetService("TweenService")
 	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
 	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
 	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
 	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
-	
-	
+
+
 	script.Parent.MouseEnter:Connect(function()
 		if Button4Toggled then
 			wait()
@@ -1260,7 +1295,7 @@ local function PRBMGY_fake_script() -- Section4Button.SectionScript4
 			OutFader:Play()
 		end
 	end)
-	
+
 	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
 	script.Parent.MouseButton1Down:Connect(function()
 		Button4Toggled = true
@@ -1285,7 +1320,7 @@ local function PRBMGY_fake_script() -- Section4Button.SectionScript4
 			Button5:Play()
 			Button5Toggled = false
 		end
-		--Script--
+		
 		SectionFrames.UIPageLayout:JumpTo(SectionFrames.ForthFrame)
 	end)
 end
@@ -1304,14 +1339,14 @@ local function PGOXUNC_fake_script() -- Section5Button.SectionScript5
 	local SelectedGoal = {
 		BackgroundTransparency = 0
 	}
-	
+
 	local TsGet = game:GetService("TweenService")
 	local tweeninfo = TweenInfo.new(0.5, Enum.EasingStyle.Linear)
 	local InFader = TsGet:Create(Object, tweeninfo, InFaderGoal)
 	local OutFader = TsGet:Create(Object, tweeninfo, OutFaderGoal)
 	local Selected = TsGet:Create(Object, tweeninfo, SelectedGoal)
-	
-	
+
+
 	script.Parent.MouseEnter:Connect(function()
 		if Button5Toggled then
 			wait()
@@ -1326,7 +1361,7 @@ local function PGOXUNC_fake_script() -- Section5Button.SectionScript5
 			OutFader:Play()
 		end
 	end)
-	
+
 	local SectionFrames = script.Parent.Parent.Parent.SectionsFrame
 	script.Parent.MouseButton1Down:Connect(function()
 		Button5Toggled = true
@@ -1351,7 +1386,7 @@ local function PGOXUNC_fake_script() -- Section5Button.SectionScript5
 			Button4:Play()
 			Button4Toggled = false
 		end
-		--Script--
+		
 		SectionFrames.UIPageLayout:JumpTo(SectionFrames.FifthFrame)
 	end)
 end
@@ -1360,7 +1395,7 @@ local function JBDNPRP_fake_script() -- Execute1.ExecuteScript1
 	local script = Instance.new('LocalScript', Execute1)
 
 	script.Parent.MouseButton1Down:Connect(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
 	end)
 end
 coroutine.wrap(JBDNPRP_fake_script)()
@@ -1376,7 +1411,7 @@ local function EPPNQ_fake_script() -- Source1.SourceScript1
 	local script = Instance.new('LocalScript', Source1)
 
 	script.Parent.MouseButton1Down:Connect(function()
-        setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua")
+		setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua")
 	end)
 end
 coroutine.wrap(EPPNQ_fake_script)()
@@ -1384,7 +1419,7 @@ local function FFDHY_fake_script() -- Execute2.ExecuteScript2
 	local script = Instance.new('LocalScript', Execute2)
 
 	script.Parent.MouseButton1Down:Connect(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
 	end)
 end
 coroutine.wrap(FFDHY_fake_script)()
@@ -1392,40 +1427,47 @@ local function ALJAYA_fake_script() -- Source2.SourceScript2
 	local script = Instance.new('LocalScript', Source2)
 
 	script.Parent.MouseButton1Down:Connect(function()
-	    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua")
+		setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua")
 	end)
 end
 coroutine.wrap(ALJAYA_fake_script)()
-local function LBVIUCV_fake_script() -- Discord3.DiscordScript3 
-	local script = Instance.new('LocalScript', Discord3)
-
-	script.Parent.MouseButton1Down:Connect(function()
-        setclipboard("https://discord.gg/4kk3jmmsFH")
-	end)
-end
-coroutine.wrap(LBVIUCV_fake_script)()
-local function SLKC_fake_script() -- Execute3.ExecuteScript3 
+local function DWTKM_fake_script() -- Execute3.ExecuteScript3 
 	local script = Instance.new('LocalScript', Execute3)
 
 	script.Parent.MouseButton1Down:Connect(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua", true))()
-        warn("\n Sanity Hub no longer works until Sanity either gets the webhost up, or releases the newest version. \n \n My apologies - vyk")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/NormalLucious.lua"))()
 	end)
 end
-coroutine.wrap(SLKC_fake_script)()
-local function BZHDD_fake_script() -- Source3.SourceScript3 
+coroutine.wrap(DWTKM_fake_script)()
+local function DCOGEFW_fake_script() -- Source3.SourceScript3 
 	local script = Instance.new('LocalScript', Source3)
 
 	script.Parent.MouseButton1Down:Connect(function()
-	    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/SanityHub.lua")
+        setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/NormalLucious.lua or https://raw.githubusercontent.com/vyks/vyks/main/PremiumLucious.lua")
 	end)
 end
-coroutine.wrap(BZHDD_fake_script)()
+coroutine.wrap(DCOGEFW_fake_script)()
+local function ZPTEPX_fake_script() -- Execute32.ExecuteScript3-2 
+	local script = Instance.new('LocalScript', Execute32)
+
+	script.Parent.MouseButton1Down:Connect(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/PremiumLucious.lua"))()
+	end)
+end
+coroutine.wrap(ZPTEPX_fake_script)()
+local function AMEP_fake_script() -- Presets2.PresetsScript2 
+	local script = Instance.new('LocalScript', Presets2)
+
+	script.Parent.MouseButton1Down:Connect(function()
+        setclipboard("https://github.com/vyks/vyks/blob/main/LuciousPremiumPresets.zip")
+	end)
+end
+coroutine.wrap(AMEP_fake_script)()
 local function LJWYSS_fake_script() -- Execute4.ExecuteScript4 
 	local script = Instance.new('LocalScript', Execute4)
 
 	script.Parent.MouseButton1Down:Connect(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
 	end)
 end
 coroutine.wrap(LJWYSS_fake_script)()
@@ -1433,7 +1475,7 @@ local function RBAYOYA_fake_script() -- Source4.SourceScript4
 	local script = Instance.new('LocalScript', Source4)
 
 	script.Parent.MouseButton1Down:Connect(function()
-	    setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua")
+		setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua")
 	end)
 end
 coroutine.wrap(RBAYOYA_fake_script)()
@@ -1455,7 +1497,7 @@ end
 coroutine.wrap(CPTTFIM_fake_script)()
 local function PJRBDOI_fake_script() -- NordScheme.Starter 
 	local script = Instance.new('LocalScript', NordScheme)
-	
+
 	local UserInputService = game:GetService("UserInputService")
 	local gui = script.Parent
 	local dragging
@@ -1488,7 +1530,7 @@ local function PJRBDOI_fake_script() -- NordScheme.Starter
 			update(input)
 		end
 	end)
-	
+
 	script.Parent.TabDecor.PlayerName.Text = game:GetService("Players").LocalPlayer.DisplayName
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
@@ -1511,13 +1553,13 @@ local function RZSNFG_fake_script() -- Minimize.MinimizeScript
 	local Maximize = {
 		Size = UDim2.new(0, 350,0, 250)
 	}
-	
+
 	local TsGet = game:GetService("TweenService")
 	local tweeninfo = TweenInfo.new(0.75, Enum.EasingStyle.Sine)
 	local Mini = TsGet:Create(Object, tweeninfo, Minimize)
 	local Max = TsGet:Create(Object, tweeninfo, Maximize)
-	
-	
+
+
 	script.Parent.MouseButton1Down:Connect(function()
 		if Minimized == false then
 			Mini:Play()
