@@ -2,9 +2,9 @@ local library = loadstring(game:GetObjects("rbxassetid://7657867786")[1].Source)
 local Wait = library.subs.Wait -- Only returns if the GUI has not been terminated. For 'while Wait() do' loops
 
 local FantaMain = library:CreateWindow({
-Name = "Fanta Hub R E W R I T T E N",
+Name = "Fanta Hub",
 Themeable = {
-Info = "Presented by free boombox hubs [oringinal script names just tinkered]"
+Info = "This is a rewritten version of the script."
 }
 })
 
