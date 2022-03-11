@@ -1491,7 +1491,7 @@ local function CPTTFIM_fake_script() -- Discord5.DiscordScript5
 	local script = Instance.new('LocalScript', Discord5)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		setclipboard("https://discord.gg/28sk94mjA5")
+		setclipboard("https://discord.gg/QypVYevvUU")
 	end)
 end
 coroutine.wrap(CPTTFIM_fake_script)()
