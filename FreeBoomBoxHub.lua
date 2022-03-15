@@ -1419,7 +1419,7 @@ local function FFDHY_fake_script() -- Execute2.ExecuteScript2
 	local script = Instance.new('LocalScript', Execute2)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua", true))()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub2.lua", true))()
 	end)
 end
 coroutine.wrap(FFDHY_fake_script)()
@@ -1427,7 +1427,7 @@ local function ALJAYA_fake_script() -- Source2.SourceScript2
 	local script = Instance.new('LocalScript', Source2)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub.lua")
+		setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub2.lua")
 	end)
 end
 coroutine.wrap(ALJAYA_fake_script)()
