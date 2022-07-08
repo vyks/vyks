@@ -799,16 +799,16 @@ pcall(function()
         
         tab1 = page1:Tab({Name = "Pineapple"})
         execute1 = tab1:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua", true))()
         end)
         desc1 = tab1:Desc(
             "This is Pineapple developed by Aux and as of now hasn't been updated since the initial release."
         )
         discord1 = tab1:ClipBoard("Discord", function()
-            print("hello")
+            setclipboard("https://discord.gg/B47nj3GbKe")
         end)
         source1 = tab1:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/AuxPineapple.lua")
         end)
         executors1 = tab1:Executors({
             string.format(accepted, "Sw/Swm"),
@@ -820,12 +820,12 @@ pcall(function()
         
         local tab2 = page1:Tab({Name = "Fanta"})
         execute2 = tab2:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub2.lua", true))()
         end)
         local desc2 = tab2:Desc(
             "This is Fanta Hub developed by an unknown persons. It hasn't recieved updates the initial release.")
         source2 = tab2:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/FantaHub2.lua")
         end)
         executors2 = tab2:Executors({
             string.format(accepted, "Sw/Swm"),
@@ -835,25 +835,22 @@ pcall(function()
         })
         
         local tab3 = page1:Tab({Name = "Lucious"})
-        execute3A = tab3:Execute("Execute!",function()
-            print("yolo")
+        execute3A = tab3:Execute("Execute Normal!",function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/NormalLucious.lua"))()
         end)
         execute3B = tab3:Execute("Execute Premium!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/PremiumLucious.lua"))()
         end)
         local desc3 = tab3:Desc(
             "This script is a recoded version of Pineapple but to what I am told it acutally works.")
-        discord3 = tab3:ClipBoard("Discord", function()
-            print("hello")
-        end)
         source3A = tab3:ClipBoard("Normal", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/NormalLucious.lua")
         end)
         source3B = tab3:ClipBoard("Premium", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/PremiumLucious.lua")
         end)
         presets3 = tab3:ClipBoard("Presets", function()
-            print("hello")
+            setclipboard("https://github.com/vyks/vyks/blob/main/LuciousPremiumPresets.zip")
         end)
         executors3 = tab3:Executors({
             string.format(accepted, "Sw/Swm"),
@@ -862,17 +859,17 @@ pcall(function()
             string.format(accepted, "Fluxus"),
         })
         
-        local tab4 = page1:Tab({Name = "Asset"})
+        local tab4 = page1:Tab({Name = "Verts"})
         execute4 = tab4:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua", true))()
         end)
         local desc4 = tab4:Desc(
             "This is Verts Hub developed by Vert I believe. It hasn't recieved updates since he quit.")
         source4 = tab4:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/VertsCrack.lua")
         end)
         preset4 = tab4:ClipBoard("Preset", function()
-            print("hello")
+            setclipboard("https://github.com/vyks/vyks/blob/main/VertsPresets.zip")
         end)
         executors4 = tab4:Executors({
             string.format(accepted, "Sw"),
@@ -884,15 +881,12 @@ pcall(function()
         
         local tab5 = page2:Tab({Name = "CypherX"})
         execute5 = tab5:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/Cyphrex.lua"))()
         end)
         local desc5 = tab5:Desc(
             "More commonly used in a game called The Streets, this script can still be used with normal radios.")
-        discord5 = tab5:ClipBoard("Discord", function()
-            print("hello")
-        end)
         source5 = tab5:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/Cyphrex.lua")
         end)
         executors5 = tab5:Executors({
             string.format(accepted, "Sw/Swm"),
@@ -903,12 +897,12 @@ pcall(function()
         
         local tab6 = page2:Tab({Name = "Assetware"})
         execute6 = tab6:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/Assetware.lua"))()
         end)
         local desc6 = tab6:Desc(
             "This is Assetware developted by someone unknown to me as doesn't seem to receive updates.")
         source6 = tab6:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/Assetware.lua")
         end)
         executors6 = tab6:Executors({
             string.format(accepted, "Sw"),
@@ -920,12 +914,12 @@ pcall(function()
         
         local tab7 = page2:Tab({Name = "Space"})
         execute7 = tab7:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/SpaceHub.lua"))()
         end)
         local desc7 = tab7:Desc(
             "This is Space Hub developed by unknown and updates are unknown to me.")
         source7 = tab7:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/SpaceHub.lua")
         end)
         executors7 = tab7:Executors({
             string.format(accepted, "Sw/Swm"),
@@ -936,12 +930,15 @@ pcall(function()
         
         local tab8 = page2:Tab({Name = "Kors"})
         execute8 = tab8:Execute("Execute!",function()
-            print("yolo")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/vyks/vyks/main/KorsHub.lua"))()
         end)
         local desc8 = tab8:Desc(
             "This is Kors Hub developed by uknown and is unkown if updates are received.")
+        discord8 = tab8:ClipBoard("Discord", function()
+            setclipboard("https://discord.gg/QypVYevvUU")
+        end)
         source8 = tab8:ClipBoard("Source", function()
-            print("hello")
+            setclipboard("https://raw.githubusercontent.com/vyks/vyks/main/KorsHub.lua")
         end)
         executors8 = tab8:Executors({
             string.format(accepted, "Sw/Swm"),
